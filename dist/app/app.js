@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {Provider} from 'react-redux'
-import {syncHistoryWithStore} from 'react-router-redux'
-import {Router, hashHistory} from 'react-router'
+import { Provider } from 'react-redux'
+import { syncHistoryWithStore } from 'react-router-redux'
+import { Router, hashHistory } from 'react-router'
 
 import store from './store/configureStore'
 
@@ -14,7 +14,7 @@ const routes = {
   indexRoute: { onEnter: (nextState, replace) => replace('/login') },
   childRoutes: [
     require('./routes/dashboard').default,
-    require('./routes/smartadmin-intel').default, 
+    require('./routes/smartadmin-intel').default,
     require('./routes/widgets').default,
     require('./routes/tables').default,
     require('./routes/ui').default,
@@ -31,9 +31,9 @@ const routes = {
     require('./routes/loanproduct').default,
     require('./routes/bank').default,
     require('./routes/risklevel').default,
-      require('./routes/rulesfilter').default,
-      require('./routes/user').default,
-      require('./routes/syncdata').default,
+    require('./routes/rulesfilter').default,
+    require('./routes/user').default,
+    require('./routes/syncdata').default,
     // comment unused routes
     // this will speed up builds
   ]

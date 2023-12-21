@@ -49,12 +49,12 @@
     "nouislider": "10.0.0",
     "prop-types": "15.5.10",
     "raphael": "2.2.7",
-    "react": "15.5.4",
+    "react": "^16.3.0",
     "react-bootstrap": "^0.31.5",
     "react-bootstrap-table": "^4.3.1",
     "react-bootstrap-table-next": "^3.1.7",
     "react-d3-speedometer": "^0.6.1",
-    "react-dom": "15.5.4",
+    "react-dom": "^16.3.0",
     "react-google-maps": "5.1.1",
     "react-hot-loader": "3.0.0-beta.6",
     "react-number-format": "^4.0.8",
@@ -73,7 +73,8 @@
     "summernote": "0.8.4",
     "then-request": "2.2.0",
     "to-markdown": "3.0.4",
-    "uuid": "^3.3.2"
+    "uuid": "^3.3.2",
+    "xmlhttprequest": "^1.8.0"
   },
   "devDependencies": {
     "babel-core": "6.25.0",

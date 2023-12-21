@@ -85,6 +85,7 @@ export default class Login extends React.Component {
                   'Authorization': auth,
                   'content-type': 'application/json'
               },
+              // mode:'no-cors',,
               body: JSON.stringify(param)
 
           })
