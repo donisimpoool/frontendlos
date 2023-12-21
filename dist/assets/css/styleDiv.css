@@ -1,0 +1,27 @@
+.wrapper {
+    position: absolute;
+    overflow: hidden;
+    /*width: 600px;*/
+    /*height: 600px;*/
+    /*left: 700px;*/
+    border: 0px solid black;
+    /*transition: 1s;*/
+    /*right: 0;*/
+}
+
+#slide {
+    position: absolute;
+    right: 0;
+    /*right: -672px;*/
+    /*width: 600px;*/
+    /*height: 600px;*/
+    background: silver;
+    transition: 1s;
+
+}
+
+.wrapper:hover #slide {
+    transition: 1s;
+    right: 0;
+}
+

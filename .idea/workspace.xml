@@ -1,0 +1,1590 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4acbe4bf-4ede-48b2-a974-871ccbdc25c7" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-1885032034">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="13" />
+          <entry key="project.open.time.10" value="4" />
+          <entry key="project.open.time.11" value="6" />
+          <entry key="project.open.time.12" value="3" />
+          <entry key="project.open.time.13" value="4" />
+          <entry key="project.open.time.14" value="2" />
+          <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.16" value="1" />
+          <entry key="project.open.time.18" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.20" value="1" />
+          <entry key="project.open.time.4" value="36" />
+          <entry key="project.open.time.5" value="138" />
+          <entry key="project.open.time.6" value="164" />
+          <entry key="project.open.time.7" value="74" />
+          <entry key="project.open.time.8" value="16" />
+          <entry key="project.open.time.9" value="10" />
+          <entry key="project.opened" value="462" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="css" value="12" />
+          <entry key="gif" value="1" />
+          <entry key="html" value="7" />
+          <entry key="js" value="598" />
+          <entry key="json" value="50" />
+          <entry key="png" value="5" />
+          <entry key="rnc" value="1" />
+          <entry key="ts" value="2" />
+          <entry key="txt" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CSS" value="12" />
+          <entry key="HTML" value="7" />
+          <entry key="Image" value="6" />
+          <entry key="JSON" value="49" />
+          <entry key="JavaScript" value="598" />
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="RNG Compact" value="1" />
+          <entry key="TypeScript" value="2" />
+          <entry key="tsconfig" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="css" value="426" />
+          <entry key="html" value="4" />
+          <entry key="js" value="19588" />
+          <entry key="json" value="3553" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="CSS" value="426" />
+          <entry key="HTML" value="4" />
+          <entry key="JSON" value="3553" />
+          <entry key="JavaScript" value="19588" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.js.language.service.starts">
+        <counts>
+          <entry key="TypeScriptServerServiceImpl" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/app/routes/auth/containers/Login.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-848">
+              <caret line="89" column="31" lean-forward="true" selection-start-line="89" selection-start-column="31" selection-end-line="89" selection-end-column="31" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/routes/forms/components/wizards/step/Loan.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1326">
+              <caret line="85" column="29" selection-start-line="85" selection-start-column="8" selection-end-line="85" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/assets/css/otpui.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="49" column="1" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="tsconfig.json" />
+        <option value="package.json" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>info.name</find>
+      <find>info.id</find>
+      <find>onChangeIDType</find>
+      <find>style</find>
+      <find>cell</find>
+      <find>onAfterSaveCell</find>
+      <find>datatable</find>
+      <find>valuec</find>
+      <find>vehicleowner</find>
+      <find>ReactDOM</find>
+      <find>applicationid</find>
+      <find>handleclickApprove</find>
+      <find>suburlsubmitapp</find>
+      <find>onchangePlaceOfBirth</find>
+      <find>getlist</find>
+      <find>suburllistrules</find>
+      <find>getlistkelurahan</find>
+      <find>onchangekelurahan</find>
+      <find>listloansimpool</find>
+      <find>summ</find>
+      <find>select Pur</find>
+      <find>name</find>
+      <find>name&quot;</find>
+      <find>&quot;name&quot;</find>
+      <find>logout&quot;</find>
+      <find>flag flag-us</find>
+      <find>header-dropdown-list hidden-xs ng-cloak</find>
+      <find>listgraph</find>
+      <find>listkelurahan</find>
+      <find>form</find>
+    </findStrings>
+    <dirStrings>
+      <dir>C:\Users\User\los\FrontEndLOS\src</dir>
+      <dir>C:\Users\User\los\FrontEndLOS\src\app\routes</dir>
+      <dir>C:\Users\User\los\FrontEndLOS</dir>
+    </dirStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/app/routes/forms/components/wizards/CollateralVehicle.js" />
+        <option value="$PROJECT_DIR$/src/app/components/user/components/LoginInfo.js" />
+        <option value="$PROJECT_DIR$/src/app/routes/user/components/FormUser.js" />
+        <option value="$PROJECT_DIR$/src/app/components/common/Header.js" />
+        <option value="$PROJECT_DIR$/src/assets/css/styleDiv.css" />
+        <option value="$PROJECT_DIR$/src/app/routes/syncdata/index.js" />
+        <option value="$PROJECT_DIR$/src/assets/css/formoverlay.css" />
+        <option value="$PROJECT_DIR$/src/app/app.js" />
+        <option value="$PROJECT_DIR$/src/assets/css/spinnercycle.css" />
+        <option value="$PROJECT_DIR$/src/assets/css/styleCustomerTable.css" />
+        <option value="$PROJECT_DIR$/src/app/routes/new-app/components/NewApplication.js" />
+        <option value="$PROJECT_DIR$/src/app/routes/forms/components/wizards/step/Address.js" />
+        <option value="$PROJECT_DIR$/src/app/routes/forms/components/wizards/Type/TypeCity.js" />
+        <option value="$PROJECT_DIR$/src/app/routes/forms/components/wizards/step/Summarys.js" />
+        <option value="$PROJECT_DIR$/src/app/routes/forms/components/wizards/actions/loanActions.js" />
+        <option value="$PROJECT_DIR$/src/app/routes/approval/components/ApprovalPage.js" />
+        <option value="$PROJECT_DIR$/src/app/routes/new-app/components/ListApplication.js" />
+        <option value="$PROJECT_DIR$/src/app/config/FunctionGlobal.js" />
+        <option value="$PROJECT_DIR$/src/app/routes/forms/components/wizards/step/Loan.js" />
+        <option value="$PROJECT_DIR$/src/app/routes/forms/components/wizards/step/Personal.js" />
+        <option value="$PROJECT_DIR$/src/app/routes/forms/components/wizards/step/Family.js" />
+        <option value="$PROJECT_DIR$/src/app/routes/forms/components/wizards/step/Business.js" />
+        <option value="$PROJECT_DIR$/src/app/routes/forms/components/wizards/step/Bank.js" />
+        <option value="$PROJECT_DIR$/src/app/routes/approval/components/AllTable2.js" />
+        <option value="$PROJECT_DIR$/src/app/routes/approval/components/Underwriting.js" />
+        <option value="$PROJECT_DIR$/src/app/routes/approval/components/Rejected.js" />
+        <option value="$PROJECT_DIR$/src/app/routes/approval/components/Approved.js" />
+        <option value="$PROJECT_DIR$/src/app/routes/approval/components/Send.js" />
+        <option value="$PROJECT_DIR$/dist/app/routes/risklevel/components/FormRiskLevel.js" />
+        <option value="$PROJECT_DIR$/src/assets/api/langs/id.json" />
+        <option value="$PROJECT_DIR$/src/app/components/i18n/LanguageSelector.js" />
+        <option value="$PROJECT_DIR$/src/app/config/ConfigParam.js" />
+        <option value="$PROJECT_DIR$/src/app/routes/roulesscoring/components/RoulesScoring.js" />
+        <option value="$PROJECT_DIR$/src/app/routes/roulesscoring/components/FormRoulesScoring.js" />
+        <option value="$PROJECT_DIR$/src/app/routes/risklevel/components/RiskLevel.js" />
+        <option value="$PROJECT_DIR$/src/app/routes/risklevel/components/FormRiskLevel.js" />
+        <option value="$PROJECT_DIR$/src/app/routes/rulesfilter/components/RulesFilter.js" />
+        <option value="$PROJECT_DIR$/src/app/routes/rulesfilter/components/FormRulesFilter.js" />
+        <option value="$PROJECT_DIR$/src/app/config/baseUrl.js" />
+        <option value="$PROJECT_DIR$/src/app/routes/loanproduct/components/LoanProduct.js" />
+        <option value="$PROJECT_DIR$/src/app/routes/loanproduct/components/FormLoanProduct.js" />
+        <option value="$PROJECT_DIR$/src/assets/api/graphs/chartjs.json" />
+        <option value="$PROJECT_DIR$/src/app/routes/dashboard/containers/Dashboard.js" />
+        <option value="$PROJECT_DIR$/src/app/routes/graphs/containers/MorrisCharts.js" />
+        <option value="$PROJECT_DIR$/src/app/routes/graphs/containers/ChartJs.js" />
+        <option value="$PROJECT_DIR$/src/app/routes/syncdata/components/SyncData.js" />
+        <option value="$PROJECT_DIR$/src/app/routes/forms/components/wizards/Type/typeDistrict.js" />
+        <option value="$PROJECT_DIR$/src/app/routes/forms/components/wizards/CollateralRealEstate.js" />
+        <option value="$PROJECT_DIR$/src/app/routes/forms/components/wizards/CollateralBank.js" />
+        <option value="$PROJECT_DIR$/src/assets/css/otpui.css" />
+        <option value="$PROJECT_DIR$/src/app/routes/auth/containers/Login.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
+    <package-json value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/dist/assets/api/langs/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/@babel/runtime/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/arr-union/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/base-64/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/bytes/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/cache-base/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/chokidar/node_modules/is-glob/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/classnames/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/cliui/node_modules/wordwrap/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/code-point-at/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/color-name/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/constants-browserify/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/content-type/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/copy-descriptor/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/css-what/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/detect-indent/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/domelementtype/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/ee-first/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/encodeurl/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/error-ex/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/exenv/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/find-cache-dir/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/for-own/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/get-value/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/glob-parent/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/globals/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/has-ansi/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/html-minifier/node_modules/he/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/https-browserify/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/is-arrayish/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/is-binary-path/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/is-equal-shallow/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/is-extglob/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/is-fullwidth-code-point/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/is-svg/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/isobject/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/json-loader/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/lodash.memoize/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/map-visit/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/media-typer/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/mime-db/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/ms/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/normalize-path/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/os-locale/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/path-is-absolute/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/pify/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/posix-character-classes/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/postcss-modules-local-by-default/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/postcss-modules-scope/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/postcss-modules-values/node_modules/ansi-styles/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/postcss-modules-values/node_modules/chalk/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/postcss-modules-values/node_modules/color-convert/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/postcss-modules-values/node_modules/color-name/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/postcss-modules-values/node_modules/has-flag/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/postcss-modules-values/node_modules/postcss/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/postcss-modules-values/node_modules/source-map/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/postcss-modules-values/node_modules/supports-color/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/postcss-modules-values/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/postcss-normalize-charset/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/postcss-normalize-url/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/postcss-ordered-values/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/postcss-reduce-idents/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/postcss-reduce-initial/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/postcss-reduce-transforms/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/postcss-selector-parser/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/postcss-svgo/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/postcss-unique-selectors/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/postcss-value-parser/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/postcss-zindex/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/postcss/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/prelude-ls/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/prepend-http/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/preserve/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/pretty-error/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/private/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/process-nextick-args/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/process/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/promise/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/prop-types-extra/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/prop-types/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/proxy-addr/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/prr/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/psl/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/public-encrypt/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/punycode/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/pure-color/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/q/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/qs/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/query-string/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/querystring-es3/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/querystring/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/querystringify/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/randomatic/node_modules/kind-of/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/randomatic/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/randombytes/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/randomfill/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/range-parser/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/raphael/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/raw-body/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/raw-loader/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/react-base16-styling/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/react-bootstrap-table-next/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/react-bootstrap-table/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/react-bootstrap/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/react-d3-speedometer/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/react-deep-force-update/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/react-dock/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/react-dom/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/react-google-maps/node_modules/warning/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/react-google-maps/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/react-hot-loader/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/react-is/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/react-json-tree/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/react-lifecycles-compat/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/react-modal/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/react-number-format/node_modules/prop-types/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/react-number-format/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/react-overlays/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/react-prop-types-element-of-type/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/react-proxy/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/react-pure-render/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/react-redux/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/react-router-redux/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/react-router/node_modules/warning/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/react-router/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/react-s-alert/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/react-tap-event-plugin/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/react-transition-group/node_modules/prop-types/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/react-transition-group/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/react/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/read-pkg-up/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/read-pkg/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/readable-stream/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/readdirp/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/recast/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/redbox-react/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/reduce-css-calc/node_modules/balanced-match/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/reduce-css-calc/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/reduce-function-call/node_modules/balanced-match/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/reduce-function-call/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/redux-devtools-dock-monitor/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/redux-devtools-instrument/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/redux-devtools-log-monitor/node_modules/lodash.debounce/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/redux-devtools-log-monitor/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/redux-devtools-themes/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/redux-devtools/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/redux-logger/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/redux-thunk/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/redux/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/reflux-core/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/reflux/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/regenerate/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/regenerator-runtime/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/regenerator-transform/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/regex-cache/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/regex-not/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/regexpu-core/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/regjsgen/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/regjsparser/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/relateurl/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/remove-trailing-separator/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/renderkid/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/repeat-element/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/repeat-string/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/repeating/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/request/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/require-directory/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/require-main-filename/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/requires-port/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/resolve-url/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/resolve/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/resolve/test/resolver/baz/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/resolve/test/resolver/browser_field/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/resolve/test/resolver/dot_main/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/resolve/test/resolver/dot_slash_main/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/resolve/test/resolver/incorrect_main/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/resolve/test/resolver/invalid_main/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/ret/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/right-align/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/rimraf/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/ripemd160/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/rw/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/safe-buffer/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/safe-regex/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/safer-buffer/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/sax/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/schema-utils/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/script-loader/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/scriptjs/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/select-hose/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/select2/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/semantic-ui-react/node_modules/lodash/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/semantic-ui-react/node_modules/prop-types/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/semantic-ui-react/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/semver/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/send/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/serve-index/node_modules/http-errors/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/serve-index/node_modules/inherits/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/serve-index/node_modules/setprototypeof/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/serve-index/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/serve-static/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/set-blocking/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/set-value/node_modules/extend-shallow/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/set-value/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/setimmediate/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/setprototypeof/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/sha.js/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/shallowequal/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/slash/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/smartadmin-plugins/bower_components/Flot/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/smartadmin-plugins/bower_components/Jcrop/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/smartadmin-plugins/bower_components/bootstrap/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/smartadmin-plugins/bower_components/highchartTable/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/smartadmin-plugins/bower_components/highcharts/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/smartadmin-plugins/bower_components/jquery.easy-pie-chart/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/smartadmin-plugins/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/snapdragon-node/node_modules/kind-of/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/snapdragon-node/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/snapdragon-util/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/snapdragon/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/sockjs-client/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/sockjs/examples/echo/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/sockjs/examples/express-3.x/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/sockjs/examples/express/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/sockjs/examples/hapi/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/sockjs/examples/koa/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/sockjs/examples/multiplex/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/sockjs/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/sort-keys/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/source-list-map/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/source-map-resolve/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/source-map-support/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/source-map-url/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/source-map/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/sourcemapped-stacktrace/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/spdx-correct/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/spdx-exceptions/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/spdx-expression-parse/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/spdx-license-ids/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/spdy-transport/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/spdy/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/speedometer/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/split-string/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/sprintf-js/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/sshpk/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/stackframe/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/static-extend/node_modules/define-property/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/static-extend/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/statuses/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/stream-browserify/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/stream-http/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/strict-uri-encode/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/string-width/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/string_decoder/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/strip-ansi/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/strip-bom/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/style-loader/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/summernote/node_modules/jquery/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/summernote/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/supports-color/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/svgo/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/symbol-observable/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/symbol-tree/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/tapable/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/then-request/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/through/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/time-stamp/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/timers-browserify/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/to-arraybuffer/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/to-fast-properties/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/to-markdown/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/to-object-path/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/to-regex-range/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/to-regex/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/toidentifier/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/toposort/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/tough-cookie/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/tr46/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/trim-right/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/tty-browserify/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/tunnel-agent/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/tweetnacl/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/type-check/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/type-is/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/typedarray/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/ua-parser-js/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/uglify-js/node_modules/commander/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/uglify-js/node_modules/source-map/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/uglify-js/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/uglify-to-browserify/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/uncontrollable/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/underscore/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/union-value/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/uniq/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/uniqs/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/unpipe/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/unset-value/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/upath/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/upper-case/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/uri-js/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/urix/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/url-loader/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/url-parse/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/url/node_modules/punycode/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/url/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/use/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/util-deprecate/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/util/node_modules/inherits/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/util/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/utila/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/utils-merge/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/uuid/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/validate-npm-package-license/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/vary/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/vendors/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/verror/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/vm-browserify/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/void-elements/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/warning/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/watchpack/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/wbuf/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/webidl-conversions/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/webpack-dev-middleware/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/webpack-dev-server/node_modules/anymatch/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/webpack-dev-server/node_modules/arr-diff/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/webpack-dev-server/node_modules/array-unique/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/webpack-dev-server/node_modules/braces/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/webpack-dev-server/node_modules/chokidar/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/webpack-dev-server/node_modules/expand-brackets/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/webpack-dev-server/node_modules/extglob/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/webpack-dev-server/node_modules/glob-parent/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/webpack-dev-server/node_modules/is-extglob/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/webpack-dev-server/node_modules/is-glob/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/webpack-dev-server/node_modules/micromatch/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/webpack-dev-server/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/webpack-sources/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/webpack/node_modules/acorn/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/webpack/node_modules/ajv/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/webpack/node_modules/big.js/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/webpack/node_modules/loader-utils/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/webpack/node_modules/source-map/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/webpack/node_modules/supports-color/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/webpack/node_modules/uglify-js/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/webpack/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/websocket-driver/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/websocket-extensions/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/whatwg-encoding/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/whatwg-fetch/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/whatwg-url/node_modules/webidl-conversions/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/whatwg-url/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/whet.extend/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/which-module/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/window-size/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/wordwrap/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/wrap-ansi/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/wrappy/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/xml-name-validator/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/xtend/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/y18n/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/yallist/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/yargs-parser/package.json" />
+      <path value="$PROJECT_DIR$/dist/node_modules/yargs/package.json" />
+      <path value="$PROJECT_DIR$/package.json" />
+      <path value="$PROJECT_DIR$/src/assets/api/langs/package.json" />
+    </packageJsonPaths>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-12" />
+    <option name="y" value="-12" />
+    <option name="width" value="1890" />
+    <option name="height" value="930" />
+  </component>
+  <component name="ProjectId" id="1SYE9WMtV3kOH1LrQ3lanUD9DOz" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="FrontEndLOS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FrontEndLOS" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FrontEndLOS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FrontEndLOS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FrontEndLOS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FrontEndLOS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FrontEndLOS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FrontEndLOS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FrontEndLOS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FrontEndLOS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FrontEndLOS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FrontEndLOS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="loan&#9;FILE&#9;file://C:/Users/User/los/FrontEndLOS/src/app/routes/forms/components/wizards/step/Loan.js&#10;login&#9;FILE&#9;file://C:/Users/User/los/FrontEndLOS/src/app/routes/auth/containers/Login.js&#10;colla&#9;null&#9;null&#10;Collateralde&#9;null&#9;null&#10;collateralr&#9;FILE&#9;file://C:/Users/User/los/FrontEndLOS/src/app/routes/forms/components/wizards/CollateralRealEstate.js&#10;fil&#9;FILE&#9;file://C:/Users/User/los/FrontEndLOS/src/app/routes/rulesfilter/components/FormRulesFilter.js&#10;add&#9;null&#9;null&#10;sy&#9;FILE&#9;file://C:/Users/User/los/FrontEndLOS/src/app/routes/syncdata/components/SyncData.js&#10;loa&#9;FILE&#9;file://C:/Users/User/los/FrontEndLOS/src/app/routes/forms/components/wizards/step/Loan.js&#10;chartjs&#9;FILE&#9;file://C:/Users/User/los/FrontEndLOS/src/assets/api/graphs/chartjs.json&#10;morris&#9;FILE&#9;file://C:/Users/User/los/FrontEndLOS/src/assets/api/graphs/morris.json&#10;dash&#9;FILE&#9;file://C:/Users/User/los/FrontEndLOS/src/app/routes/dashboard/containers/Dashboard.js&#10;formloa&#9;null&#9;null&#10;formr&#9;null&#9;null&#10;ru&#9;null&#9;null&#10;rules&#9;null&#9;null&#10;form&#9;FILE&#9;file://C:/Users/User/los/FrontEndLOS/src/app/routes/risklevel/components/FormRiskLevel.js&#10;risk&#9;FILE&#9;file://C:/Users/User/los/FrontEndLOS/src/app/routes/risklevel/components/RiskLevel.js&#10;roul&#9;FILE&#9;file://C:/Users/User/los/FrontEndLOS/src/app/routes/roulesscoring/components/RoulesScoring.js&#10;listro&#9;FILE&#9;file://C:/Users/User/los/FrontEndLOS/src/app/routes/roulesscoring/ListRoules.js&#10;lis&#9;FILE&#9;file://C:/Users/User/los/FrontEndLOS/src/app/routes/new-app/components/ListApplication.js&#10;summ&#9;FILE&#9;file://C:/Users/User/los/FrontEndLOS/src/app/routes/forms/components/wizards/step/Summarys.js&#10;syn&#9;FILE&#9;file://C:/Users/User/los/FrontEndLOS/src/app/routes/syncdata/components/SyncData.js&#10;formri&#9;FILE&#9;file://C:/Users/User/los/FrontEndLOS/src/app/routes/risklevel/components/FormRiskLevel.js&#10;send&#9;FILE&#9;file://C:/Users/User/los/FrontEndLOS/src/app/routes/approval/components/Send.js&#10;app&#9;FILE&#9;file://C:/Users/User/los/FrontEndLOS/src/app/routes/approval/components/Approved.js&#10;re&#9;FILE&#9;file://C:/Users/User/los/FrontEndLOS/src/app/routes/approval/components/Rejected.js&#10;under&#9;FILE&#9;file://C:/Users/User/los/FrontEndLOS/src/app/routes/approval/components/Underwriting.js&#10;all&#9;FILE&#9;file://C:/Users/User/los/FrontEndLOS/src/app/routes/approval/components/AllTable2.js&#10;bank&#9;null&#9;null&#10;bus&#9;FILE&#9;file://C:/Users/User/los/FrontEndLOS/src/app/routes/forms/components/wizards/step/Business.js&#10;fami&#9;FILE&#9;file://C:/Users/User/los/FrontEndLOS/src/app/routes/forms/components/wizards/step/Family.js&#10;per&#9;FILE&#9;file://C:/Users/User/los/FrontEndLOS/src/app/routes/forms/components/wizards/step/Personal.js&#10;pers&#9;FILE&#9;file://C:/Users/User/los/FrontEndLOS/src/app/routes/forms/components/wizards/step/Personal.js&#10;perso&#9;FILE&#9;file://C:/Users/User/los/FrontEndLOS/src/app/routes/forms/components/wizards/step/Personal.js&#10;appro&#9;FILE&#9;file://C:/Users/User/los/FrontEndLOS/src/app/routes/approval/components/Approved.js&#10;reje&#9;FILE&#9;file://C:/Users/User/los/FrontEndLOS/src/app/routes/approval/components/Rejected.js&#10;dashb&#9;null&#9;null&#10;rea&#9;null&#9;null&#10;reale&#9;FILE&#9;file://C:/Users/User/los/FrontEndLOS/src/assets/img/realestate&#10;summa&#9;FILE&#9;file://C:/Users/User/los/FrontEndLOS/src/app/routes/forms/components/wizards/step/Summarys.js&#10;sen&#9;FILE&#9;file://C:/Users/User/los/FrontEndLOS/src/app/routes/approval/components/Send.js&#10;loanp&#9;FILE&#9;file://C:/Users/User/los/FrontEndLOS/src/app/routes/loanproduct/components/LoanProduct.js&#10;bas&#9;FILE&#9;file://C:/Users/User/los/FrontEndLOS/src/app/config/baseUrl.js&#10;unde&#9;FILE&#9;file://C:/Users/User/los/FrontEndLOS/src/app/routes/approval/components/Underwriting.js&#10;new&#9;FILE&#9;file://C:/Users/User/los/FrontEndLOS/src/app/routes/new-app/components/NewApplication.js&#10;base&#9;FILE&#9;file://C:/Users/User/los/FrontEndLOS/src/app/config/baseUrl.js&#10;loana&#9;FILE&#9;file://C:/Users/User/los/FrontEndLOS/src/app/routes/forms/components/wizards/actions/loanActions.js&#10;fam&#9;null&#9;null&#10;bu&#9;null&#9;null" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2018.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\los\FrontEndLOS\src\assets\img" />
+      <recent name="C:\Users\User\los\FrontEndLOS\src\assets\img\favicon" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4acbe4bf-4ede-48b2-a974-871ccbdc25c7" name="Default Changelist" comment="" />
+      <created>1571731977399</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1571731977399</updated>
+      <workItem from="1571731979867" duration="5014000" />
+      <workItem from="1571794049901" duration="2448000" />
+      <workItem from="1572918793876" duration="20683000" />
+      <workItem from="1573005319826" duration="19230000" />
+      <workItem from="1573091455134" duration="17511000" />
+      <workItem from="1573176500788" duration="20366000" />
+      <workItem from="1573436258472" duration="23024000" />
+      <workItem from="1573466192152" duration="2117000" />
+      <workItem from="1573523210025" duration="13383000" />
+      <workItem from="1573611095206" duration="9627000" />
+      <workItem from="1573631825445" duration="6634000" />
+      <workItem from="1573696082335" duration="16842000" />
+      <workItem from="1574040945444" duration="25027000" />
+      <workItem from="1574318838117" duration="3798000" />
+      <workItem from="1574388711019" duration="20508000" />
+      <workItem from="1574648007710" duration="27804000" />
+      <workItem from="1574741783397" duration="17576000" />
+      <workItem from="1574820378916" duration="18292000" />
+      <workItem from="1574906880108" duration="31264000" />
+      <workItem from="1574993055757" duration="23117000" />
+      <workItem from="1575202575390" duration="3162000" />
+      <workItem from="1575213524061" duration="2242000" />
+      <workItem from="1575252325820" duration="20701000" />
+      <workItem from="1575338706484" duration="22637000" />
+      <workItem from="1575423749465" duration="21573000" />
+      <workItem from="1575512125248" duration="6118000" />
+      <workItem from="1575605215708" duration="7170000" />
+      <workItem from="1575649198388" duration="1295000" />
+      <workItem from="1575684284354" duration="722000" />
+      <workItem from="1575856714125" duration="13372000" />
+      <workItem from="1575945244223" duration="31146000" />
+      <workItem from="1576028976818" duration="23535000" />
+      <workItem from="1576116054310" duration="18778000" />
+      <workItem from="1576204676417" duration="14130000" />
+      <workItem from="1576330775193" duration="9111000" />
+      <workItem from="1576389123021" duration="3608000" />
+      <workItem from="1576414193097" duration="8657000" />
+      <workItem from="1576462077632" duration="19384000" />
+      <workItem from="1576548766544" duration="27008000" />
+      <workItem from="1576633920504" duration="14603000" />
+      <workItem from="1576722767825" duration="15868000" />
+      <workItem from="1576796331472" duration="815000" />
+      <workItem from="1576803925389" duration="3244000" />
+      <workItem from="1577070910348" duration="15475000" />
+      <workItem from="1577255332014" duration="40000" />
+      <workItem from="1577255426480" duration="16000" />
+      <workItem from="1577326437007" duration="631000" />
+      <workItem from="1577327952369" duration="499000" />
+      <workItem from="1577329244628" duration="614000" />
+      <workItem from="1577333080163" duration="597000" />
+      <workItem from="1577334288915" duration="621000" />
+      <workItem from="1577335819991" duration="1034000" />
+      <workItem from="1577337029468" duration="523000" />
+      <workItem from="1577345865823" duration="928000" />
+      <workItem from="1577347107430" duration="691000" />
+      <workItem from="1577348365562" duration="648000" />
+      <workItem from="1577349580294" duration="438000" />
+      <workItem from="1577351630755" duration="950000" />
+      <workItem from="1577353450128" duration="997000" />
+      <workItem from="1577354712908" duration="1008000" />
+      <workItem from="1577355928192" duration="830000" />
+      <workItem from="1577358565075" duration="1194000" />
+      <workItem from="1577359789461" duration="904000" />
+      <workItem from="1577361005547" duration="1116000" />
+      <workItem from="1577362785240" duration="333000" />
+      <workItem from="1577412290133" duration="846000" />
+      <workItem from="1577413508858" duration="1137000" />
+      <workItem from="1577414949576" duration="1169000" />
+      <workItem from="1577416159986" duration="1094000" />
+      <workItem from="1577417384698" duration="1049000" />
+      <workItem from="1577418675508" duration="1164000" />
+      <workItem from="1577419933143" duration="691000" />
+      <workItem from="1577429350182" duration="1162000" />
+      <workItem from="1577430918894" duration="1176000" />
+      <workItem from="1577432127979" duration="1074000" />
+      <workItem from="1577433404114" duration="974000" />
+      <workItem from="1577434612006" duration="1160000" />
+      <workItem from="1577435930784" duration="409000" />
+      <workItem from="1577437278484" duration="1099000" />
+      <workItem from="1577438486905" duration="1015000" />
+      <workItem from="1577439819758" duration="816000" />
+      <workItem from="1577441157353" duration="901000" />
+      <workItem from="1577442437099" duration="1087000" />
+      <workItem from="1577443658594" duration="1052000" />
+      <workItem from="1577444873832" duration="900000" />
+      <workItem from="1577671110305" duration="858000" />
+      <workItem from="1577672322913" duration="626000" />
+      <workItem from="1577673642641" duration="1073000" />
+      <workItem from="1577674850169" duration="926000" />
+      <workItem from="1577676334911" duration="950000" />
+      <workItem from="1577677562901" duration="1152000" />
+      <workItem from="1577678907844" duration="771000" />
+      <workItem from="1577680121472" duration="1184000" />
+      <workItem from="1577681485135" duration="1022000" />
+      <workItem from="1577682970686" duration="934000" />
+      <workItem from="1577684469641" duration="1039000" />
+      <workItem from="1577685679047" duration="854000" />
+      <workItem from="1577687231066" duration="378000" />
+      <workItem from="1577690358544" duration="882000" />
+      <workItem from="1577691571602" duration="1039000" />
+      <workItem from="1577692784478" duration="754000" />
+      <workItem from="1577695105932" duration="874000" />
+      <workItem from="1577696489318" duration="378000" />
+      <workItem from="1577697789868" duration="1072000" />
+      <workItem from="1577699639565" duration="761000" />
+      <workItem from="1577702246756" duration="1170000" />
+      <workItem from="1577703456038" duration="1178000" />
+      <workItem from="1577704666734" duration="349000" />
+      <workItem from="1577706851531" duration="1105000" />
+      <workItem from="1577708062700" duration="1095000" />
+      <workItem from="1577709271793" duration="771000" />
+      <workItem from="1577801752863" duration="1194000" />
+      <workItem from="1577802963823" duration="993000" />
+      <workItem from="1577804765746" duration="599000" />
+      <workItem from="1577852451854" duration="1114000" />
+      <workItem from="1577853661675" duration="1078000" />
+      <workItem from="1577854872518" duration="400000" />
+      <workItem from="1577856081397" duration="479000" />
+      <workItem from="1577858671068" duration="569000" />
+      <workItem from="1577859944470" duration="376000" />
+      <workItem from="1577861269381" duration="426000" />
+      <workItem from="1577933060433" duration="1056000" />
+      <workItem from="1577934357121" duration="1094000" />
+      <workItem from="1577935585833" duration="829000" />
+      <workItem from="1577936966289" duration="1135000" />
+      <workItem from="1577938175879" duration="977000" />
+      <workItem from="1577939562154" duration="863000" />
+      <workItem from="1577940819527" duration="1114000" />
+      <workItem from="1577942028020" duration="837000" />
+      <workItem from="1577947308574" duration="1061000" />
+      <workItem from="1577948532126" duration="63000" />
+      <workItem from="1577950369125" duration="1123000" />
+      <workItem from="1577951580809" duration="1046000" />
+      <workItem from="1577953115817" duration="1171000" />
+      <workItem from="1577954324802" duration="795000" />
+      <workItem from="1577963459556" duration="233000" />
+      <workItem from="1578019286778" duration="1074000" />
+      <workItem from="1578024262398" duration="1187000" />
+      <workItem from="1578025474264" duration="34000" />
+      <workItem from="1578032821205" duration="1199000" />
+      <workItem from="1578034037087" duration="1057000" />
+      <workItem from="1578035259049" duration="1000000" />
+      <workItem from="1578036638573" duration="1103000" />
+      <workItem from="1578038103949" duration="1119000" />
+      <workItem from="1578043414077" duration="427000" />
+      <workItem from="1578049105456" duration="467000" />
+      <workItem from="1578280389055" duration="967000" />
+      <workItem from="1578281625628" duration="1173000" />
+      <workItem from="1578282837894" duration="795000" />
+      <workItem from="1578284045464" duration="1121000" />
+      <workItem from="1578285278059" duration="1046000" />
+      <workItem from="1578286492853" duration="946000" />
+      <workItem from="1578287746627" duration="596000" />
+      <workItem from="1578292772177" duration="1090000" />
+      <workItem from="1578293984366" duration="940000" />
+      <workItem from="1578295242272" duration="1169000" />
+      <workItem from="1578296452030" duration="1121000" />
+      <workItem from="1578297873000" duration="1118000" />
+      <workItem from="1578299095512" duration="1177000" />
+      <workItem from="1578300308785" duration="956000" />
+      <workItem from="1578301515256" duration="1181000" />
+      <workItem from="1578302777289" duration="1107000" />
+      <workItem from="1578304044986" duration="1125000" />
+      <workItem from="1578305253625" duration="919000" />
+      <workItem from="1578308125260" duration="967000" />
+      <workItem from="1578313846722" duration="645000" />
+      <workItem from="1578364349384" duration="900000" />
+      <workItem from="1578365562000" duration="1184000" />
+      <workItem from="1578366775333" duration="1064000" />
+      <workItem from="1578367988121" duration="863000" />
+      <workItem from="1578369199345" duration="1148000" />
+      <workItem from="1578370409476" duration="1094000" />
+      <workItem from="1578371672091" duration="1121000" />
+      <workItem from="1578372883472" duration="328000" />
+      <workItem from="1578377606105" duration="1085000" />
+      <workItem from="1578378850333" duration="1075000" />
+      <workItem from="1578380057541" duration="1037000" />
+      <workItem from="1578381705578" duration="855000" />
+      <workItem from="1578383011520" duration="1168000" />
+      <workItem from="1578384216595" duration="928000" />
+      <workItem from="1578385424009" duration="1106000" />
+      <workItem from="1578386636883" duration="980000" />
+      <workItem from="1578389134106" duration="599000" />
+      <workItem from="1578390348546" duration="1084000" />
+      <workItem from="1578391559863" duration="1195000" />
+      <workItem from="1578392775005" duration="1185000" />
+      <workItem from="1578393991424" duration="261000" />
+      <workItem from="1578451130866" duration="1015000" />
+      <workItem from="1578452345219" duration="1069000" />
+      <workItem from="1578453700994" duration="1125000" />
+      <workItem from="1578454938696" duration="1197000" />
+      <workItem from="1578456153375" duration="463000" />
+      <workItem from="1578457605322" duration="1159000" />
+      <workItem from="1578458820434" duration="320000" />
+      <workItem from="1578463708888" duration="36000" />
+      <workItem from="1578466735472" duration="1081000" />
+      <workItem from="1578467945395" duration="1045000" />
+      <workItem from="1578469221407" duration="1094000" />
+      <workItem from="1578470447350" duration="450000" />
+      <workItem from="1578471787582" duration="187000" />
+      <workItem from="1578475979926" duration="278000" />
+      <workItem from="1578536200668" duration="596000" />
+      <workItem from="1578538213999" duration="314000" />
+      <workItem from="1578542513915" duration="844000" />
+      <workItem from="1578545204795" duration="802000" />
+      <workItem from="1578546923663" duration="713000" />
+      <workItem from="1578551232803" duration="877000" />
+      <workItem from="1578552448238" duration="961000" />
+      <workItem from="1578554749620" duration="1098000" />
+      <workItem from="1578555963812" duration="1083000" />
+      <workItem from="1578557170264" duration="1002000" />
+      <workItem from="1578558379470" duration="923000" />
+      <workItem from="1578559591771" duration="1180000" />
+      <workItem from="1578562258446" duration="1098000" />
+      <workItem from="1578563468716" duration="1079000" />
+      <workItem from="1578567996445" duration="414000" />
+      <workItem from="1578642419184" duration="347000" />
+      <workItem from="1578643755281" duration="947000" />
+      <workItem from="1578645142036" duration="1095000" />
+      <workItem from="1578646452701" duration="581000" />
+      <workItem from="1578649608187" duration="674000" />
+      <workItem from="1578881118004" duration="1138000" />
+      <workItem from="1578882324688" duration="1064000" />
+      <workItem from="1578883533410" duration="1122000" />
+      <workItem from="1578884745641" duration="956000" />
+      <workItem from="1578885955074" duration="1117000" />
+      <workItem from="1578887180108" duration="599000" />
+      <workItem from="1578891786312" duration="615000" />
+      <workItem from="1578894502912" duration="246000" />
+      <workItem from="1578897938258" duration="730000" />
+      <workItem from="1578899524240" duration="915000" />
+      <workItem from="1578900733791" duration="1139000" />
+      <workItem from="1578901993567" duration="1000000" />
+      <workItem from="1578903497942" duration="711000" />
+      <workItem from="1578905440673" duration="763000" />
+      <workItem from="1578907335189" duration="351000" />
+      <workItem from="1578909022407" duration="921000" />
+      <workItem from="1578910459458" duration="1097000" />
+      <workItem from="1578912221796" duration="599000" />
+      <workItem from="1578913758294" duration="224000" />
+      <workItem from="1578913996926" duration="1002000" />
+      <workItem from="1578915934832" duration="316000" />
+      <workItem from="1578917276580" duration="817000" />
+      <workItem from="1578970825762" duration="646000" />
+      <workItem from="1578973401153" duration="1104000" />
+      <workItem from="1578974623692" duration="767000" />
+      <workItem from="1578975825585" duration="609000" />
+      <workItem from="1578977040746" duration="875000" />
+      <workItem from="1578978387560" duration="1140000" />
+      <workItem from="1578979619640" duration="330000" />
+      <workItem from="1578984189323" duration="1174000" />
+      <workItem from="1578985400548" duration="996000" />
+      <workItem from="1578986931449" duration="867000" />
+      <workItem from="1578988226535" duration="992000" />
+      <workItem from="1578990057340" duration="966000" />
+      <workItem from="1578991264492" duration="1086000" />
+      <workItem from="1578993657448" duration="1037000" />
+      <workItem from="1578994869876" duration="1005000" />
+      <workItem from="1578996080407" duration="801000" />
+      <workItem from="1578997317887" duration="1041000" />
+      <workItem from="1578998528972" duration="1102000" />
+      <workItem from="1579000036938" duration="600000" />
+      <workItem from="1579001347034" duration="514000" />
+      <workItem from="1579002820437" duration="63000" />
+      <workItem from="1579055180260" duration="614000" />
+      <workItem from="1579056416969" duration="1195000" />
+      <workItem from="1579057653773" duration="1176000" />
+      <workItem from="1579059836574" duration="724000" />
+      <workItem from="1579061165152" duration="261000" />
+      <workItem from="1579071367315" duration="1181000" />
+      <workItem from="1579072587085" duration="844000" />
+      <workItem from="1579073895382" duration="739000" />
+      <workItem from="1579075576284" duration="936000" />
+      <workItem from="1579078869906" duration="937000" />
+      <workItem from="1579080234214" duration="1073000" />
+      <workItem from="1579081440199" duration="1196000" />
+      <workItem from="1579082671586" duration="799000" />
+      <workItem from="1579084773510" duration="325000" />
+      <workItem from="1579086100426" duration="751000" />
+      <workItem from="1579141158509" duration="964000" />
+      <workItem from="1579142383496" duration="635000" />
+      <workItem from="1579143604222" duration="1165000" />
+      <workItem from="1579144831471" duration="1115000" />
+      <workItem from="1579146749787" duration="1133000" />
+      <workItem from="1579150042936" duration="267000" />
+      <workItem from="1579163665967" duration="1173000" />
+      <workItem from="1579164876955" duration="1051000" />
+      <workItem from="1579169407146" duration="794000" />
+      <workItem from="1579170980215" duration="621000" />
+      <workItem from="1579245634715" duration="1087000" />
+      <workItem from="1579246862725" duration="1043000" />
+      <workItem from="1579248076854" duration="607000" />
+      <workItem from="1579249287994" duration="966000" />
+      <workItem from="1579257055971" duration="746000" />
+      <workItem from="1579258292661" duration="1084000" />
+      <workItem from="1579351305567" duration="1016000" />
+      <workItem from="1579352515139" duration="1173000" />
+      <workItem from="1579353728582" duration="1050000" />
+      <workItem from="1579359446232" duration="929000" />
+      <workItem from="1579361722640" duration="920000" />
+      <workItem from="1579362940490" duration="484000" />
+      <workItem from="1579488042552" duration="702000" />
+      <workItem from="1579489362962" duration="1130000" />
+      <workItem from="1579491204361" duration="425000" />
+      <workItem from="1579492416134" duration="903000" />
+      <workItem from="1579494113579" duration="966000" />
+      <workItem from="1579495328537" duration="1128000" />
+      <workItem from="1579496544510" duration="745000" />
+      <workItem from="1579497751046" duration="770000" />
+      <workItem from="1579498969205" duration="455000" />
+      <workItem from="1579502576218" duration="1061000" />
+      <workItem from="1579503787733" duration="1112000" />
+      <workItem from="1579505007183" duration="800000" />
+      <workItem from="1579506687856" duration="1171000" />
+      <workItem from="1579507900114" duration="901000" />
+      <workItem from="1579510029357" duration="931000" />
+      <workItem from="1579511278350" duration="1171000" />
+      <workItem from="1579513297870" duration="998000" />
+      <workItem from="1579515123384" duration="1185000" />
+      <workItem from="1579516337444" duration="786000" />
+      <workItem from="1579517556418" duration="1172000" />
+      <workItem from="1579518770895" duration="975000" />
+      <workItem from="1579574587655" duration="785000" />
+      <workItem from="1579575792447" duration="946000" />
+      <workItem from="1579585164318" duration="794000" />
+      <workItem from="1579591808506" duration="33000" />
+      <workItem from="1579593023254" duration="718000" />
+      <workItem from="1579594289531" duration="682000" />
+      <workItem from="1579595574814" duration="1096000" />
+      <workItem from="1579596844020" duration="962000" />
+      <workItem from="1579598091003" duration="987000" />
+      <workItem from="1579599301037" duration="451000" />
+      <workItem from="1579758785197" duration="715000" />
+      <workItem from="1579760015839" duration="1001000" />
+      <workItem from="1579761226888" duration="586000" />
+      <workItem from="1579763111120" duration="1123000" />
+      <workItem from="1579764347066" duration="1161000" />
+      <workItem from="1579765571327" duration="1141000" />
+      <workItem from="1579766781106" duration="616000" />
+      <workItem from="1579767998141" duration="650000" />
+      <workItem from="1579769229664" duration="826000" />
+      <workItem from="1579770447761" duration="607000" />
+      <workItem from="1579772396334" duration="402000" />
+      <workItem from="1579775335580" duration="1171000" />
+      <workItem from="1579776551031" duration="739000" />
+      <workItem from="1579837301658" duration="348000" />
+      <workItem from="1579867110539" duration="59000" />
+      <workItem from="1579958174250" duration="16000" />
+      <workItem from="1580034062784" duration="609000" />
+      <workItem from="1580091098208" duration="1166000" />
+      <workItem from="1580092306881" duration="803000" />
+      <workItem from="1580093554414" duration="1176000" />
+      <workItem from="1580094762170" duration="1155000" />
+      <workItem from="1580095978761" duration="1106000" />
+      <workItem from="1580097192939" duration="1114000" />
+      <workItem from="1580098487261" duration="1172000" />
+      <workItem from="1580099703589" duration="1062000" />
+      <workItem from="1580101697279" duration="1129000" />
+      <workItem from="1580102908875" duration="673000" />
+      <workItem from="1580104577487" duration="169000" />
+      <workItem from="1580107914141" duration="1057000" />
+      <workItem from="1580109123840" duration="1105000" />
+      <workItem from="1580110330016" duration="1185000" />
+      <workItem from="1580111543804" duration="1124000" />
+      <workItem from="1580112756648" duration="1050000" />
+      <workItem from="1580113974319" duration="718000" />
+      <workItem from="1580115565153" duration="1015000" />
+      <workItem from="1580116805685" duration="663000" />
+      <workItem from="1580118398737" duration="945000" />
+      <workItem from="1580119623557" duration="785000" />
+      <workItem from="1580120929417" duration="1155000" />
+      <workItem from="1580122146120" duration="1145000" />
+      <workItem from="1580178279034" duration="1001000" />
+      <workItem from="1580179478963" duration="1165000" />
+      <workItem from="1580180724069" duration="969000" />
+      <workItem from="1580181985574" duration="1038000" />
+      <workItem from="1580183276881" duration="945000" />
+      <workItem from="1580184526671" duration="1183000" />
+      <workItem from="1580185733369" duration="861000" />
+      <workItem from="1580186965451" duration="670000" />
+      <workItem from="1580188173347" duration="730000" />
+      <workItem from="1580265285592" duration="243000" />
+      <workItem from="1580266852584" duration="994000" />
+      <workItem from="1580268061186" duration="1048000" />
+      <workItem from="1580269269458" duration="656000" />
+      <workItem from="1580294891570" duration="365000" />
+      <workItem from="1580296724178" duration="296000" />
+      <workItem from="1580352002510" duration="1148000" />
+      <workItem from="1580353217390" duration="1149000" />
+      <workItem from="1580354465766" duration="1161000" />
+      <workItem from="1580355691433" duration="1173000" />
+      <workItem from="1580356898024" duration="1101000" />
+      <workItem from="1580358111782" duration="1145000" />
+      <workItem from="1580359477234" duration="1116000" />
+      <workItem from="1580360690057" duration="508000" />
+      <workItem from="1580361902632" duration="799000" />
+      <workItem from="1580383782237" duration="81000" />
+      <workItem from="1580440604961" duration="1179000" />
+      <workItem from="1580441815686" duration="954000" />
+      <workItem from="1580443029895" duration="1141000" />
+      <workItem from="1580444240882" duration="848000" />
+      <workItem from="1580452767019" duration="1035000" />
+      <workItem from="1580453982541" duration="1177000" />
+      <workItem from="1580455194113" duration="1102000" />
+      <workItem from="1580456412574" duration="1181000" />
+      <workItem from="1580457618992" duration="1161000" />
+      <workItem from="1580458832119" duration="102000" />
+      <workItem from="1580460724712" duration="920000" />
+      <workItem from="1580461931331" duration="753000" />
+      <workItem from="1580697482816" duration="918000" />
+      <workItem from="1580698686775" duration="1155000" />
+      <workItem from="1580699899346" duration="1017000" />
+      <workItem from="1580701118279" duration="1047000" />
+      <workItem from="1580702342627" duration="993000" />
+      <workItem from="1580703561092" duration="621000" />
+      <workItem from="1580717024548" duration="356000" />
+      <workItem from="1580726601595" duration="627000" />
+      <workItem from="1580729567154" duration="605000" />
+      <workItem from="1580786680657" duration="601000" />
+      <workItem from="1580798523179" duration="855000" />
+      <workItem from="1580800238592" duration="1182000" />
+      <workItem from="1580801449347" duration="1023000" />
+      <workItem from="1580802893501" duration="931000" />
+      <workItem from="1580804106027" duration="599000" />
+      <workItem from="1580805413197" duration="71000" />
+      <workItem from="1580808198455" duration="835000" />
+      <workItem from="1580809458200" duration="285000" />
+      <workItem from="1580812060476" duration="872000" />
+      <workItem from="1580872913447" duration="451000" />
+      <workItem from="1580877807129" duration="897000" />
+      <workItem from="1580881547995" duration="940000" />
+      <workItem from="1580882785083" duration="596000" />
+      <workItem from="1580886893936" duration="668000" />
+      <workItem from="1580888431836" duration="883000" />
+      <workItem from="1580892084428" duration="412000" />
+      <workItem from="1581303891001" duration="645000" />
+      <workItem from="1581323709214" duration="835000" />
+      <workItem from="1581324968876" duration="731000" />
+      <workItem from="1581327028544" duration="599000" />
+      <workItem from="1581329752297" duration="239000" />
+      <workItem from="1581391480335" duration="836000" />
+      <workItem from="1581392945992" duration="993000" />
+      <workItem from="1581476915956" duration="599000" />
+      <workItem from="1581488995526" duration="117000" />
+      <workItem from="1581492308327" duration="1151000" />
+      <workItem from="1581493522531" duration="951000" />
+      <workItem from="1581494727517" duration="76000" />
+      <workItem from="1581502440883" duration="1073000" />
+      <workItem from="1581503650104" duration="1039000" />
+      <workItem from="1581506120750" duration="333000" />
+      <workItem from="1581509235431" duration="746000" />
+      <workItem from="1581561485271" duration="782000" />
+      <workItem from="1581562902560" duration="421000" />
+      <workItem from="1581564106497" duration="1191000" />
+      <workItem from="1581565320320" duration="844000" />
+      <workItem from="1581567058417" duration="785000" />
+      <workItem from="1581568268301" duration="914000" />
+      <workItem from="1581569951188" duration="562000" />
+      <workItem from="1581673704295" duration="745000" />
+      <workItem from="1581845660374" duration="909000" />
+      <workItem from="1581910734153" duration="821000" />
+      <workItem from="1581912528667" duration="782000" />
+      <workItem from="1581913847083" duration="325000" />
+      <workItem from="1581915099798" duration="851000" />
+      <workItem from="1581918612900" duration="1099000" />
+      <workItem from="1581921034896" duration="1055000" />
+      <workItem from="1581922328774" duration="838000" />
+      <workItem from="1581923626778" duration="1036000" />
+      <workItem from="1581924902520" duration="790000" />
+      <workItem from="1581926119638" duration="1117000" />
+      <workItem from="1581929042040" duration="887000" />
+      <workItem from="1582010300504" duration="35000" />
+      <workItem from="1582081174734" duration="1108000" />
+      <workItem from="1582082388390" duration="1017000" />
+      <workItem from="1582083601811" duration="931000" />
+      <workItem from="1582084816231" duration="814000" />
+      <workItem from="1582086100040" duration="971000" />
+      <workItem from="1582087304817" duration="720000" />
+      <workItem from="1582095407138" duration="295000" />
+      <workItem from="1582101984531" duration="1052000" />
+      <workItem from="1582103377622" duration="82000" />
+      <workItem from="1582104966893" duration="1110000" />
+      <workItem from="1582106339761" duration="999000" />
+      <workItem from="1582107702393" duration="363000" />
+      <workItem from="1582167898443" duration="596000" />
+      <workItem from="1582170227917" duration="133000" />
+      <workItem from="1582184780914" duration="703000" />
+      <workItem from="1582185995731" duration="1160000" />
+      <workItem from="1582187205635" duration="1065000" />
+      <workItem from="1582188472211" duration="558000" />
+      <workItem from="1582190285251" duration="1009000" />
+      <workItem from="1582191560894" duration="1018000" />
+      <workItem from="1582192955927" duration="1044000" />
+      <workItem from="1582194291698" duration="1114000" />
+      <workItem from="1582253969447" duration="134000" />
+      <workItem from="1582258267559" duration="614000" />
+      <workItem from="1582269351525" duration="1164000" />
+      <workItem from="1582270597664" duration="499000" />
+      <workItem from="1582274742869" duration="759000" />
+      <workItem from="1582511152396" duration="903000" />
+      <workItem from="1582512341516" duration="1100000" />
+      <workItem from="1582513551764" duration="1064000" />
+      <workItem from="1582514763374" duration="1048000" />
+      <workItem from="1582515989998" duration="1020000" />
+      <workItem from="1582517198385" duration="499000" />
+      <workItem from="1582519113275" duration="36000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="390753000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24244833" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3285968" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3285968" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TypeScript" order="11" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24939272" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/assets/api/outlook/inbox.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/api/langs/languages.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/routes/forms/components/wizards/step/Personal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12750">
+          <caret line="763" column="119" selection-start-line="763" selection-start-column="119" selection-end-line="763" selection-end-column="119" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/routes/forms/components/wizards/step/Family.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2448">
+          <caret line="150" column="128" selection-start-line="150" selection-start-column="128" selection-end-line="150" selection-end-column="128" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/routes/approval/components/AllTable2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="376" column="84" selection-start-line="376" selection-start-column="35" selection-end-line="376" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/routes/approval/components/Underwriting.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="578" column="77" selection-start-line="578" selection-start-column="28" selection-end-line="578" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/routes/approval/components/Rejected.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="313" column="84" selection-start-line="313" selection-start-column="35" selection-end-line="313" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/routes/approval/components/Approved.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="379" column="84" selection-start-line="379" selection-start-column="35" selection-end-line="379" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/routes/approval/components/Send.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="339" column="84" selection-start-line="339" selection-start-column="84" selection-end-line="339" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/app/routes/risklevel/components/FormRiskLevel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="331" column="158" selection-start-line="331" selection-start-column="158" selection-end-line="331" selection-end-column="158" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/app/routes/ui/containers/icons/FlagIcons.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6758">
+          <caret line="525" column="40" selection-start-line="525" selection-start-column="40" selection-end-line="525" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/api/langs/id.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3315">
+          <caret line="195" column="39" selection-start-line="195" selection-start-column="39" selection-end-line="195" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/classnames/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/i18n/LanguageActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/common/Header.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1496">
+          <caret line="101" column="17" selection-start-line="101" selection-start-column="17" selection-end-line="101" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/routes/ui/containers/icons/FlagIcons.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1394">
+          <caret line="84" column="38" selection-start-line="84" selection-start-column="38" selection-end-line="84" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/routes/forms/components/wizards/step/Business.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3791">
+          <caret line="229" column="80" selection-start-line="229" selection-start-column="80" selection-end-line="229" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/routes/forms/components/wizards/step/Bank.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3604">
+          <caret line="217" column="123" selection-start-line="217" selection-start-column="80" selection-end-line="217" selection-end-column="123" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/i18n/LanguageSelector.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/routes/roulesscoring/ListRoules.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="682">
+          <caret line="87" column="31" selection-start-line="87" selection-start-column="17" selection-end-line="87" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/routes/forms/components/wizards/step/Summarys.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1377">
+          <caret line="156" selection-start-line="156" selection-end-line="156" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/routes/new-app/components/ListApplication.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="935">
+          <caret line="70" column="32" selection-start-line="70" selection-start-column="16" selection-end-line="70" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/routes/roulesscoring/components/RoulesScoring.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="63" column="32" selection-start-line="63" selection-start-column="32" selection-end-line="63" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/routes/roulesscoring/components/FormRoulesScoring.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3026">
+          <caret line="184" column="16" selection-start-line="184" selection-start-column="16" selection-end-line="184" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/routes/loanproduct/components/LoanProduct.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="61" column="33" selection-start-line="61" selection-start-column="33" selection-end-line="61" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/routes/risklevel/components/RiskLevel.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/routes/risklevel/components/FormRiskLevel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2992">
+          <caret line="181" column="46" selection-start-line="181" selection-start-column="20" selection-end-line="181" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/routes/rulesfilter/components/RulesFilter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1071">
+          <caret line="71" column="16" selection-start-line="71" selection-start-column="16" selection-end-line="71" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/config/FunctionGlobal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/routes/loanproduct/components/FormLoanProduct.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="45" column="33" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/api/graphs/morris.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="988" column="4" selection-start-line="988" selection-start-column="4" selection-end-line="988" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/routes/dashboard/containers/Dashboard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2720">
+          <caret line="172" column="25" selection-start-line="172" selection-start-column="25" selection-end-line="172" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/routes/graphs/containers/ChartJs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="29" column="72" selection-start-line="29" selection-start-column="72" selection-end-line="29" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/routes/syncdata/components/SyncData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="57" column="26" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/routes/forms/components/wizards/step/Address.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5831">
+          <caret line="351" column="23" selection-start-line="351" selection-start-column="23" selection-end-line="351" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/routes/forms/components/wizards/Type/TypeCity.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2312">
+          <caret line="143" column="26" selection-start-line="143" selection-start-column="26" selection-end-line="143" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/config/baseUrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1156">
+          <caret line="68" column="71" selection-start-line="68" selection-start-column="53" selection-end-line="68" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/routes/graphs/containers/MorrisCharts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2278">
+          <caret line="142" column="173" selection-start-line="142" selection-start-column="102" selection-end-line="142" selection-end-column="173" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/graphs/morris/MorrisGraph.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/forms/commons/FieldCollateral.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/routes/forms/components/wizards/Type/typeDistrict.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="42" column="12" selection-start-line="42" selection-start-column="12" selection-end-line="42" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/routes/forms/components/wizards/CollateralRealEstate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3570">
+          <caret line="222" selection-start-line="222" selection-end-line="222" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/routes/rulesfilter/components/FormRulesFilter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6001">
+          <caret line="366" column="44" selection-start-line="366" selection-start-column="16" selection-end-line="366" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/config/ConfigParam.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="20" column="24" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/api/graphs/chartjs.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1224">
+          <caret line="72" column="3" selection-start-line="72" selection-start-column="3" selection-end-line="72" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/graphs/chartjs/ChartJsGraph.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/routes/forms/components/wizards/CollateralBank.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="219" column="17" lean-forward="true" selection-start-line="219" selection-start-column="17" selection-end-line="219" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/routes/forms/components/wizards/step/Loan.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1326">
+          <caret line="85" column="29" selection-start-line="85" selection-start-column="8" selection-end-line="85" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/css/otpui.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="49" column="1" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/routes/auth/containers/Login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-848">
+          <caret line="89" column="31" lean-forward="true" selection-start-line="89" selection-start-column="31" selection-end-line="89" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

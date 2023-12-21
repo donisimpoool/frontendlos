@@ -1,0 +1,69 @@
+{
+  "items": [
+    {
+      "title": "Dashboard",
+      "route": "/dashboard",
+      "icon": "fa fa-lg fa-fw fa-home",
+      "menuitem":[
+        {
+          "title": "Dashboard",
+          "route": "/dashboard",
+          "icon": "fa fa-lg fa-fw fa-home"
+        }
+      ]
+    },{
+      "title" : "Application",
+      "route" : "/application",
+      "icon" : "fa fa-lg fa-fw fa-check-circle",
+      "menuitem":[
+        {
+          "title" : "Application",
+          "route" : "/application",
+          "icon" : "fa fa-lg fa-fw fa-check-circle"
+        }
+      ]
+    },
+    {
+      "title" : "Approval",
+      "route" : "/approval-process",
+      "icon" : "fa fa-lg fa-fw fa-check-circle",
+      "menuitem":[
+        {
+          "title" : "Approval Process",
+          "route" : "/approval-process",
+          "icon" : "fa fa-lg fa-fw fa-check-circle"
+        }
+      ]
+    },
+
+    {
+      "title" : "Master",
+      "route" : "/roulesscoring",
+      "icon" : "fa fa-lg fa-fw fa-check-circle",
+      "menuitem":[
+        {
+          "title" : "Rules Scoring",
+          "route" : "/roulesscoring",
+          "icon" : "fa fa-lg fa-fw fa-check-circle"
+        },{
+          "title" : "Loan Product",
+          "route" : "/loanproduct",
+          "icon" : "fa fa-lg fa-fw fa-check-circle"
+        },{
+          "title" : "Bank",
+          "route" : "/bank",
+          "icon" : "fa fa-lg fa-fw fa-check-circle"
+        },{
+          "title" : "Risk Level",
+          "route" : "/risklevel",
+          "icon" : "fa fa-lg fa-fw fa-check-circle"
+        },{
+          "title" : "Rules Filter",
+          "route" : "/rulesfilter",
+          "icon" : "fa fa-lg fa-fw fa-check-circle"
+        }
+      ]
+    }
+
+  ]
+}
