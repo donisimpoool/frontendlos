@@ -38,7 +38,7 @@
 
     {
       "title" : "Master",
-      "route" : "/roulesscoring",
+      "route" : "",
       "icon" : "fa fa-lg fa-fw fa-check-circle",
       "menuitem":[
         {
@@ -60,6 +60,22 @@
         },{
           "title" : "Rules Filter",
           "route" : "/rulesfilter",
+          "icon" : "fa fa-lg fa-fw fa-check-circle"
+        },{
+          "title" : "Sync Data",
+          "route" : "/syncdata",
+          "icon" : "fa fa-lg fa-fw fa-check-circle"
+        }
+      ]
+    },
+    {
+      "title" : "Admin",
+      "route" : "",
+      "icon" : "fa fa-lg fa-fw fa-check-circle",
+      "menuitem":[
+        {
+          "title" : "User",
+          "route" : "/user",
           "icon" : "fa fa-lg fa-fw fa-check-circle"
         }
       ]

@@ -50,47 +50,47 @@ class Dashboard extends React.Component {
 
     }
   componentDidMount() {
-      const session = localStorage.getItem(keyset);
-      if(session){
-          var params = {
-              loanProductId: "",
-              loanDescription: "", loanName: ""
-          };
-          this.setState({listitemstopfive: params});
-          params = {
-              loanID: "",
-              loanname: "", loandesc: "", amount: 0, appall: 0, appapprove: 0, appunderwriting: 0
-          };
-          this.setState({listreangeamount: params});
+      // const session = localStorage.getItem(keyset);
+      // if(session){
+      //     var params = {
+      //         loanProductId: "",
+      //         loanDescription: "", loanName: ""
+      //     };
+      //     this.setState({listitemstopfive: params});
+      //     params = {
+      //         loanID: "",
+      //         loanname: "", loandesc: "", amount: 0, appall: 0, appapprove: 0, appunderwriting: 0
+      //     };
+      //     this.setState({listreangeamount: params});
 
-          var url = suburllistgraph;
-          const otherPram = {
-              method: "GET",
-              headers: headers
-          }
+      //     var url = suburllistgraph;
+      //     const otherPram = {
+      //         method: "GET",
+      //         headers: headers
+      //     }
 
-          fetch(url, otherPram)
-              .then(response => response.json())
-              .then(json => {
-                  var value = this.state.datagraph;
-                  value.datagraphdonuts = json.data.donuts
-                  value.listgraph = json.data.graph;
-                  // value.jmlapplied = json.data.donuts.jmlapplied
-                  // value.jmlapprove = json.data.donuts.jmlapprove
-                  // value.jmlpending = json.data.donuts.jmlpending
-                  this.setState(value);
-                  // alert("json.data.donuts.jmlapplied : "+json.data.donuts.jmlapplied)
-                  // console.log("json.data.donuts : "+JSON.stringify(json.data.graph))
-                  // this.setState({listgraph: json.data.graph}) //, {datagraphdonuts: json.data.donuts})
-                  // alert("json.data.donuts.jmlapplied : "+json.data.donuts.jmlapplied)
+      //     fetch(url, otherPram)
+      //         .then(response => response.json())
+      //         .then(json => {
+      //             var value = this.state.datagraph;
+      //             value.datagraphdonuts = json.data.donuts
+      //             value.listgraph = json.data.graph;
+      //             // value.jmlapplied = json.data.donuts.jmlapplied
+      //             // value.jmlapprove = json.data.donuts.jmlapprove
+      //             // value.jmlpending = json.data.donuts.jmlpending
+      //             this.setState(value);
+      //             // alert("json.data.donuts.jmlapplied : "+json.data.donuts.jmlapplied)
+      //             // console.log("json.data.donuts : "+JSON.stringify(json.data.graph))
+      //             // this.setState({listgraph: json.data.graph}) //, {datagraphdonuts: json.data.donuts})
+      //             // alert("json.data.donuts.jmlapplied : "+json.data.donuts.jmlapplied)
                   
-                  // this.setState({datagraphdonuts: json.data.donuts})
-              })
+      //             // this.setState({datagraphdonuts: json.data.donuts})
+      //         })
 
-          // this.props.fetchToken();
-      }else{
-          window.location.href = "/#/login";
-      }
+      //     // this.props.fetchToken();
+      // }else{
+      //     window.location.href = "/#/login";
+      // }
   }
   onChangeTimespan = (e) => {
     var str = e.target.value;

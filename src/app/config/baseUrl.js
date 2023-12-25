@@ -1,6 +1,12 @@
 export var keyset = 'LOSSYSTEM';
 export var auth = 'Basic MKqp!ncc2=Ix9Uy=';
-export var url = 'http://localhost:8088/los/api'
+export const url = 'http://localhost:8088/los/api'
+
+
+// New
+export const loginURL = url+'/v1/login'
+//
+
 // export var url = 'https://demo.simpool.id:8088/los/api'
 export var suburllistrules = url+'/roules/v1/getlistpage'
 export var suburlalllistrules = url+'/roules/v1/getlist'

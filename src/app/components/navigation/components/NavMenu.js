@@ -34,12 +34,13 @@ function addId(item) {
 }
 
   // const navItems = require('../../../config/navigation.json').items.map(addId);
- var navItems = [];//info.listmenu.items.map(addId);//require('../../../config/navigation2.json').items.map(addId);
+//  var navItems = [];//info.listmenu.items.map(addId);//require('../../../config/navigation2.json').items.map(addId);
+ var navItems = require('../../../config/navigation2.json').items.map(addId);
 
 export default class NavMenu extends React.Component {
 
   componentWillMount() {
-      navItems = JSON.parse(DecrypsCode(localStorage.getItem(keyset))).listmenu.items.map(addId)
+      // navItems = JSON.parse(DecrypsCode(localStorage.getItem(keyset))).listmenu.items.map(addId)
     store.dispatch(navigationInit(navItems))
   }
 

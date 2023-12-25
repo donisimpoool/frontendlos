@@ -1,13 +1,14 @@
 import React from 'react'
-
+import { hashHistory } from 'react-router'
 import UiValidate from '../../../components/forms/validation/UiValidate'
-import {suburlLogin,keyset,url,auth} from "../../../config/baseUrl";
+import {suburlLogin,keyset,url,auth, loginURL} from "../../../config/baseUrl";
 import {corsEnabled} from "../../../config/FunctionGlobal";
 import {EncrypsCode,DecrypsCode} from "../../../config/Encrypt";
 import '../../../../assets/css/spinnercycle.css'
 import '../../../../assets/css/formoverlay.css'
 import '../../../../assets/css/otpui.css'
-
+import { fetchHandler } from '../../../config/Utils';
+//s
 export var info = {
     name:"",
     id:"",
@@ -65,6 +66,35 @@ export default class Login extends React.Component {
     componentDidMount() {
 
     }
+    loginxxx(){
+      let user = this.state.formlogin.user;
+      let password = this.state.formlogin.password;
+      let obj = new Object();
+      obj.user = user;
+      obj.password = password;
+
+      fetch(loginURL,
+        {
+            method: 'POST',
+            headers: {
+                // 'Authorization': auth,
+                'content-type': 'application/json'
+            },
+            // mode:'no-cors',,
+            body: JSON.stringify(obj)
+
+        })
+        .then(response => response.json())
+        .then(appList => {
+          // alert(appList);
+          hashHistory.push("/application");
+          // window.location.href = "/#/dashboard/analytics";
+        }).catch((error) => {
+          console.log(error)
+        });
+    }
+
+
     login(){
         this.funconverlay("show")
         info.name = ''
@@ -196,44 +226,86 @@ export default class Login extends React.Component {
 
           <div id="content" className="container">
 
-            <div className="row">
+          <div className="well padding-7" style={{width:'350px',transform:'translate(100%, 30%)'}}>
+          <UiValidate>
+          <form action="#/dashboard" id="login-form" className="smart-form client-form">
+          <header>
+            Sign In
+          </header>
+
+          <section>
+              <label className="label">User</label>
+              <label className="input"> <i className="icon-append fa fa-user"/>
+                <input type="email" name="email" data-smart-validate-input="" data-required=""
+                        onChange={this.onchangeuser.bind(this)}
+                />
+                <b className="tooltip tooltip-top-right"><i className="fa fa-user txt-color-teal"/>
+                  Please enter email address/username</b></label>
+            </section>
+
+            <section>
+              <label className="label">Password</label>
+              <label className="input"> <i className="icon-append fa fa-lock"/>
+                <input type="password" name="password" data-smart-validate-input="" data-required=""
+                        data-minlength="3" data-maxnlength="20"
+                        data-message="Please enter your email password" onChange={this.onchangepassword.bind(this)} />
+                <b className="tooltip tooltip-top-right"><i className="fa fa-lock txt-color-teal"/> Enter
+                  your password</b> </label>
+                  
+            </section>
+
+            <footer>
+              <button type="submit" onClick={this.loginxxx.bind(this)} className="btn btn-primary">
+                          Sign in
+                </button>
+                </footer>
+            
+          <fieldset>
+
+          </fieldset>
+          </form>
+          </UiValidate>
+          </div>
+
+            <div className="row" hidden={true}>
               <div className="col-xs-12 col-sm-12 col-md-7 col-lg-8 hidden-xs hidden-sm">
-                {/*<h1 className="txt-color-red login-header-big">SmartAdmin</h1>*/}
+                <h1 className="txt-color-red login-header-big">SmartAdmin</h1>
 
                 <div className="hero">
                   <div className="pull-left login-desc-box-l">
-                    {/*<h4 className="paragraph-header">It's Okay to be Smart. Experience the simplicity of SmartAdmin,*/}
-                      {/*everywhere you go!</h4>*/}
+                    <h4 className="paragraph-header">It's Okay to be Smart. Experience the simplicity of SmartAdmin,
+                      everywhere you go!</h4>
 
                     <div className="login-app-icons">
-                      {/*<a href="#/dashboard" className="btn btn-danger btn-sm">Frontend Template</a>*/}
+                      <a href="#/dashboard" className="btn btn-danger btn-sm">Frontend Template</a>
                       <span> </span>
-                      {/*<a href="#/smartadmin/different-versions.html" className="btn btn-danger btn-sm">Find out more</a>*/}
+                      <a href="#/smartadmin/different-versions.html" className="btn btn-danger btn-sm">Find out more</a>
                     </div>
                   </div>
-                  {/*<img src="assets/img/demo/iphoneview.png" className="pull-right display-image" alt=""*/}
-                       {/*style={{width: '210px'}}/>*/}
+                  <img src="assets/img/demo/iphoneview.png" className="pull-right display-image" alt=""
+                       style={{width: '210px'}}/> 
                 </div>
                 <div className="row">
                   <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                    {/*<h5 className="about-heading">About SmartAdmin - Are you up to date?</h5>*/}
+                    <h5 className="about-heading">About SmartAdmin - Are you up to date?</h5>
 
-                    {/*<p>*/}
-                      {/*Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque*/}
-                      {/*laudantium, totam rem aperiam, eaque ipsa.*/}
-                    {/*</p>*/}
+                    <p>
+                      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                      laudantium, totam rem aperiam, eaque ipsa.
+                    </p>
                   </div>
                   <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                    {/*<h5 className="about-heading">Not just your average template!</h5>*/}
+                    <h5 className="about-heading">Not just your average template!</h5>
 
-                    {/*<p>*/}
-                      {/*Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta*/}
-                      {/*nobis est eligendi voluptatem accusantium!*/}
-                    {/*</p>*/}
+                    <p>
+                      Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta
+                      nobis est eligendi voluptatem accusantium!
+                    </p>
                   </div>
                 </div>
               </div> 
-               
+
+              {/* <div className="col-xs-12 col-sm-12 col-md-5 col-lg-4">  */}
               <div className="col-xs-12 col-sm-12 col-md-5 col-lg-4">
                 <div className="well no-padding">
                   <UiValidate>

@@ -15,7 +15,6 @@ export default class SmartMenuItem extends React.Component {
   render() {
     const item = this.props.item;
 
-
     const title = !item.parent ?
       <span className="menu-item-parent"><Msg phrase={item.title}/></span> :
       <Msg phrase={item.title}/>;
@@ -45,7 +44,7 @@ export default class SmartMenuItem extends React.Component {
                         <Link to={eventmenu.route} title={eventmenu.title} activeClassName="active">
                             {icon1} {title1} {badge}
                         </Link>
-                    var childItems1 = eventmenu.items ? <SmartMenuList items={eventmenu.items}/> : null;
+                    var childItems1 = eventmenu.menuitem ? <SmartMenuList items={eventmenu.menuitem}/> : null;
                     return <li className={liClassName1}>{link}{childItems1}</li>;
                 })}
             </ul>
