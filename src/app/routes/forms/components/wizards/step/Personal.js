@@ -13,13 +13,14 @@ import {suburlFindCustomer, suburlsubmitapp,suburllistreligion} from "../../../.
 import {longToDate} from "../../../../../config/FunctionGlobal";
 import {headers} from "../../../../../config/ConfigParam";
 
-export var personelvalue = {fullname: "",
+export var personelvalue = {
+    names: "",
     mobilephone:"",
     landlinephone:"",
     placeofbirth:"",
-    dateofbirth:0,
+    dateofbirthtime:0,
     gender:"",
-    idtype:"KTP",
+    typeid:"KTP",
     idnumber:"",
     education:"",
     maritalstatus:"",
@@ -29,8 +30,8 @@ export var personelvalue = {fullname: "",
     customerid:"",
     religionid:"",
 taxnumber:""};
-export var fullname='',mobilephone='',landline='',placeofbirth='',dateofbirth='',Gender='',maritalstatus='';
-export var idtype='',idnumber='',education='',email='';
+export var names='',mobilephone='',landline='',placeofbirth='',dateofbirthtime='',Gender='',maritalstatus='';
+export var typeid='',idnumber='',education='',email='';
 var flag = false;
 var mydatebirth = "";
 var custid = "";
@@ -43,13 +44,13 @@ export default class Personal extends React.Component{
     this.state = {
       personal: this.props.personal_state,
         valuepersonal:{
-            fullname: "",
+            names: "",
             mobilephone:"",
             landlinephone:"",
             placeofbirth:"",
-            dateofbirth:0,
+            dateofbirthtime:0,
             gender:"",
-            idtype:"KTP",
+            typeid:"KTP",
             idnumber:"",
             education:"",
             maritalstatus:"",
@@ -86,11 +87,11 @@ export default class Personal extends React.Component{
         personelvalue =  this.state.valuepersonal;
     }
   onchangeName(e){
-      fullname='';
+      names='';
       var str = e.target.value;
-      fullname=str;
+      names=str;
       var value = this.state.valuepersonal;
-      value.fullname = str;
+      value.names = str;
       this.setState(value);
       personelvalue = this.state.valuepersonal;
       flag = true;
@@ -112,7 +113,7 @@ export default class Personal extends React.Component{
         personelvalue = this.state.valuepersonal;
         flag = true;
     }
-    onchangeMobilePhone(e){
+    onchangemobilephone(e){
         mobilephone= '';
         var str = e.target.value;
         mobilephone = str;
@@ -122,7 +123,7 @@ export default class Personal extends React.Component{
         personelvalue = this.state.valuepersonal;
         flag = true;
     }
-    onchangeLandLinePhone(e){
+    onchangelandlinephone(e){
         landline = '';
         var str = e.target.value;
         landline = str;
@@ -144,11 +145,11 @@ export default class Personal extends React.Component{
   onDate(e){ 
     // const value = `${e.target.value};T00:00:00.000+07:00`
     var str = e.target.value;
-    dateofbirth = str;
+    dateofbirthtime = str;
     var value = this.state.valuepersonal;
     var dt = new Date(str);
     str = dt.getTime();
-    value.dateofbirth = str;
+    value.dateofbirthtime = str;
     this.setState(value);
     personelvalue = this.state.valuepersonal;
       flag = true;
@@ -166,11 +167,11 @@ export default class Personal extends React.Component{
         flag = true;
     }
 
-    onChangeIDType(e){
+    onChangetypeid(e){
         var str = e.target.value;
-        idtype = str;
+        typeid = str;
         var value = this.state.valuepersonal;
-        value.idtype = str;
+        value.typeid = str;
         this.setState(value);
         personelvalue = this.state.valuepersonal;
         flag = true;
@@ -257,23 +258,23 @@ export default class Personal extends React.Component{
   }
     setEntity() {
         var entity = this.props.datapersonel;
-         mydatebirth = this.state.valuepersonal.dateofbirth;
+         mydatebirth = this.state.valuepersonal.dateofbirthtime;
 
         if (typeof entity !== "undefined" && !flag){
-            this.state.valuepersonal.fullname = entity.name
+            this.state.valuepersonal.names = entity.name
             this.state.valuepersonal.mobilephone = entity.mobilephone
             this.state.valuepersonal.landlinephone = entity.landlinephone
             this.state.valuepersonal.placeofbirth = entity.placeofbirth
-            this.state.valuepersonal.dateofbirth = entity.dateofbirth
+            this.state.valuepersonal.dateofbirthtime = entity.dateofbirthtime
             this.state.valuepersonal.gender = entity.gender
-            this.state.valuepersonal.idtype = entity.typeid
+            this.state.valuepersonal.typeid = entity.typeid
             this.state.valuepersonal.idnumber = entity.idnumber
             this.state.valuepersonal.education = entity.education
             this.state.valuepersonal.maritalstatus = entity.maritalstatus
             this.state.valuepersonal.numberofdependant = entity.numberofdependant
             this.state.valuepersonal.email = entity.email
             personelvalue = this.state.valuepersonal;
-            fullname = entity.name;
+            names = entity.name;
             mobilephone = entity.mobilephone
             landline = entity.landlinephone
             placeofbirth = entity.placeofbirth
@@ -283,12 +284,12 @@ export default class Personal extends React.Component{
             }
             Gender = strgender
             maritalstatus = entity.maritalstatus
-            idtype = entity.typeid
+            typeid = entity.typeid
             idnumber = entity.idnumber
             education = entity.education
             email = entity.email
         }
-        var tempdate = new Date(this.state.valuepersonal.dateofbirth);
+        var tempdate = new Date(this.state.valuepersonal.dateofbirthtime);
         var month = (tempdate.getMonth() + 1);
         if(month < 10){
             month = "0"+month
@@ -298,14 +299,14 @@ export default class Personal extends React.Component{
             date = "0"+date;
         }
         mydatebirth = tempdate.getFullYear() + "-" + month + "-" + date;
-        dateofbirth = mydatebirth
+        dateofbirthtime = mydatebirth
         flag = false;
     }
     handleclickToogle(){
         this.funconverlay("show")
       var param = {
-          fullname:this.state.valuepersonal.fullname,
-          dateofbirth:this.state.valuepersonal.dateofbirth,
+          names:this.state.valuepersonal.names,
+          dateofbirthtime:this.state.valuepersonal.dateofbirthtime,
           idnumber:this.state.valuepersonal.idnumber
       };
 
@@ -352,20 +353,20 @@ export default class Personal extends React.Component{
             })
             var value = this.state.valuepersonal;
             search.map(function (item) {
-                value.fullname = item.name;
+                value.names = item.name;
                 value.mobilephone = item.mobilephone;
                 value.landlinephone = item.landlinephone;
                 value.placeofbirth = item.placeofbirth;
-                value.dateofbirth = item.dateofbirthlong;
+                value.dateofbirthtime = item.dateofbirthtimelong;
                 value.gender = item.gender;
-                value.idtype = item.typeid;
+                value.typeid = item.typeid;
                 value.idnumber = item.idnumber;
                 value.education = item.education;
                 value.maritalstatus = item.maritalstatus;
                 value.email = item.email;
                 value.cfiid = item.cif_id;
                 value.customerid = item.customerid;
-                mydatebirth = longToDate(item.dateofbirthlong)
+                mydatebirth = longToDate(item.dateofbirthtimelong)
             })
             this.setState(value);
             personelvalue = this.state.valuepersonal;
@@ -489,9 +490,9 @@ export default class Personal extends React.Component{
                              <h4  style={{float:"left"}}><b>{LanguageStore.translate('Full Name')}</b></h4>
                              <span className="text-danger">*</span>
                               <input className="form-control input-lg"
-                                placeholder={LanguageStore.translate('Full Name')} type="text" name="fullName"
+                                placeholder={LanguageStore.translate('Full Name')} type="text" name="names"
                                   data-smart-validate-input="" data-required="" data-minlength="4"
-                                   data-message="Please specify your Full name" value={this.state.valuepersonal.fullname}
+                                   data-message="Please specify your Full name" value={this.state.valuepersonal.names}
                                 onChange={this.onchangeName.bind(this)}
                               />
 
@@ -524,7 +525,7 @@ export default class Personal extends React.Component{
                                 <i className="icon-append fa fa-calendar"/>
                                 <input type="date" className="form-control"
                                        id="datepicker" placeholder= "dd/mm/yyyy"
-                                       name="dateOfBirth"
+                                       name="dateofbirthtime"
                                        data-smart-validate-input="" data-required=""
                                        data-message="Please specify your date of birth" value={mydatebirth}
                                        onChange={this.onDate.bind(this)}
@@ -600,7 +601,7 @@ export default class Personal extends React.Component{
                                <NumberFormat className="form-control input-lg" data-minLength="10"
                                 data-required="" placeholder={LanguageStore.translate('Mobile Phone')}
                                  format=" ############"  name="mobile"  data-maxLength="12" value={this.state.valuepersonal.mobilephone}
-                                  onChange={this.onchangeMobilePhone.bind(this)} required />
+                                  onChange={this.onchangemobilephone.bind(this)} required />
                         </div>
                         <br />
                         <div className="col-xs-2 col-sm-2 col-md-2 col-lg-2">
@@ -624,8 +625,8 @@ export default class Personal extends React.Component{
                              <h4  style={{float:"left"}}><b>{LanguageStore.translate('Landline')}</b></h4>
                               <NumberFormat className="form-control input-lg" data-minlength="4"
                                  placeholder={LanguageStore.translate('Landline')}
-                                 format="############"  name="landlinePhone"  data-minlength="10" data-maxLength="12"
-                                  onChange={this.onchangeLandLinePhone.bind(this)} value={this.state.valuepersonal.landlinephone} />
+                                 format="############"  name="landlinephone" minLength="10" data-maxLength="12"
+                                  onChange={this.onchangelandlinephone.bind(this)} value={this.state.valuepersonal.landlinephone} />
                              
                         </div>
                       </div>
@@ -680,18 +681,18 @@ export default class Personal extends React.Component{
                                   {/*<div className="col-sm-4 col-md-4 col-lg-8">*/}
                                     {/*<div className="inputGroup-sizing-default">*/}
                                         {/*<label className="radio state-error" >*/}
-                                            {/*<input type="radio" name="idType"  */}
-                                              {/*onChange={this.onChangeIDType.bind(this)} value="KTP" checked={this.state.valuepersonal.idtype === 'KTP'}/>*/}
+                                            {/*<input type="radio" name="typeid"  */}
+                                              {/*onChange={this.onChangetypeid.bind(this)} value="KTP" checked={this.state.valuepersonal.typeid === 'KTP'}/>*/}
                                               {/*KTP</label>*/}
                                               {/*&nbsp;&nbsp;&nbsp;&nbsp;*/}
                                               {/*<label className="radio">*/}
-                                              {/*<input type="radio" name="idType" */}
-                                               {/*onChange={this.onChangeIDType.bind(this)} value="SIM" checked={this.state.valuepersonal.idtype === 'SIM'}/>*/}
+                                              {/*<input type="radio" name="typeid" */}
+                                               {/*onChange={this.onChangetypeid.bind(this)} value="SIM" checked={this.state.valuepersonal.typeid === 'SIM'}/>*/}
                                               {/*SIM</label>*/}
                                               {/*&nbsp;&nbsp;&nbsp;&nbsp;*/}
                                               {/*<label className="radio">*/}
-                                              {/*<input type="radio" name="idType" */}
-                                               {/*onChange={this.onChangeIDType.bind(this)} value="Passport" checked={this.state.valuepersonal.idtype === 'Passport'}/>*/}
+                                              {/*<input type="radio" name="typeid" */}
+                                               {/*onChange={this.onChangetypeid.bind(this)} value="Passport" checked={this.state.valuepersonal.typeid === 'Passport'}/>*/}
                                               {/*Passport</label> */}
                                               {/*&nbsp;&nbsp;&nbsp;&nbsp;*/}
                                     {/*</div>*/}

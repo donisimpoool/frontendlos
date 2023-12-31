@@ -6,17 +6,18 @@ import LanguageStore from "../../../../../components/i18n/LanguageStore";
 import {suburllistprovince,suburllistbusiness} from "../../../../../config/baseUrl";
 import {headers} from "../../../../../config/ConfigParam";
 
-export var businessvalue = {companyname: "",
+export var businessvalue = {
+    companyname: "",
     companyaddress:"",
-    province:"0",
+    provinceid:"0",
     division:"",
-    position:"",
+    positions:"",
     duration:"0",
-    totalnumberemp:"0",
+    numberofemployees:"0",
     businessline:"",
     idregencies:"0",
     iddistrict:"0"};
-export var companyname,companyaddress='',provincenamebusiness='',divisionname='',positionname='',durationtime='0',totalnumberemp='0',businessline=''
+export var companyname,companyaddress='',provincenamebusiness='',divisionname='',positionname='',durationtime='0',numberofemployees='0',businessline=''
 export var listposition = [
     {id:'CEO-CFO',name:'CEO-CFO'},
     {id:'uppermanager',name:'Up Manager'},
@@ -46,11 +47,11 @@ export default class Business extends React.Component{
             valuebusiness:{
                 companyname: "",
                 companyaddress:"",
-                province:"0",
+                provinceid:"0",
                 division:"",
-                position:"",
+                positions:"",
                 duration:"0",
-                totalnumberemp:"0",
+                numberofemployees:"0",
                 businessline:"",
                 idregencies:"0",
                 iddistrict:"0"
@@ -101,7 +102,7 @@ export default class Business extends React.Component{
     onchangeprovince(e){
         var str = e.target.value;
         var value = this.state.valuebusiness;
-        value.province = str;
+        value.provinceid = str;
         this.setState(value);
         businessvalue = this.state.valuebusiness;
         this.state.valueProv = str;
@@ -132,7 +133,7 @@ export default class Business extends React.Component{
     onchangeposition(e){
         var str = e.target.value;
         var value = this.state.valuebusiness;
-        value.position = str;
+        value.positions = str;
         this.setState(value);
         businessvalue = this.state.valuebusiness;
         var filterposition = listposition.filter( (item) => {
@@ -155,9 +156,9 @@ export default class Business extends React.Component{
     }
     onchangetotalnumberemp(e){
         var str = e.target.value;
-        totalnumberemp = str;
+        numberofemployees = str;
         var value = this.state.valuebusiness;
-        value.totalnumberemp = str;
+        value.numberofemployees = str;
         this.setState(value);
         businessvalue = this.state.valuebusiness;
         flag = true;
@@ -177,12 +178,12 @@ export default class Business extends React.Component{
         if (typeof entity !== "undefined" && !flag){
             this.state.valuebusiness.companyname = entity.companyname
             this.state.valuebusiness.companyaddress = entity.companyaddress
-            this.state.valuebusiness.province = entity.provinceid
+            this.state.valuebusiness.provinceid = entity.provinceid
             this.state.valueProv = entity.provinceid;
             this.state.valuebusiness.division = entity.division
-            this.state.valuebusiness.position = entity.position
+            this.state.valuebusiness.positions = entity.positions
             this.state.valuebusiness.duration = entity.duration
-            this.state.valuebusiness.totalnumberemp =  entity.numberofemployees
+            this.state.valuebusiness.numberofemployees =  entity.numberofemployees
             this.state.valuebusiness.businessline = entity.businessline
             idregencies = entity.idregencies
             iddistrict = entity.iddistrict
@@ -204,14 +205,14 @@ export default class Business extends React.Component{
                 divisionname = item.value;
             })
             var filterposition = listposition.filter( (item) => {
-                return item.id == entity.position
+                return item.id == entity.positions
             })
             positionname= '';
             filterposition.map(function (item) {
                 positionname = item.name;
             })
             durationtime = entity.duration
-            totalnumberemp = entity.numberofemployees
+            numberofemployees = entity.numberofemployees
             businessline = entity.businessline
             businessvalue = this.state.valuebusiness;
         }
@@ -263,8 +264,8 @@ export default class Business extends React.Component{
 
                             <select className="form-control input-lg"
                                     data-smart-validate-input="" data-required=""
-                                    name="province" defaultValue={""}
-                                    onChange={this.onchangeprovince.bind(this)} value={this.state.valuebusiness.province}
+                                    name="provinceid" defaultValue={""}
+                                    onChange={this.onchangeprovince.bind(this)} value={this.state.valuebusiness.provinceid}
                             >
                                 <option value="0" disabled={true}>{LanguageStore.translate('Choose')}</option>
                                 {
@@ -298,7 +299,7 @@ export default class Business extends React.Component{
 
                                                     <select className="form-control input-lg"
                                                             data-smart-validate-input="" data-required=""
-                                                            name="province" defaultValue={""} value={this.state.valuebusiness.division}
+                                                            name="provinceid" defaultValue={""} value={this.state.valuebusiness.division}
                                                             onChange={this.onchangedivision.bind(this)}
                                                     >
                                                         <option value="" disabled={true}>{LanguageStore.translate('Choose')}</option>
@@ -323,8 +324,8 @@ export default class Business extends React.Component{
                                                 <h4  style={{float:"left"}}><b>{LanguageStore.translate('Position')}</b></h4>
                                                     <select className="form-control input-lg"
                                                         data-smart-validate-input="" data-required=""
-                                                        name="position" defaultValue={"0"}
-                                                        onChange={this.onchangeposition.bind(this)} value={this.state.valuebusiness.position}
+                                                        name="positions" defaultValue={"0"}
+                                                        onChange={this.onchangeposition.bind(this)} value={this.state.valuebusiness.positions}
                                                     >
                                                     <option value="" selected={true}>{LanguageStore.translate('Choose')}</option>
                                                         {
@@ -366,7 +367,7 @@ export default class Business extends React.Component{
                                                                        placeholder={LanguageStore.translate('Number Of Employee')} type="number"
                                                                        name="totalNoEmployees" 
                                                                        onChange={this.onchangetotalnumberemp.bind(this)}
-                                                                       data-smart-validate-input="" value={this.state.valuebusiness.totalnumberemp}
+                                                                       data-smart-validate-input="" value={this.state.valuebusiness.numberofemployees}
                                                                        data-required=""min="0" />
                                                                 </div>
                                                             </div>

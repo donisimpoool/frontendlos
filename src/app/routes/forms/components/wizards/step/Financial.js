@@ -4,14 +4,15 @@ import {businessvalue, divisionname} from "./Business";
 import division from "../../../../../components/forms/commons/division";
 import LanguageStore from "../../../../../components/i18n/LanguageStore";
 
-export var financialvalue = {typeincome: "",
+export var financialvalue = {
+    typeincome: "",
     mainincome:"0",
     sideincome:"0",
     expense:"0",
-    addtionalexpense:"0",
+    additionalexpense:"0",
     vehicleowner:'N',
     typevehicle:''};
-export var typeincome='',mainincome='',sideincome='',expense='',addtionalexpense='',vehicleowner='N',typevehiclefinancial=''
+export var typeincome='',mainincome='',sideincome='',expense='',additionalexpense='',vehicleowner='N',typevehiclefinancial=''
 export var listtypeincome = [
     {id:'employed',name:'Employed'},
     {id:'selfemployed',name:'Self Employed'},
@@ -37,7 +38,7 @@ export default class Financial extends React.Component{
                 mainincome:"0",
                 sideincome:"0",
                 expense:"0",
-                addtionalexpense:"0",
+                additionalexpense:"0",
                 vehicleowner:'N',
                 typevehicle:''
             }
@@ -99,10 +100,10 @@ export default class Financial extends React.Component{
 
       onSideExpense(e){
           var str = e.target.value;
-          addtionalexpense = str;
+          additionalexpense = str;
           str = str.replace(/,/g, "");
           var value = this.state.valuefinancial;
-          value.addtionalexpense = str;
+          value.additionalexpense = str;
           this.setState(value);
           financialvalue = this.state.valuefinancial;
           flag = true
@@ -182,7 +183,7 @@ export default class Financial extends React.Component{
             this.state.valuefinancial.mainincome = entity.mainincome
             this.state.valuefinancial.sideincome = entity.sideincome
             this.state.valuefinancial.expense = entity.expense
-            this.state.valuefinancial.addtionalexpense = entity.additionalexpense
+            this.state.valuefinancial.additionalexpense = entity.additionalexpense
             this.state.valuefinancial.vehicleowner = entity.vehicleowner
             this.state.valuefinancial.typevehicle = entity.typevehicle
             var filtertypeincome = listtypeincome.filter( (item) => {
@@ -197,7 +198,7 @@ export default class Financial extends React.Component{
             mainincome = entity.mainincome
             sideincome = entity.sideincome
             expense = entity.expense
-            addtionalexpense = entity.additionalexpense
+            additionalexpense = entity.additionalexpense
             financialvalue = this.state.valuefinancial;
         }
         flag = false;
@@ -303,7 +304,7 @@ export default class Financial extends React.Component{
                                                             <h4 className="input-number" style={{textAlign:"left"}}><b>{LanguageStore.translate('Additional Expense')}</b> ( IDR )</h4>
                                                                 <NumberFormat className="form-control input-lg" data-minlength="4" data-required=""
                                                                     thousandSeparator={true} placeholder="Input your expense" 
-                                                                    onChange={this.onSideExpense.bind(this)} value={this.state.valuefinancial.addtionalexpense}
+                                                                    onChange={this.onSideExpense.bind(this)} value={this.state.valuefinancial.additionalexpense}
                                                                     name="value" required data-message="Please specify your expense"
                                                                     />     
                                                                  <div className="note">

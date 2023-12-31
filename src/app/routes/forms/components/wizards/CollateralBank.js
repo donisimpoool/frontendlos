@@ -11,13 +11,13 @@ import {info} from "../../../auth/containers/Login";
 import {msglimitfile} from "../../../../config/KosaKata";
 import {DecrypsCode} from "../../../../config/Encrypt";
 
-export var filedocumentbank={filedoc:[],totalsize:0},isuploadfileBank='NO',bankName = '',amount='',currency='',accnumberColateralbank='',duedate='';
+export var filedocumentbank={filedoc:[],totalsize:0},isuploadfileBank='NO',bankName = '',amount='',currency='',accnumberColateralbank='',duedatetime='';
 export var valuecollateraldeposit = {
     bankid:'0',
     amount:'0',
     currency:'',
     accountnumber:'',
-    duedate:0
+    duedatetime:0
 }
 var flag = false,myduedate = "";
 export default class CollateralBank extends React.Component{ 
@@ -35,7 +35,7 @@ export default class CollateralBank extends React.Component{
             amount:'0',
             currency:'',
             accountnumber:'',
-            duedate:0
+            duedatetime:0
         }
       };
 
@@ -88,12 +88,12 @@ export default class CollateralBank extends React.Component{
     }
     onChangeDueDate(e){
         var str = e.target.value;
-        duedate = str;
+        duedatetime = str;
         var dt = new Date(str);
         str = dt.getTime();
-        valuecollateraldeposit.duedate = str;
+        valuecollateraldeposit.duedatetime = str;
         var value = this.state.valuecollateraldeposit;
-        value.duedate = str;
+        value.duedatetime = str;
         this.setState(value);
         flag = true
     }
@@ -200,7 +200,7 @@ export default class CollateralBank extends React.Component{
             currency = entity.currency
             accnumberColateralbank = entity.accountnumber
         }
-        var tempdate = new Date(this.state.valuecollateraldeposit.duedate);
+        var tempdate = new Date(this.state.valuecollateraldeposit.duedatetime);
         var month = (tempdate.getMonth() + 1);
         if(month < 10){
             month = "0"+month
@@ -210,7 +210,7 @@ export default class CollateralBank extends React.Component{
             date = "0"+date;
         }
         myduedate = tempdate.getFullYear() + "-" + month + "-" + date;
-        duedate = myduedate
+        duedatetime = myduedate
         flag = false;
 
     }
@@ -309,7 +309,7 @@ export default class CollateralBank extends React.Component{
                             <div className="inputGroup-sizing-default">
                             <h4 className="input" style={{textAlign:"left"}}><b>{LanguageStore.translate('Due Date')}</b></h4>
                              <input type="date" className="form-control" id="datepicker"
-                                name="duedate"
+                                name="duedatetime"
                                 onChange={this.onChangeDueDate.bind(this)} value={myduedate}
                              />
                             </div>

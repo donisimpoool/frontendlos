@@ -17,7 +17,7 @@ export default class LoanSum extends React.Component{
     // }
     render(){
         var numamount = this.props.loanAmount;
-        numamount = numamount.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,")
+        numamount = new String(numamount).toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,")
         return(
             <div>
                  <div className="row">

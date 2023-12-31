@@ -1,20 +1,21 @@
 import React from 'react'
-// import province from '../../../../../components/forms/commons/province'
+// import secondprovinceid from '../../../../../components/forms/commons/secondprovinceid'
 import SelectUntil from '../SelectUntil';
 
 import district from '../../../../../components/forms/commons/district';
 import TypeCity from '../Type/TypeCity';
-import {Addressvalue, isCollateral, ownershipstatus, provincename} from "./Address";
+import {Addressvalue, isCollateral, secondownershipstatus, provincename} from "./Address";
 import LanguageStore from "../../../../../components/i18n/LanguageStore";
 export var mainaddress2='',provincename2='',postalcode2='',ownershipstatus2='',isCollateral2='';
-export var Addressvalue2 = {mainaddress: "",
-    province:"0",
-    postalcode:"",
-    ownershipstatus:"",
-    collateral:"",
-    idregencies:"0",
-    iddistrict:"0"};
-var flag = false,idcity="0",iddistrict="0";
+export var Addressvalue2 = {
+    secondaddress: "",
+    secondprovinceid:"0",
+    secondpostalcode:"",
+    secondownershipstatus:"",
+    secondusedforcollateral:"",
+    secondidregencies:"0",
+    secondiddistrict:"0"};
+var flag = false,idcity="0",secondiddistrict="0";
 export default class Address2 extends React.Component{ 
 
     constructor(props){
@@ -24,13 +25,13 @@ export default class Address2 extends React.Component{
             valueUntil2: false,
             valueProv:'',
             valueaddress:{
-                mainaddress: "",
-                province:"0",
-                postalcode:"",
-                ownershipstatus:"",
-                collateral:"",
-                idregencies:"0",
-                iddistrict:"0"
+                secondaddress: "",
+                secondprovinceid:"0",
+                secondpostalcode:"",
+                secondownershipstatus:"",
+                secondusedforcollateral:"",
+                secondidregencies:"0",
+                secondiddistrict:"0"
             }
         }
     }
@@ -42,7 +43,7 @@ export default class Address2 extends React.Component{
             isCollateral2 = 'Yes';
         }
         var value = this.state.valueaddress;
-        value.collateral = str;
+        value.secondusedforcollateral = str;
         this.setState(value);
         Addressvalue2 = this.state.valueaddress;
         flag = true
@@ -51,7 +52,7 @@ export default class Address2 extends React.Component{
         var str = e.target.value;
         mainaddress2 = str;
         var value = this.state.valueaddress;
-        value.mainaddress = str;
+        value.secondaddress = str;
         this.setState(value);
         Addressvalue2 = this.state.valueaddress;
         flag = true
@@ -59,7 +60,7 @@ export default class Address2 extends React.Component{
     onChangeOwnershipStatus(e){
         var str = e.target.value;
         var value = this.state.valueaddress;
-        value.ownershipstatus = str;
+        value.secondownershipstatus = str;
         this.setState(value);
         Addressvalue2 = this.state.valueaddress;
         ownershipstatus2 = '';
@@ -75,7 +76,7 @@ export default class Address2 extends React.Component{
     OnChangeProvince(e){
         var str = e.target.value;
         var value = this.state.valueaddress;
-        value.province = str;
+        value.secondprovinceid = str;
         this.state.valueProv = str;
         this.setState(value);
         Addressvalue2 = this.state.valueaddress;
@@ -92,7 +93,7 @@ export default class Address2 extends React.Component{
         var str = e.target.value;
         postalcode2 = str;
         var value = this.state.valueaddress;
-        value.postalcode = str;
+        value.secondpostalcode = str;
         this.setState(value);
         Addressvalue2 = this.state.valueaddress;
         flag = true
@@ -113,14 +114,14 @@ export default class Address2 extends React.Component{
     setEntity() {
         var entity = this.props.dataaddress;
         if (typeof entity !== "undefined" && !flag){
-            this.state.valueaddress.mainaddress = entity.secondaddress
-            this.state.valueaddress.province = entity.secondprovinceid
+            this.state.valueaddress.secondaddress = entity.secondaddress
+            this.state.valueaddress.secondprovinceid = entity.secondprovinceid
             this.state.valueProv = entity.secondprovinceid
             idcity = entity.secondidregencies
-            iddistrict = entity.secondiddistrict
-            this.state.valueaddress.postalcode = entity.secondpostalcode
-            this.state.valueaddress.ownershipstatus = entity.secondownershipstatus
-            this.state.valueaddress.collateral = entity.secondusedforcollateral
+            secondiddistrict = entity.secondiddistrict
+            this.state.valueaddress.secondpostalcode = entity.secondpostalcode
+            this.state.valueaddress.secondownershipstatus = entity.secondownershipstatus
+            this.state.valueaddress.secondusedforcollateral = entity.secondusedforcollateral
             mainaddress2 = entity.secondaddress
             provincename2 = entity.provincesecond.locationName
             postalcode2 = entity.secondpostalcode
@@ -153,7 +154,7 @@ export default class Address2 extends React.Component{
                                 <h4 style={{float:"left"}}><b>{LanguageStore.translate('Additional Address')}</b></h4>
                                 <textarea rows="5" placeholder="Full Address" 
                                 name="currentAddress"
-                                onChange={this.onChangeAddress.bind(this)} value={this.state.valueaddress.mainaddress}
+                                onChange={this.onChangeAddress.bind(this)} value={this.state.valueaddress.secondaddress}
                                  className="form-control input-md" required  data-message="Please specify your address"
                                 id="example-textarea" data-minlength="10" data-maxLength="255">
                                 </textarea>
@@ -170,7 +171,7 @@ export default class Address2 extends React.Component{
 
                             <select className="form-control input-lg"
                                     data-smart-validate-input="" data-required=""
-                                    name="province" defaultValue={""} value={this.state.valueaddress.province}
+                                    name="secondprovinceid" defaultValue={""} value={this.state.valueaddress.secondprovinceid}
                                     onChange={this.OnChangeProvince.bind(this)}
                             >
                                 <option value="0" selected={true}>{LanguageStore.translate('Choose')}</option>
@@ -192,7 +193,7 @@ export default class Address2 extends React.Component{
                     </div>  
                 <TypeCity
                     idcity={idcity}
-                    iddistrict={iddistrict}
+                    secondiddistrict={secondiddistrict}
                     no={'2'}
                     DivState={this.state.valueProv}
                     onChangeAddress= {this.OnChangeProvince.bind(this)}
@@ -206,8 +207,8 @@ export default class Address2 extends React.Component{
                                         placeholder="Postal Code" type="number"
                                         name="postalCode"
                                         onChange={this.onChangePostalCode.bind(this)}
-                                        data-smart-validate-input="" value={this.state.valueaddress.postalcode}
-                                        data-required=""data-minlength="3" data-minlength="5"/>
+                                        data-smart-validate-input="" value={this.state.valueaddress.secondpostalcode}
+                                        data-required=""data-minlength="3" maxLength="5"/>
                                     </div>
                                 </div>
                                 </div>
@@ -218,7 +219,7 @@ export default class Address2 extends React.Component{
                                          <div className="inputGroup-sizing-default">                    
                                                     <h4 ><b>{LanguageStore.translate('Ownership Status')}</b></h4>
                                                 <select className="form-control input-lg"
-                                                    data-smart-validate-input="" data-required="" value={this.state.valueaddress.ownershipstatus}
+                                                    data-smart-validate-input="" data-required="" value={this.state.valueaddress.secondownershipstatus}
                                                     name="dropdown" onChange={this.onChangeOwnershipStatus.bind(this)} defaultValue={"0"}>
                                                     <option value="" selected={true}>{LanguageStore.translate('Choose')}</option>
                                                     {
@@ -236,20 +237,20 @@ export default class Address2 extends React.Component{
                             <div className="row" >
                                     <div className="col-sm-6">
                                     <div className="form-group">
-                                        <h4  style={{float:"left"}}><b>{LanguageStore.translate('Has been used as collateral elsewhere')}</b></h4>
+                                        <h4  style={{float:"left"}}><b>{LanguageStore.translate('Has been used as secondusedforcollateral elsewhere')}</b></h4>
                                         <br/>
                                         <div className="col-xs-4 col-lg-8">
                                     
                                                 <div className="inputGroup-sizing-default">
                                                     <label className="radio state-error">
                                                     <input type="radio" name="radio1s"
-                                                        onChange={this.onchangecollateral.bind(this)} checked={this.state.valueaddress.collateral === 'Y'}
+                                                        onChange={this.onchangecollateral.bind(this)} checked={this.state.valueaddress.secondusedforcollateral === 'Y'}
                                                         value="Y"/>
                                                         {LanguageStore.translate('Yes')}</label>
                                                         &nbsp;&nbsp;&nbsp;&nbsp;
                                                     <label className="radio">
                                                     <input type="radio" name="radio1s"
-                                                        onChange={this.onchangecollateral.bind(this)} checked={this.state.valueaddress.collateral === 'N'}
+                                                        onChange={this.onchangecollateral.bind(this)} checked={this.state.valueaddress.secondusedforcollateral === 'N'}
                                                         value="N"/>
                                                         {LanguageStore.translate('No')}</label>
                                                 </div>

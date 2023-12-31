@@ -4,12 +4,12 @@ import NumberFormat from "react-number-format";
 import {bankvalue, iscc} from "./Bank";
 import LanguageStore from "../../../../../components/i18n/LanguageStore";
 
-export var bankcc = '',numbercc='',typecreditcard='';
+export var bankcc = '',numbercc='',typecredittcard='';
 var flag = false
 export var creditcardvalue={
-    issuerid:'0',
-    numbercreditcard:'',
-    typecreditcard:''
+    bankcc:'0',
+    numbercc:'',
+    typecredittcard:''
 }
 export default class CreditCard extends React.Component{
 
@@ -18,9 +18,9 @@ export default class CreditCard extends React.Component{
         this.state = {
             creditCard: {},
             creditcardvalue:{
-                issuerid:'0',
-                numbercreditcard:'',
-                typecreditcard:''
+                bankcc:'0',
+                numbercc:'',
+                typecredittcard:''
             }
         }
     }
@@ -44,7 +44,7 @@ export default class CreditCard extends React.Component{
         var str = event.target.value;
         bankcc = str
         var value = this.state.creditcardvalue;
-        value.issuerid = str
+        value.bankcc = str
         this.setState(value);
         creditcardvalue = this.state.creditcardvalue
         flag = true
@@ -52,9 +52,9 @@ export default class CreditCard extends React.Component{
 
     onChangeTypeCreditCard(e){
         var str = e.target.value;
-        typecreditcard = str
+        typecredittcard = str
         var value = this.state.creditcardvalue;
-        value.typecreditcard = str;
+        value.typecredittcard = str;
         this.setState(value);
         creditcardvalue = this.state.creditcardvalue;
         flag = true;
@@ -64,7 +64,7 @@ export default class CreditCard extends React.Component{
         var str = event.target.value;
         numbercc = str
         var value = this.state.creditcardvalue;
-        value.numbercreditcard = str
+        value.numbercc = str
         this.setState(value);
         creditcardvalue = this.state.creditcardvalue
         flag = true
@@ -73,12 +73,12 @@ export default class CreditCard extends React.Component{
     setentity(){
         if(!flag){
             var value = this.state.creditcardvalue;
-            this.state.creditcardvalue.numbercreditcard = this.props.numbercc
-            this.state.creditcardvalue.issuerid = this.props.bankcc
-            this.state.creditcardvalue.typecreditcard = this.props.typecreditcard
+            this.state.creditcardvalue.numbercc = this.props.numbercc
+            this.state.creditcardvalue.bankcc = this.props.bankcc
+            this.state.creditcardvalue.typecredittcard = this.props.typecredittcard
             numbercc = this.props.numbercc
             bankcc = this.props.bankcc
-            typecreditcard = this.props.typecreditcard
+            typecredittcard = this.props.typecredittcard
             creditcardvalue = this.state.creditcardvalue
         }
         flag = false;
@@ -95,7 +95,7 @@ export default class CreditCard extends React.Component{
                             <h4 className="input" style={{textAlign:"left"}}><b>{LanguageStore.translate('Issuer')}</b></h4>
                                 <select className="form-control input-lg"
                                         data-smart-validate-input="" data-required=""
-                                        name="bank" defaultValue={""} onChange={this.onChangeIssuer.bind(this)} value={this.state.creditcardvalue.issuerid}
+                                        name="bank" defaultValue={""} onChange={this.onChangeIssuer.bind(this)} value={this.state.creditcardvalue.bankcc}
                                 >
                                     <option value="0" selected={true}>{LanguageStore.translate('Choose')}</option>
                                     {
@@ -119,10 +119,10 @@ export default class CreditCard extends React.Component{
                             <div className="form-group">
                                 <div className="inputGroup-sizing-default">
                                     <h4 className="input" style={{textAlign:"left"}}><b>{LanguageStore.translate('Credit Card Number')}</b></h4>
-                                    <NumberFormat className="form-control input-lg" minLength="10" onChange={this.onChangeCreditNumber.bind(this)} value={this.state.creditcardvalue.numbercreditcard}
+                                    <NumberFormat className="form-control input-lg" minLength="10" onChange={this.onChangeCreditNumber.bind(this)} value={this.state.creditcardvalue.numbercc}
                                                   data-required="" placeholder="Enter your Credit Card Number"
                                                   format="#### #### #### ####"
-                                                  name="numbercreditcard" required/>
+                                                  name="numbercc" required/>
                                     {/* <input className="form-control input-lg"
                                 placeholder="Account Number" type="number"
                                 name="accountNumber" minLength
@@ -142,15 +142,15 @@ export default class CreditCard extends React.Component{
                                 <div className="col-xs-4 col-lg-8">
                                     <div className="inputGroup-sizing-default">
                                         <label className="radio state-error">
-                                            <input type="radio" name="typecreditcard"  value="visa" onChange={this.onChangeTypeCreditCard.bind(this)} checked={this.state.creditcardvalue.typecreditcard == 'visa'} />
+                                            <input type="radio" name="typecredittcard"  value="visa" onChange={this.onChangeTypeCreditCard.bind(this)} checked={this.state.creditcardvalue.typecredittcard == 'visa'} />
                                             Visa</label>
                                         &nbsp;&nbsp;&nbsp;
                                         <label className="radio">
-                                            <input type="radio" name="typecreditcard"  value="mastercard" onChange={this.onChangeTypeCreditCard.bind(this)} checked={this.state.creditcardvalue.typecreditcard == 'mastercard'} />
+                                            <input type="radio" name="typecredittcard"  value="mastercard" onChange={this.onChangeTypeCreditCard.bind(this)} checked={this.state.creditcardvalue.typecredittcard == 'mastercard'} />
                                             Master Card</label>
                                         &nbsp;&nbsp;&nbsp;
                                         <label className="radio">
-                                            <input type="radio" name="typecreditcard"  value="jcb" onChange={this.onChangeTypeCreditCard.bind(this)} checked={this.state.creditcardvalue.typecreditcard == 'jcb'} />
+                                            <input type="radio" name="typecredittcard"  value="jcb" onChange={this.onChangeTypeCreditCard.bind(this)} checked={this.state.creditcardvalue.typecredittcard == 'jcb'} />
                                             JCB</label>
                                     </div>
                                 </div>

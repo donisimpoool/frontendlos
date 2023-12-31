@@ -12,18 +12,18 @@ import {msglimitfile} from "../../../../config/KosaKata";
 import {DecrypsCode} from "../../../../config/Encrypt";
 import {headers} from "../../../../config/ConfigParam";
 
-export var typeofrealestate = '',condition='',yearbuild='',rooms='',addresss='',provincee='',sizee='',proofownership='',filedocumentRealEstate={filedoc:[],totalsize:0},isuploadfileRE='NO'
+export var typeofrealestate = '',conditions='',yearbuild='',rooms='',addresss='',provincee='',sizee='',proofownership='',filedocumentRealEstate={filedoc:[],totalsize:0},isuploadfileRE='NO'
 export var valueCollateralRealEstate = {
     applicationid:"",
     typerealestate:"",
-    condition:"",
-    year:"0",
+    conditions:"",
+    years:"0",
     rooms:"0",
     address:"",
     provinceid:"0",
     regenciesid:"0",
     districtid:"0",
-    size:"",
+    sizes:"",
     proofofownership:""
 }
 export var listtypeofestate=[
@@ -45,32 +45,32 @@ export default class CollateralRealEstate extends React.Component{
         valueCollateralRealEstate : {
             applicationid:"",
             typerealestate:"",
-            condition:"",
-            year:"0",
+            conditions:"",
+            years:"0",
             rooms:"0",
             address:"",
             provinceid:"0",
             regenciesid:"0",
             districtid:"0",
-            size:"",
+            sizes:"",
             proofofownership:""
         }
       };
     uploadFile(event) {
         var listdoc=[];
-        var size = 0
+        var sizes = 0
         for(var i=0; i < event.target.files.length; i++){
             var file = event.target.files[i];
-            size += file.size
+            sizes += file.sizes
             listdoc.push(file)
         }
         var value = this.state.valuedocument;
         value.filedoc = listdoc;
-        value.totalsize = size
+        value.totalsize = sizes
         filedocumentRealEstate = this.state.valuedocument;
         isuploadfileRE='YES';
 
-        var totalsizemb = convertByteToMB(size);
+        var totalsizemb = convertByteToMB(sizes);
         if(totalsizemb > JSON.parse(DecrypsCode(localStorage.getItem(keyset))).sizefile){
             alert(msglimitfile(info.sizefile));
         }
@@ -121,17 +121,17 @@ export default class CollateralRealEstate extends React.Component{
           const value = e.target.value;
           sizee = value;
           var temp = this.state.valueCollateralRealEstate;
-          temp.size = value;
-          valueCollateralRealEstate.size = value
+          temp.sizes = value;
+          valueCollateralRealEstate.sizes = value
           this.setState(temp);
           flag = true;
       }
       onChangeYearBuild(e){
           const value = e.target.value;
-          valueCollateralRealEstate.year = value;
+          valueCollateralRealEstate.years = value;
           yearbuild = value;
           var temp = this.state.valueCollateralRealEstate;
-          temp.year = value;
+          temp.years = value;
           this.setState(temp);
           flag = true;
       }
@@ -180,10 +180,10 @@ export default class CollateralRealEstate extends React.Component{
       }
       onchangecondition(e){
           const value = e.target.value;
-          valueCollateralRealEstate.condition = value;
-          condition = value;
+          valueCollateralRealEstate.conditions = value;
+          conditions = value;
           var temp = this.state.valueCollateralRealEstate;
-          temp.condition = value;
+          temp.conditions = value;
           this.setState(temp);
           flag = true;
       }
@@ -224,11 +224,11 @@ export default class CollateralRealEstate extends React.Component{
             this.state.valueCollateralRealEstate.typerealestate =entity.typerealestate
             valueCollateralRealEstate.typerealestate = entity.typerealestate
 
-            valueCollateralRealEstate.condition = entity.condition
-            this.state.valueCollateralRealEstate.condition = entity.condition
+            valueCollateralRealEstate.conditions = entity.conditions
+            this.state.valueCollateralRealEstate.conditions = entity.conditions
 
-            valueCollateralRealEstate.year = entity.year
-            this.state.valueCollateralRealEstate.year = entity.year
+            valueCollateralRealEstate.years = entity.years
+            this.state.valueCollateralRealEstate.years = entity.years
 
             valueCollateralRealEstate.rooms = entity.rooms
             this.state.valueCollateralRealEstate.rooms = entity.rooms
@@ -242,8 +242,8 @@ export default class CollateralRealEstate extends React.Component{
 
             idregencies = entity.regenciesid
             iddistrict = entity.districtid
-            valueCollateralRealEstate.size = entity.size
-            this.state.valueCollateralRealEstate.size = entity.size
+            valueCollateralRealEstate.sizes = entity.sizes
+            this.state.valueCollateralRealEstate.sizes = entity.sizes
 
             valueCollateralRealEstate.proofofownership = entity.proofofownership
             this.state.valueCollateralRealEstate.proofofownership = entity.proofofownership
@@ -254,12 +254,12 @@ export default class CollateralRealEstate extends React.Component{
             filterestate.map(function (item) {
                 typeofrealestate = item.name;
             })
-            condition = entity.condition
-            yearbuild = entity.year
+            conditions = entity.conditions
+            yearbuild = entity.years
             rooms = entity.rooms
             addresss = entity.address
             provincee = entity.province.locationName
-            sizee = entity.size
+            sizee = entity.sizes
             proofownership = entity.proofofownership
         }
         flag = false;
@@ -304,11 +304,11 @@ export default class CollateralRealEstate extends React.Component{
                     <div className="col-sm-6">
                         <div className="form-group">
                             <div className="inputGroup-sizing-default">
-                            <h4 className="condition" style={{textAlign:"left"}}><b>{LanguageStore.translate('Condition')}</b></h4>
-                                <textarea rows="3" placeholder="Describe the condition" 
-                                    className="form-control input-md" required  data-message="Please specify this condition"
+                            <h4 className="conditions" style={{textAlign:"left"}}><b>{LanguageStore.translate('Condition')}</b></h4>
+                                <textarea rows="3" placeholder="Describe the conditions" 
+                                    className="form-control input-md" required  data-message="Please specify this conditions"
                                     id="example-textarea" data-minlength="10" data-maxLength="255"
-                                    name="condition" value={this.state.valueCollateralRealEstate.condition }
+                                    name="conditions" value={this.state.valueCollateralRealEstate.conditions }
                                     onChange={this.onchangecondition.bind(this)}>
                                     </textarea>
                             </div>
@@ -322,8 +322,8 @@ export default class CollateralRealEstate extends React.Component{
                             <h4 className="yearbuild" style={{textAlign:"left"}}><b>{LanguageStore.translate('Year Build')}</b></h4>
                                 <select className="form-control input-lg"
                                             data-smart-validate-input="" data-required=""
-                                            name="year"
-                                            onChange={this.onChangeYearBuild.bind(this)} value={this.state.valueCollateralRealEstate.year}
+                                            name="years"
+                                            onChange={this.onChangeYearBuild.bind(this)} value={this.state.valueCollateralRealEstate.years}
                                             defaultValue={""}>
                                             <option value="0" disabled="true">{LanguageStore.translate('Select Year')}</option>
                                             {CyearList}
@@ -404,9 +404,9 @@ export default class CollateralRealEstate extends React.Component{
                                 <input className="form-control input-lg"
                                             placeholder="Total Area, L * W, in meter squaresize" type="number"
                                             data-smart-validate-input="" data-required="" 
-                                            name="size" value={this.state.valueCollateralRealEstate.size}
+                                            name="sizes" value={this.state.valueCollateralRealEstate.sizes}
                                             onChange={this.onChangeSize.bind(this)}
-                                            data-message="please specify the area's size" min="0"/>
+                                            data-message="please specify the area's sizes" min="0"/>
                                             <div className="note">
                                 <strong>Note:</strong> format text input in  m^2.
                             </div>

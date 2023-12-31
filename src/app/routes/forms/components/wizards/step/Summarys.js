@@ -8,10 +8,10 @@ import LoanSum from "../SummaryData/LoanSum";
 import PersonalSum from '../SummaryData/PersonalSum';
 import BankSum from '../SummaryData/BankSum';
 import {loanvalue} from "./Loan";
-import {loanName,loanAmount,purposeofloan,tenor} from "./Loan";
+import {loanName,amount as amountloan,purposeofloan,tenor} from "./Loan";
 import {personelvalue} from "./Personal";
 import {Addressvalue} from "./Address";
-import {fullname,mobilephone,landline,placeofbirth,dateofbirth,Gender,maritalstatus,idtype,idnumber,education,email } from "./Personal";
+import {names,mobilephone,landline,placeofbirth,dateofbirthtime,Gender,maritalstatus,typeid,idnumber,education,email } from "./Personal";
 import AddressSum from "../SummaryData/AddressSum";
 import {idcity, idcity2, idcity3, idcity4, namecity, namecity2, namecity3, namecity4} from "../Type/TypeCity";
 import {mainaddress,provincename,postalcode,ownershipstatus,isCollateral,livedinaddress,location} from "./Address";
@@ -31,19 +31,19 @@ import {
 } from "../Type/typeDistrict";
 import {mainaddress2, provincename2, postalcode2, ownershipstatus2, isCollateral2, Addressvalue2} from "./Address2";
 import {familyvalue} from "./Family";
-import {emergencycontact,addressemergencycontact,mobilephoneemergencycontact} from "./Family";
+import {contactemergency,addressemergencycontact,mobileemergency} from "./Family";
 import {businessvalue} from "./Business";
-import {companyname,companyaddress,provincenamebusiness,divisionname,positionname,durationtime,totalnumberemp,businessline} from "./Business";
+import {companyname,companyaddress,provincenamebusiness,divisionname,positionname,durationtime,numberofemployees,businessline} from "./Business";
 import {financialvalue} from "./Financial";
-import {typeincome,mainincome,sideincome,expense,addtionalexpense,typevehiclefinancial,vehicleowner} from "./Financial";
+import {typeincome,mainincome,sideincome,expense,additionalexpense,typevehiclefinancial,vehicleowner} from "./Financial";
 import {bankvalue} from "./Bank";
-import {bankname,acctypename,accnumber,iscc} from "./Bank";
+import {bankname,acctypename,accountnumber,iscreditcard} from "./Bank";
 import CollateralView from "../View/CollateralView";
 import {collateralvalue,selectcollateral} from "./SelectCollateral";
-import {bankcc, creditcardvalue, numbercc,typecreditcard} from "./CreditCard";
+import {bankcc, creditcardvalue, numbercc,typecredittcard} from "./CreditCard";
 import {
     typeofrealestate,
-    condition,
+    conditions,
     yearbuild,
     rooms,
     addresss,
@@ -61,7 +61,7 @@ import {
     amount,
     currency,
     accnumberColateralbank,
-    duedate,
+    duedatetime,
     isuploadfileBank,
     valuecollateraldeposit
 } from "../CollateralBank";
@@ -315,7 +315,7 @@ export default class Summarys extends React.Component{
                   <div>
                       <LoanSum
                           loanName={loanName}
-                          loanAmount={loanAmount}
+                          loanAmount={amountloan}
                           purposeofloan={purposeofloan}
                           tenor={tenor}
                       />
@@ -326,21 +326,21 @@ export default class Summarys extends React.Component{
                 <JarvisWidget colorbutton={false} editbutton={false}
                                 custombutton={false}
                                 color="blueDark" >
-                    <header onClick={this.handleClickLoanPersonel} value={personelvalue.fullname}>
+                    <header onClick={this.handleClickLoanPersonel} value={personelvalue.names}>
                         <span className="widget-icon"> </span>
                             <h2>{LanguageStore.translate('Personal Information')}</h2>
 
                     </header>
                     <div>
                         <PersonalSum
-                            fullname={fullname}
+                            fullname={names}
                             mobilephone={mobilephone}
                             landline={landline}
                             placeofbirth={placeofbirth}
-                            dateofbirth={dateofbirth}
+                            dateofbirth={dateofbirthtime}
                             Gender={Gender}
                             maritalstatus={maritalstatus}
-                            idtype={idtype}
+                            idtype={typeid}
                             idnumber={idnumber}
                             education={education}
                             email={email}
@@ -383,16 +383,16 @@ export default class Summarys extends React.Component{
                     <JarvisWidget colorbutton={false} editbutton={false}
                                     custombutton={false}
                                     color="blueDark">
-                        <header onClick={this.handleClickLoanFamilyInfo} value={familyvalue.emergencycontact}>
+                        <header onClick={this.handleClickLoanFamilyInfo} value={familyvalue.contactemergency}>
                             <span className="widget-icon"> </span>
                                 <h2>{LanguageStore.translate('Family Information')}</h2>
 
                         </header>
                         <div>
                             <FamilySum
-                                emergencycontact={emergencycontact}
+                                emergencycontact={contactemergency}
                                 addressemergencycontact={addressemergencycontact}
-                                mobilephoneemergencycontact={mobilephoneemergencycontact}
+                                mobilephoneemergencycontact={mobileemergency}
                             />
                         </div>
                  </JarvisWidget>
@@ -416,7 +416,7 @@ export default class Summarys extends React.Component{
                                 divisionname = {divisionname}
                                 positionname={positionname}
                                 durationtime={durationtime}
-                                totalnumberemp={totalnumberemp}
+                                totalnumberemp={numberofemployees}
                                 businessline={businessline}
                             />
                         </div>
@@ -437,7 +437,7 @@ export default class Summarys extends React.Component{
                                 mainincome = {mainincome}
                                 sideincome = {sideincome}
                                 expense = {expense}
-                                addtionalexpense = {addtionalexpense}
+                                addtionalexpense = {additionalexpense}
                                 vehicleowner={vehicleowner}
                                 typevehicle={typevehiclefinancial}
                             />
@@ -458,11 +458,11 @@ export default class Summarys extends React.Component{
                             <BankSum
                                 bankname={bankname}
                                 acctypename={acctypename}
-                                accnumber={accnumber}
-                                iscc={iscc}
+                                accnumber={accountnumber}
+                                iscc={iscreditcard}
                                 bankcc={bankcc}
                                 numbercc={numbercc}
-                                typecreditcard={typecreditcard}
+                                typecreditcard={typecredittcard}
                             />
                         </div>
                  </JarvisWidget>
@@ -479,7 +479,7 @@ export default class Summarys extends React.Component{
                            <CollateralView
                                typecollateral={selectcollateral}
                                typeofrealestate={typeofrealestate}
-                               condition={condition}
+                               condition={conditions}
                                yearbuild={yearbuild}proofownership={proofownership}
                                rooms={rooms}addresss={addresss}provincee={provincee}sizee={sizee}
                                namecity4={namecity4}namekecataman4={namekecataman4}isuploadfileRE={isuploadfileRE}
@@ -489,7 +489,7 @@ export default class Summarys extends React.Component{
                                modelname={modelname}isuploadfileVehicle={isuploadfileVehicle}
 
                                bankName={bankName}amount={amount}currency={currency}
-                               accnumber={accnumberColateralbank}duedate={duedate}isuploadfileBank={isuploadfileBank}
+                               accnumber={accnumberColateralbank}duedate={duedatetime}isuploadfileBank={isuploadfileBank}
                            />
                         </div>
                  </JarvisWidget>

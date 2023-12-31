@@ -1,5 +1,5 @@
 import React from 'react'
-import {addtionalexpense, expense, mainincome, sideincome, typeincome} from "../step/Financial";
+import {additionalexpense, expense, mainincome, sideincome, typeincome} from "../step/Financial";
 import LanguageStore from "../../../../../components/i18n/LanguageStore";
 
 export default class FinancialSum extends React.Component{

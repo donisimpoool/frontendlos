@@ -7,12 +7,12 @@ import LanguageStore from "../../../../../components/i18n/LanguageStore";
 import {tempData} from "../../../../new-app/components/ListApplication";
 import {headers} from "../../../../../config/ConfigParam";
 
-export var loanvalue = {loanProductId: "0",
-    loanAmount:"0",
-    loanPurpose:"",
-    loanTenor:0,
+export var loanvalue = {loanproductid: "0",
+    amount:"0",
+    purposeofloan:"",
+    tenor:0,
     filterid:''};
-export var loanName = '',loanAmount=0,purposeofloan='',tenor=0;
+export var loanName = '',amount=0,purposeofloan='',tenor=0;
 export var listprodloan = [];
 export var listpurposeofloan = [
     {id:'education',name:'Education'},
@@ -34,10 +34,10 @@ export default class Loan extends React.Component {
             listloansimpool:[],
             loan: {},
             value:{
-                loanProductId: "0",
-                loanAmount:"0",
-                loanPurpose:"",
-                loanTenor:0,
+                loanproductid: "0",
+                amount:"0",
+                purposeofloan:"",
+                tenor:0,
                 filterid:''
             },
             range:{mintenor:0,maxtenor:0,defaulttenor:0,minamount:0,maxamount:0,defaultamount:0,msgtenor:"Range Teno 2 s/d 4",msgamount:""},
@@ -80,9 +80,9 @@ export default class Loan extends React.Component {
     onParseAmount(e) {
         var str = e.target.value;
         str = str.replace(/,/g, "");
-        loanAmount = str;
+        amount = str;
         var value = this.state.value;
-        value.loanAmount = str;
+        value.amount = str;
         this.setState(value);
         loanvalue = this.state.value;
         flag = true;
@@ -93,7 +93,7 @@ export default class Loan extends React.Component {
         return val;
     }
     onParseMonth(e) {
-        //this.state.value.loanTenor
+        //this.state.value.tenor
         //range
         var str = e.target.value;
         var mintenor = 5;
@@ -104,7 +104,7 @@ export default class Loan extends React.Component {
         //     str = maxtenor
         // }
         var value = this.state.value;
-        value.loanTenor = str;
+        value.tenor = str;
         tenor= str;
         this.setState(value);
         loanvalue = this.state.value;
@@ -115,7 +115,7 @@ export default class Loan extends React.Component {
         const loanprodID = e.target.value;
 
         var nameloan = this.state.posts.filter( (item) => {
-            return item.loanProductId == loanprodID
+            return item.loanproductid == loanprodID
         })
         loanName = '';
         var mintenor = 0
@@ -137,13 +137,13 @@ export default class Loan extends React.Component {
 
         })
         var value = this.state.value;
-        value.loanProductId = loanprodID;
-        value.loanTenor = defaulttenor;
-        value.loanAmount = defaultamount;
+        value.loanproductid = loanprodID;
+        value.tenor = defaulttenor;
+        value.amount = defaultamount;
         value.filterid = filterid;
         this.setState(value);
         tenor = defaulttenor
-        loanAmount = defaultamount
+        amount = defaultamount
         var range = this.state.range;
         range.mintenor=mintenor;
         range.maxtenor=maxtenor;
@@ -162,11 +162,11 @@ export default class Loan extends React.Component {
     onChangeLoanProduct(e) {
         const loanprodID = e.target.value;
         var value = this.state.value;
-        value.loanProductId = loanprodID;
+        value.loanproductid = loanprodID;
         this.setState(value);
         loanvalue = this.state.value;
     }
-    onChangeLoanPurpose(e) {
+    onChangepurposeofloan(e) {
         var str = e.target.value;
         var tempfilter = listpurposeofloan.filter( (item) => {
             return item.id == str
@@ -176,7 +176,7 @@ export default class Loan extends React.Component {
             purposeofloan = item.name;
         })
         var value = this.state.value;
-        value.loanPurpose = str;
+        value.purposeofloan = str;
         this.setState(value);
         loanvalue = this.state.value;
         flag = true;
@@ -186,14 +186,14 @@ export default class Loan extends React.Component {
         var loan = this.props.listloan;
 
         if (typeof loan !== "undefined" && !flag){
-            this.state.value.loanProductId = loan.loanProductId;
-            this.state.value.loanAmount = loan.loanamount
-            this.state.value.loanPurpose = loan.purposeofloan
-            this.state.value.loanTenor = loan.tenor;
+            this.state.value.loanproductid = loan.loanproductid;
+            this.state.value.amount = loan.amount
+            this.state.value.purposeofloan = loan.purposeofloan
+            this.state.value.tenor = loan.tenor;
             this.state.value.filterid = loan.filterid;
             loanvalue = this.state.value;
             loanName = loan.loanname
-            loanAmount = loan.loanamount
+            amount = loan.amount
             var range = this.state.range;
             range.mintenor=loan.mintenor;
             range.maxtenor=loan.maxtenor;
@@ -216,7 +216,7 @@ export default class Loan extends React.Component {
     }
     render() {
         this.setLoan()
-        // var priceamount = this.state.value.loanAmount;
+        // var priceamount = this.state.value.amount;
         // priceamount = priceamount.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,")
         // console.log("priceamount : "+priceamount)
         return (
@@ -231,7 +231,7 @@ export default class Loan extends React.Component {
 
                                 <select className="form-control input-lg"
                                         data-smart-validate-input="" data-required=""
-                                        name="loanProductId" defaultValue={"0"} value={this.state.value.loanProductId}
+                                        name="loanproductid" defaultValue={"0"} value={this.state.value.loanproductid}
                                         onChange={this.myChangeHandler}
                                 >
                                     <option value="0" selected={true}>{LanguageStore.translate('Select Product')}</option>
@@ -239,16 +239,16 @@ export default class Loan extends React.Component {
                                         this.state.posts.map(function (item) {
                                             if(item.loanName !== '') {
                                                 return (
-                                                    <option key={item.loanProductId}
-                                                            value={item.loanProductId}>{item.loanName}</option>
+                                                    <option key={item.loanproductid}
+                                                            value={item.loanproductid}>{item.loanName}</option>
                                                 )
                                             }
 
                                         // this.state.posts.map(function (item) {
                                         //     if(item.loanName !== '') {
                                         //         return (
-                                        //             <option key={item.loanProductId}
-                                        //                     value={item.loanProductId}>{item.loanName}</option>
+                                        //             <option key={item.loanproductid}
+                                        //                     value={item.loanproductid}>{item.loanName}</option>
                                         //         )
                                         //     }
                                     })}
@@ -266,13 +266,13 @@ export default class Loan extends React.Component {
                                 <NumberFormat className="form-control input-lg" data-minlength="4" data-required=""
                                               thousandSeparator={true} placeholder="Enter your loan amount"
                                               onChange={this.onParseAmount.bind(this)} min={this.state.range.minamount} max={this.state.range.maxamount }
-                                              name="loanAmount" value={this.state.value.loanAmount} data-message=""
+                                              name="amount" value={this.state.value.amount} data-message=""
 
                                 />
 
                                 {/*<input className="form-control input-lg" min={this.state.range.minamount} max={this.state.range.maxamount}*/}
                                 {/*       placeholder="Enter your loan amount" thousandSeparator={true} type="number"*/}
-                                {/*       name="loanAmount"*/}
+                                {/*       name="amount"*/}
                                 {/*       data-smart-validate-input="" data-required=""*/}
                                 {/*       data-message=""*/}
                                 {/*       onChange={this.onParseAmount.bind(this)} value={priceamount}*/}
@@ -290,8 +290,8 @@ export default class Loan extends React.Component {
                                 <select className="form-control input-lg "
                                         data-smart-validate-input="" data-required=""
                                         data-message-required="Please specify your purpose"
-                                        name="purpose" defaultValue={"0"} value={this.state.value.loanPurpose}
-                                        onChange={this.onChangeLoanPurpose.bind(this)}>
+                                        name="purpose" defaultValue={"0"} value={this.state.value.purposeofloan}
+                                        onChange={this.onChangepurposeofloan.bind(this)}>
                                     <option value="" selected={true}>{LanguageStore.translate('Select Purpose')}</option>
                                     {
                                         listpurposeofloan.map(function (item) {
@@ -316,7 +316,7 @@ export default class Loan extends React.Component {
                                        name="tenor"
                                        data-smart-validate-input="" data-required=""
                                        data-message=""
-                                       onChange={this.onParseMonth.bind(this)} value={this.state.value.loanTenor}
+                                       onChange={this.onParseMonth.bind(this)} value={this.state.value.tenor}
                                 />
                             </div>
                         </div>

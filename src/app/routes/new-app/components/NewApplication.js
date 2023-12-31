@@ -221,8 +221,8 @@ class NewApplication extends React.Component {
       Addressvalue.iddistrict = idkec;
       Addressvalue.idvillage = idkelurahan
 
-      Addressvalue2.idregencies = idcity2;
-      Addressvalue2.iddistrict = idkec2;
+      Addressvalue2.secondidregencies = idcity2;
+      Addressvalue2.secondiddistrict = idkec2;
 
       businessvalue.idregencies = idcity3;
       businessvalue.iddistrict = idkec3;
@@ -240,29 +240,40 @@ class NewApplication extends React.Component {
       value.Addressvalue2 = Addressvalue2;
       value.familyvalue = familyvalue;
       value.businessvalue = businessvalue;
+
+      financialvalue.vehicleowner = financialvalue.vehicleowner == "Y"?true:false;
+
       value.financialvalue = financialvalue;
+
+      bankvalue.iscreditcard = bankvalue.iscreditcard == "Y"?true:false;
+
       value.bankvalue = bankvalue;
       value.collateralvalue = collateralvalue;
+
+      let applicationaddress = Addressvalue;
+      applicationaddress.secondaddress = Addressvalue2.secondaddress;
+      applicationaddress.secondprovinceid = Addressvalue2.secondprovinceid;
+      applicationaddress.secondpostalcode = Addressvalue2.secondpostalcode;
+      applicationaddress.secondownershipstatus = Addressvalue2.secondownershipstatus;
+      applicationaddress.secondusedforcollateral = Addressvalue2.secondusedforcollateral;
+      applicationaddress.secondidregencies = Addressvalue2.secondidregencies;
+      applicationaddress.secondiddistrict = Addressvalue2.secondiddistrict;
+
       this.setState(value);
       var paramloan = {
-          applicationID:appid,
-          status:"OPEN",
-          score:0,
-          isdraft:"Y",
-          createdby:JSON.parse(DecrypsCode(localStorage.getItem(keyset))).id,
-          appLoan:this.state.allvalue.loanvalue,
-          appPersonel:this.state.allvalue.personelvalue,
-          appAddress1:this.state.allvalue.Addressvalue,
-          appAddress2:this.state.allvalue.Addressvalue2,
-          appFamily:this.state.allvalue.familyvalue,
-          appBusiness:this.state.allvalue.businessvalue,
-          appFinancial:this.state.allvalue.financialvalue,
-          appBank:this.state.allvalue.bankvalue,
-          appCollateral:this.state.allvalue.collateralvalue,
-          appCollateralRealEstate:valueCollateralRealEstate,
-          appCollateralVehicle:valueColleteralVehicle,
-          appCollateralDeposit:valuecollateraldeposit,
-          creditcard:creditcardvalue
+          isdraft:true,
+          applicationloan:this.state.allvalue.loanvalue,
+          applicationpersonal:this.state.allvalue.personelvalue,
+          applicationaddress:applicationaddress,
+          applicationfamily:this.state.allvalue.familyvalue,
+          applicationbusiness:this.state.allvalue.businessvalue,
+          applicationfinancial:this.state.allvalue.financialvalue,
+          applicationbank:this.state.allvalue.bankvalue,
+          applicationcollateral:this.state.allvalue.collateralvalue,
+          applicationCollateralRealEstate:valueCollateralRealEstate,
+          applicationCollateralVehicle:valueColleteralVehicle,
+          applicationCollateralDeposit:valuecollateraldeposit,
+          // creditcard:creditcardvalue
       }
       appid=""
     this.props.loanPost(paramloan,filedocument);
@@ -363,7 +374,6 @@ class NewApplication extends React.Component {
           databusiness={this.props.databusiness}
           databank={this.props.databank}
           datafinancial={this.props.datafinancial}
-          databank={this.props.databank}
           datacollateral={this.props.datacollateral}
           detailcollateral={this.props.detailcollateral}
           listkelurahan={this.state.listkelurahan}

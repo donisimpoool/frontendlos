@@ -1,6 +1,7 @@
 import {auth, keyset} from "./baseUrl";
 import {DecrypsCode} from "./Encrypt";
 
+export var keyToken = "token";
 export var sizefileinbyte = 2000 //1024 bytes = 1 KB, 1024 KB = 1 MB
 export var sizefont = 23
 export var Speedometerwidth = 255
@@ -12,6 +13,18 @@ export var headers = {
         'Platform-CreditScoring':'',
         'Authorization': auth,
         'content-type': 'application/json'
+}
+
+export var header = {
+        'Authorization': localStorage.getItem(keyToken),
+        'Accept': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+        'Content-Type': 'application/json',
+}
+
+export const handleAuth = (param) =>{
+        let token = param.token;
+        localStorage.setItem(keyToken,token);
 }
 
 function getstorage() {

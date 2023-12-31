@@ -1,4 +1,4 @@
-import {keyset, url} from '../../../../../config/baseUrl'
+import {createapp, keyset, url} from '../../../../../config/baseUrl'
 import {filedocument} from "../step/Document";
 import {filedocumentVehicle} from "../CollateralVehicle";
 import {filedocumentRealEstate} from "../CollateralRealEstate";
@@ -8,7 +8,7 @@ import {info} from "../../../../auth/containers/Login";
 import {msglimitfile} from "../../../../../config/KosaKata";
 import {convertByteToMB} from "../../../../../config/FunctionGlobal";
 import {DecrypsCode} from "../../../../../config/Encrypt";
-import {headers} from "../../../../../config/ConfigParam";
+import {header, headers} from "../../../../../config/ConfigParam";
 
 export const UPDATE_LOAN = 'UPDATE_LOAN'
 
@@ -97,61 +97,63 @@ export function listapplicationloann(){
     return paramloan1;
 }
 export function postLoan(params,paramsfile) {
-    var size = 0;
-    if (paramsfile.filedoc.length > 0) {
-        size += paramsfile.totalsize
-    }
-    if (filedocumentRealEstate.filedoc.length > 0) {
-        size += filedocumentRealEstate.totalsize
-    }
-    if (filedocumentVehicle.filedocvehicle.length > 0) {
-        size += filedocumentVehicle.totalsize
-    }
-    if (filedocumentbank.filedoc.length > 0) {
-        size += filedocumentbank.totalsize
-    }
+    // var size = 0;
+    // if (paramsfile.filedoc.length > 0) {
+    //     size += paramsfile.totalsize
+    // }
+    // if (filedocumentRealEstate.filedoc.length > 0) {
+    //     size += filedocumentRealEstate.totalsize
+    // }
+    // if (filedocumentVehicle.filedocvehicle.length > 0) {
+    //     size += filedocumentVehicle.totalsize
+    // }
+    // if (filedocumentbank.filedoc.length > 0) {
+    //     size += filedocumentbank.totalsize
+    // }
     // var totalSizeKB = size / Math.pow(1024,1)
-    var totalSizeMB = convertByteToMB(size);//size / Math.pow(1024,2)
+    // var totalSizeMB = convertByteToMB(size);//size / Math.pow(1024,2)
     // var totalSizeGB = size / Math.pow(1024,3)
-    var sizefile = JSON.parse(DecrypsCode(localStorage.getItem(keyset))).sizefile
-    if (sizefile > totalSizeMB) {
-    return dispatch => {
-        var url = suburlcreateapp;
+    // var sizefile = JSON.parse(DecrypsCode(localStorage.getItem(keyset))).sizefile
+    // if (sizefile > totalSizeMB) {
+        var url = createapp;
         fetch(url,
             {
                 method: 'POST',
-                headers: headers,
+                headers: header,
                 body: JSON.stringify(params)
-            })
+            }
+            )
             .then(response => response.json())
             .then(respon => {
-                uploadFile(paramsfile, respon.data.applicationid, 'appdocument')
-                if (filedocumentVehicle.filedocvehicle.length > 0) {
-                    var parms = {
-                        'filedoc': filedocumentVehicle.filedocvehicle,
-                        'description': ''
-                    }
-                    uploadFile(parms, respon.data.applicationid, 'colvehicle')
-                }
-                if (filedocumentRealEstate.filedoc.length > 0) {
-                    var parms = {
-                        'filedoc': filedocumentRealEstate.filedoc,
-                        'description': ''
-                    }
-                    uploadFile(parms, respon.data.applicationid, 'colrealestate')
-                }
-                if (filedocumentbank.filedoc.length > 0) {
-                    var parms = {
-                        'filedoc': filedocumentbank.filedoc,
-                        'description': ''
-                    }
-                    uploadFile(parms, respon.data.applicationid, 'colbank')
-                }
+                // uploadFile(paramsfile, respon.data.applicationid, 'appdocument')
+                // if (filedocumentVehicle.filedocvehicle.length > 0) {
+                //     var parms = {
+                //         'filedoc': filedocumentVehicle.filedocvehicle,
+                //         'description': ''
+                //     }
+                //     uploadFile(parms, respon.data.applicationid, 'colvehicle')
+                // }
+                // if (filedocumentRealEstate.filedoc.length > 0) {
+                //     var parms = {
+                //         'filedoc': filedocumentRealEstate.filedoc,
+                //         'description': ''
+                //     }
+                //     uploadFile(parms, respon.data.applicationid, 'colrealestate')
+                // }
+                // if (filedocumentbank.filedoc.length > 0) {
+                //     var parms = {
+                //         'filedoc': filedocumentbank.filedoc,
+                //         'description': ''
+                //     }
+                //     uploadFile(parms, respon.data.applicationid, 'colbank')
+                // }
             })
-    }
-}else{
-        alert(msglimitfile(sizefile));
-    }
+    // return dispatch => {
+        
+    // }
+// }else{
+//         alert(msglimitfile(sizefile));
+//     }
 }
 
 export function uploadFile(params,applicationid,docfor){

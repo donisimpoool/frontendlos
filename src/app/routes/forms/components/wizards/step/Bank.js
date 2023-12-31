@@ -5,11 +5,12 @@ import {financialvalue, typeincome} from "./Financial";
 import LanguageStore from "../../../../../components/i18n/LanguageStore";
 import {suburlbank} from "../../../../../config/baseUrl";
 
-export var bankvalue = {bank: "0",
-    acctype:"",
-    accnumber:"",
-    iscc:"N"};
-export var bankname='',acctypename='',accnumber='',iscc='No'
+export var bankvalue = {
+    bankid: "0",
+    accounttype:"",
+    accountnumber:"",
+    iscreditcard:"N"};
+export var bankname='',acctypename='',accountnumber='',iscreditcard='No'
 var bankcc='0',numbercc=''
 export var listacctype =[
     {id:'currentaccount',name:'Current Account'},
@@ -28,17 +29,17 @@ export default class Bank extends React.Component{
             }, 
             creditCardList: [],
             valuebank:{
-                bank: "0",
-                acctype:"",
-                accnumber:"",
-                iscc:"N"
+                bankid: "0",
+                accounttype:"",
+                accountnumber:"",
+                iscreditcard:"N"
             },
             posts: []
         }
     }
     componentDidMount(){
         var url = suburlbank;
-        console.log("bank : "+url);
+        console.log("bankid : "+url);
         const otherPram={
             method:"GET",
             headers:{
@@ -54,12 +55,12 @@ export default class Bank extends React.Component{
     }
     onChangeCreditCard(e){
         var str = e.target.value;
-        iscc = "Yes"
+        iscreditcard = "Yes"
         if(str == "N"){
-            iscc = "No";
+            iscreditcard = "No";
         }
         var value = this.state.valuebank;
-        value.iscc = str;
+        value.iscreditcard = str;
         this.setState(value);
         bankvalue = this.state.valuebank;
         bankcc = '0'
@@ -83,7 +84,7 @@ export default class Bank extends React.Component{
     onChangeBank(e){
         var str = e.target.value;
         var value = this.state.valuebank;
-        value.bank = str;
+        value.bankid = str;
         this.setState(value);
         bankvalue = this.state.valuebank;
         var filterbank = this.state.posts.filter( (item) => {
@@ -98,7 +99,7 @@ export default class Bank extends React.Component{
     onChangeAccType(e){
         var str = e.target.value;
         var value = this.state.valuebank;
-        value.acctype = str;
+        value.accounttype = str;
         this.setState(value);
         bankvalue = this.state.valuebank;
         var filteracctype = listacctype.filter( (item) => {
@@ -112,9 +113,9 @@ export default class Bank extends React.Component{
     }
     onChangeAccNumber(e){
         var str = e.target.value;
-        accnumber = str;
+        accountnumber = str;
         var value = this.state.valuebank;
-        value.accnumber = str;
+        value.accountnumber = str;
         this.setState(value);
         bankvalue = this.state.valuebank;
         flag = true
@@ -127,10 +128,10 @@ export default class Bank extends React.Component{
     setEntity() {
         var entity = this.props.databank;
         if (typeof entity !== "undefined" && !flag){
-            this.state.valuebank.bank = entity.bankid
-            this.state.valuebank.acctype = entity.accounttype
-            this.state.valuebank.accnumber = entity.accountnumber
-            this.state.valuebank.iscc = entity.iscreditcard
+            this.state.valuebank.bankid = entity.bankid
+            this.state.valuebank.accounttype = entity.accounttype
+            this.state.valuebank.accountnumber = entity.accountnumber
+            this.state.valuebank.iscreditcard = entity.iscreditcard
             bankcc = entity.bankcc
             numbercc = entity.numbercc
             bankvalue = this.state.valuebank;
@@ -148,17 +149,17 @@ export default class Bank extends React.Component{
             filteracctype.map(function (item) {
                 acctypename = item.name;
             })
-            accnumber = entity.accountnumber
-            iscc = "Yes"
+            accountnumber = entity.accountnumber
+            iscreditcard = "Yes"
             if(entity.iscreditcard == "N"){
-                iscc = "No"
+                iscreditcard = "No"
             }
         }
         flag = false;
     }
     render(){
         this.setEntity()
-        console.log("this.state.valuebank.iscc : "+this.state.valuebank.iscc)
+        console.log("this.state.valuebank.iscreditcard : "+this.state.valuebank.iscreditcard)
         return(
             <div>
                 <div className="row">
@@ -168,8 +169,8 @@ export default class Bank extends React.Component{
                             <h4 className="input" style={{textAlign:"left"}}><b>Bank</b></h4>
                                 <select className="form-control input-lg"
                                         data-smart-validate-input="" data-required=""
-                                        name="bank" defaultValue={""}
-                                        onChange={this.onChangeBank.bind(this)} value={this.state.valuebank.bank}
+                                        name="bankid" defaultValue={""}
+                                        onChange={this.onChangeBank.bind(this)} value={this.state.valuebank.bankid}
                                 >
                                     <option value="0" selected={true}>{LanguageStore.translate('Choose')}</option>
                                     {
@@ -198,7 +199,7 @@ export default class Bank extends React.Component{
                                     data-smart-validate-input="" data-required=""
                                     name="accountType" 
                                     onChange={this.onChangeAccType.bind(this)}
-                                    defaultValue={""} value={this.state.valuebank.acctype}>
+                                    defaultValue={""} value={this.state.valuebank.accounttype}>
                                     <option value="" selected={true}>{LanguageStore.translate('Choose')}</option>
                                     {
                                         listacctype.map(function (item) {
@@ -218,7 +219,7 @@ export default class Bank extends React.Component{
                             <h4 className="input" style={{textAlign:"left"}}><b>{LanguageStore.translate('Account Number')}</b></h4>
                             <NumberFormat className="form-control input-lg" minLength="10" 
                                    data-required="" placeholder={LanguageStore.translate('Account Number')}
-                                    format="#### #### #### ####"  onChange={this.onChangeAccNumber.bind(this)} value={this.state.valuebank.accnumber}
+                                    format="#### #### #### ####"  onChange={this.onChangeAccNumber.bind(this)} value={this.state.valuebank.accountnumber}
                                     name="accountNumber" required/>
                               {/* <input className="form-control input-lg"
                                 placeholder="Account Number" type="number"
@@ -238,11 +239,11 @@ export default class Bank extends React.Component{
                             <div className="col-xs-4 col-lg-8">
                                 <div className="inputGroup-sizing-default">
                                     <label className="radio state-error">
-                                        <input type="radio" name="creditcard"  value="Y" onChange={this.onChangeCreditCard.bind(this)} checked={this.state.valuebank.iscc == 'Y'} />
+                                        <input type="radio" name="creditcard"  value="Y" onChange={this.onChangeCreditCard.bind(this)} checked={this.state.valuebank.iscreditcard == 'Y'} />
                                         {LanguageStore.translate('Yes')}</label>
                                     &nbsp;&nbsp;&nbsp;
                                     <label className="radio">
-                                        <input type="radio" name="creditcard"  value="N" onChange={this.onChangeCreditCard.bind(this)} checked={this.state.valuebank.iscc == 'N'} />
+                                        <input type="radio" name="creditcard"  value="N" onChange={this.onChangeCreditCard.bind(this)} checked={this.state.valuebank.iscreditcard == 'N'} />
                                         {LanguageStore.translate('No')}</label>
                                 </div>
                             </div>
@@ -254,7 +255,7 @@ export default class Bank extends React.Component{
                   <CreditCard
                       bankcc={bankcc}
                       numbercc={numbercc}
-                    divState={this.state.valuebank.iscc}
+                    divState={this.state.valuebank.iscreditcard}
                     listbank={this.state.posts}
                     onCreditCard={this.onCreditCard.bind(this)}
                   /> 

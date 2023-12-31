@@ -15,7 +15,7 @@ export var valueColleteralVehicle = {
     typevehicle:'',
     brand:'',
     typetransmision:'',
-    year:'0',
+    years:'0',
     mileage:'',
     model:''
 }
@@ -35,7 +35,7 @@ export default class CollateralVehicle extends React.Component{
                 typevehicle:'',
                 brand:'',
                 typetransmision:'',
-                year:'0',
+                years:'0',
                 mileage:'',
                 model:''
             }
@@ -121,10 +121,10 @@ export default class CollateralVehicle extends React.Component{
     }
     onChangeYears(e){
         var str = e.target.value;
-        valueColleteralVehicle.year = str;
+        valueColleteralVehicle.years = str;
         years = str;
         var temp = this.state.valueColleteralVehicle;
-        temp.year = str;
+        temp.years = str;
         this.setState(temp);
         flag = true
         this.setState({
@@ -148,10 +148,10 @@ export default class CollateralVehicle extends React.Component{
             brandid = entity.brand
             modelid = entity.model
             typetransmision = entity.typetransmision
-            this.state.valueColleteralVehicle.year = entity.year
+            this.state.valueColleteralVehicle.years = entity.years
             this.state.valueColleteralVehicle.mileage = entity.mileage
             typevehicle =entity.typevehicle
-            years = entity.year
+            years = entity.years
             millage = entity.mileage
             //typevehicle='',years='',millage='',isuploadfileVehicle='NO'
         }
@@ -204,8 +204,8 @@ export default class CollateralVehicle extends React.Component{
                                 <h4 className="input" style={{textAlign:"left"}}><b>{LanguageStore.translate('Year')}</b></h4>
                                     <select className="form-control input-lg"
                                         data-smart-validate-input="" data-required=""
-                                        name="year"
-                                        onChange={this.onChangeYears.bind(this)} value={this.state.valueColleteralVehicle.year}
+                                        name="years"
+                                        onChange={this.onChangeYears.bind(this)} value={this.state.valueColleteralVehicle.years}
                                         defaultValue={"0"}>
                                         <option value="0" selected="true">{LanguageStore.translate('Select Year')}</option>
                                           {yearList}

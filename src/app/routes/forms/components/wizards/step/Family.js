@@ -6,11 +6,12 @@ import {Addressvalue2} from "./Address2";
 import {maritalstatus} from "./Personal";
 import LanguageStore from "../../../../../components/i18n/LanguageStore";
 
-export var familyvalue = {emergencycontact: "",
+export var familyvalue = {
+    contactemergency: "",
     addressemergencycontact:"",
-    mobilephoneemergencycontact:"",
+    mobileemergency:"",
     mothername:""};
-export var emergencycontact='',addressemergencycontact='',mobilephoneemergencycontact='',mothername='';
+export var contactemergency='',addressemergencycontact='',mobileemergency='',mothername='';
 var flag = false;
 export default class Family extends React.Component{ 
     constructor(props){
@@ -19,9 +20,9 @@ export default class Family extends React.Component{
           family: {},
           emergencyAddress:{},
             valuefamily:{
-                emergencycontact: "",
+                contactemergency: "",
                 addressemergencycontact:"",
-                mobilephoneemergencycontact:"",
+                mobileemergency:"",
                 mothername:""
             }
 
@@ -33,9 +34,9 @@ export default class Family extends React.Component{
 
     onchangeemergencycontact(e){
         var str = e.target.value;
-        emergencycontact = str;
+        contactemergency = str;
         var value = this.state.valuefamily;
-        value.emergencycontact = str;
+        value.contactemergency = str;
         this.setState(value);
         familyvalue = this.state.valuefamily;
         flag = true;
@@ -52,9 +53,9 @@ export default class Family extends React.Component{
     }
     onchangemobilephoneemergencycontact(e){
         var str = e.target.value;
-        mobilephoneemergencycontact = str;
+        mobileemergency = str;
         var value = this.state.valuefamily;
-        value.mobilephoneemergencycontact = str;
+        value.mobileemergency = str;
         this.setState(value);
         familyvalue = this.state.valuefamily;
         flag = true;
@@ -71,13 +72,13 @@ export default class Family extends React.Component{
     setEntity() {
         var entity = this.props.datafamily;
         if (typeof entity !== "undefined" && !flag){
-            this.state.valuefamily.emergencycontact = entity.contactemergency
+            this.state.valuefamily.contactemergency = entity.contactemergency
             this.state.valuefamily.addressemergencycontact = entity.addressemergencycontact
-            this.state.valuefamily.mobilephoneemergencycontact = entity.mobileemergency
+            this.state.valuefamily.mobileemergency = entity.mobileemergency
             this.state.valuefamily.mothername = entity.mothername
-            emergencycontact = entity.contactemergency
+            contactemergency = entity.contactemergency
             addressemergencycontact = entity.addressemergencycontact
-            mobilephoneemergencycontact = entity.mobileemergency
+            mobileemergency = entity.mobileemergency
             familyvalue = this.state.valuefamily;
             mothername = entity.mothername
         }
@@ -116,7 +117,7 @@ export default class Family extends React.Component{
                                 <input className="form-control input-lg" 
                                     onChange={this.onchangeemergencycontact.bind(this)}
                                     name="emergencyContactPersonName"
-                                    placeholder={LanguageStore.translate('Emergency Contact Name')} type="text" value={this.state.valuefamily.emergencycontact}
+                                    placeholder={LanguageStore.translate('Emergency Contact Name')} type="text" value={this.state.valuefamily.contactemergency}
                                     data-smart-validate-input="" data-required="" data-minlength="4" 
                                     data-message="Please specify Emergency Contact"/>
                                 </div>
@@ -149,7 +150,7 @@ export default class Family extends React.Component{
                                     <h4  style={{float:"left"}}><b>{LanguageStore.translate('Mobile Phone Emergency Contact')}</b></h4>
                                         <NumberFormat className="form-control input-lg" data-minlength="4"
                                         data-required="" placeholder={LanguageStore.translate('Mobile Phone Emergency Contact')}
-                                        format="##########"  name="emergencyContactMobile"  data-minlength="10" value={this.state.valuefamily.mobilephoneemergencycontact}
+                                        format="##########"  name="emergencyContactMobile"  maxLength="10" value={this.state.valuefamily.mobileemergency}
                                         onChange={this.onchangemobilephoneemergencycontact.bind(this)} required />
                                         </div>
                                       </div>

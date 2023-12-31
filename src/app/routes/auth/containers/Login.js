@@ -8,6 +8,7 @@ import '../../../../assets/css/spinnercycle.css'
 import '../../../../assets/css/formoverlay.css'
 import '../../../../assets/css/otpui.css'
 import { fetchHandler } from '../../../config/Utils';
+import { handleAuth } from '../../../config/ConfigParam';
 //s
 export var info = {
     name:"",
@@ -66,7 +67,7 @@ export default class Login extends React.Component {
     componentDidMount() {
 
     }
-    loginxxx(){
+     loginxxx(){
       let user = this.state.formlogin.user;
       let password = this.state.formlogin.password;
       let obj = new Object();
@@ -84,14 +85,33 @@ export default class Login extends React.Component {
             body: JSON.stringify(obj)
 
         })
-        .then(response => response.json())
-        .then(appList => {
-          // alert(appList);
-          hashHistory.push("/application");
-          // window.location.href = "/#/dashboard/analytics";
-        }).catch((error) => {
-          console.log(error)
-        });
+        .then(response => { return response.json();})
+      .then(responseData => {
+        // console.log('responseData ',responseData); 
+        
+        return responseData;})
+      .then(data => {
+        handleAuth ({token:data.data.token});
+        hashHistory.push("/dashboard");
+        // this.setState({"questions" : data});
+      })
+
+      .catch(err => {
+        console.log("fetch error" + err);
+    });
+        // // .then(response => 
+        //   // response.json()
+        //   // console.log('response ',response.json())
+        //   // )
+        // .then(appList => {
+        //   console.log('appList ',appList);
+        //   // alert(appList);
+        //   hashHistory.push("/dashboard");
+        //   // window.location.href = "/#/dashboard/analytics";
+        // }).catch((error) => {
+        //   console.log(error)
+        // });
+
     }
 
 

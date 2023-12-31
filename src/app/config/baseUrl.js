@@ -5,6 +5,7 @@ export const url = 'http://localhost:8088/los/api'
 
 // New
 export const loginURL = url+'/v1/login'
+export const createapp = url+'/v1/application'
 //
 
 // export var url = 'https://demo.simpool.id:8088/los/api'
