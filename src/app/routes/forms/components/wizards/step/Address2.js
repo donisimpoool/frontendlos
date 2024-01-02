@@ -6,7 +6,7 @@ import district from '../../../../../components/forms/commons/district';
 import TypeCity from '../Type/TypeCity';
 import {Addressvalue, isCollateral, secondownershipstatus, provincename} from "./Address";
 import LanguageStore from "../../../../../components/i18n/LanguageStore";
-export var mainaddress2='',provincename2='',postalcode2='',ownershipstatus2='',isCollateral2='';
+export var mainaddress2='',provincename2='',cityname2='',districtname2='',postalcode2='',ownershipstatus2='',isCollateral2='';
 export var Addressvalue2 = {
     secondaddress: "",
     secondprovinceid:"0",
@@ -24,6 +24,8 @@ export default class Address2 extends React.Component{
             value:"0",  
             valueUntil2: false,
             valueProv:'',
+            listkota:[],
+            listkecamatan:[],
             valueaddress:{
                 secondaddress: "",
                 secondprovinceid:"0",
@@ -34,6 +36,36 @@ export default class Address2 extends React.Component{
                 secondiddistrict:"0"
             }
         }
+    }
+
+    OnChangeCity(e){
+        var str = e.target.value;
+        var value = this.state.valueaddress;
+        value.secondidregencies = str;
+        this.setState(value);
+
+        let getKota = this.state.listkota.filter(output => output.idregencies == str);
+        cityname2 = "";
+        if(getKota.length > 0){
+            cityname2 = getKota[0].nameregencies;
+        }
+        
+        let listkecamatan = this.props.listkecamatan.filter(output => output.idregencies == str);
+        this.setState({listkecamatan:listkecamatan});
+    }
+
+    OnChangeKecamatan(e){
+        var str = e.target.value;
+        var value = this.state.valueaddress;
+        value.secondiddistrict = str;
+        this.setState(value);
+
+        let getData = this.props.listkecamatan.filter(output => output.iddistrict == str);
+        districtname2 = "";
+        if(getData.length > 0){
+            districtname2 = getData[0].namedistrict;
+        }
+        
     }
 
     onchangecollateral(e){
@@ -87,6 +119,11 @@ export default class Address2 extends React.Component{
         filterprovince.map(function (item) {
             provincename2 = item.locationName;
         })
+
+        console.log('this.props.listkota ',this.props.listkota);
+        let listkota = this.props.listkota.filter(output => output.idprovince == str);
+        
+        this.setState({listkota:listkota});
         flag = true
     }
     onChangePostalCode(e){
@@ -191,13 +228,71 @@ export default class Address2 extends React.Component{
                         </div>
                       </div>
                     </div>  
-                <TypeCity
+
+                    <div className="row">
+                    <div className="col-md-6">
+                        <div className="form-group">
+                        <div className="inputGroup-sizing-default">
+                               <h4 style={{float:"left"}}><b>{LanguageStore.translate('City')}</b></h4>
+                            <select className="form-control input-lg"
+                                    data-smart-validate-input="" data-required=""
+                                    name="idregencies" defaultValue={""} value={this.state.valueaddress.secondidregencies}
+                                    onChange={this.OnChangeCity.bind(this)}
+                            >
+                                <option value="" selected={true}>{LanguageStore.translate('Choose')}</option>
+                                {
+
+                                    this.state.listkota.map(function (item) {
+                                        if(item.nameregencies !== '') {
+                                            return (
+                                                <option key={item.idregencies}
+                                                        value={item.idregencies} >{item.nameregencies}</option>
+
+                                            )
+                                        }
+                                    })}
+
+                            </select>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="row">
+                    <div className="col-md-6">
+                        <div className="form-group">
+                        <div className="inputGroup-sizing-default">
+                               <h4 style={{float:"left"}}><b>{LanguageStore.translate('District')}</b></h4>
+                            <select className="form-control input-lg"
+                                    data-smart-validate-input="" data-required=""
+                                    name="iddistrict" defaultValue={""} value={this.state.valueaddress.secondiddistrict}
+                                    onChange={this.OnChangeKecamatan.bind(this)}
+                            >
+                                <option value="" selected={true}>{LanguageStore.translate('Choose')}</option>
+                                {
+
+                                    this.state.listkecamatan.map(function (item) {
+                                        if(item.namedistrict !== '') {
+                                            return (
+                                                <option key={item.iddistrict}
+                                                        value={item.iddistrict}>{item.namedistrict}</option>
+
+                                            )
+                                        }
+                                    })}
+
+                            </select>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                {/* <TypeCity
                     idcity={idcity}
                     secondiddistrict={secondiddistrict}
                     no={'2'}
                     DivState={this.state.valueProv}
                     onChangeAddress= {this.OnChangeProvince.bind(this)}
-                />
+                /> */}
                     <div className="row" >
                     <div className="col-sm-6">
                         <div className="form-group">

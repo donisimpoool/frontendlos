@@ -23,6 +23,7 @@ export default class TypeCity extends React.Component{
             listkota:[]
         }
     }
+
     componentDidMount(){
         var url = suburllistcity;
         const otherPram={
@@ -38,6 +39,7 @@ export default class TypeCity extends React.Component{
     }
     OnChangeCity(e){
         var str = e.target.value;
+        console.log('OnChangeCity ',str);
         this.state.valueCity = str;
         idcity = str;
 
@@ -48,6 +50,8 @@ export default class TypeCity extends React.Component{
         var filterkota = this.state.listkota.filter( (item) => {
             return item.idregencies == event.target.value
         })
+        console.log('event.target.value ',event.target.value);
+        console.log('myChangeHandler ',this.state.listkota);
         tempidcity = event.target.value;
         if(fromaddress == '1') {
             idcity = event.target.value;
@@ -78,13 +82,12 @@ export default class TypeCity extends React.Component{
     }
 
     render(){
-        console.log("this.props.DivState : "+this.props.DivState)
         var filterkota = this.state.listkota.filter( (item) => {
             return item.idprovince == this.props.DivState
         })
         if(!flag){
             tempidcity = this.props.idcity;
-            this.state.valueCity = tempidcity
+            this.state.valueCity = tempidcity;
             var filterkota = this.state.listkota.filter( (item) => {
                 return item.idregencies == tempidcity
             })
@@ -114,6 +117,9 @@ export default class TypeCity extends React.Component{
                     namecity4 = item.nameregencies;
                 })
             }
+
+            console.log('filterkota ',filterkota);
+            console.log('tempidcity ',tempidcity);
         }
             return(
                 <div>
@@ -124,8 +130,10 @@ export default class TypeCity extends React.Component{
                                 <h4 style={{float:"left"}}><b>{LanguageStore.translate('City')}</b></h4>
                                 <select className="form-control input-lg"
                                         data-smart-validate-input="" data-required=""
-                                        name="kota" defaultValue={"0"}
-                                        onClick={this.myChangeHandler} value={tempidcity}
+                                        name="kota" defaultValue={tempidcity}
+                                        onClick={this.myChangeHandler} 
+                                        onChange={this.OnChangeCity.bind(this)}
+                                        value={tempidcity}
                                 >
                                     <option value="0" disabled={true}>{LanguageStore.translate('Choose')}</option>
                                     {

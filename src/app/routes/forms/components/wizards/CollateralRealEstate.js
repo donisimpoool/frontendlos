@@ -5,14 +5,14 @@ import {provincename} from "./step/Address";
 import {filedocument} from "./step/Document";
 import {bankvalue} from "./step/Bank";
 import LanguageStore from "../../../../components/i18n/LanguageStore";
-import {keyset, suburllistprovince} from "../../../../config/baseUrl";
+import {keyset, suburllistcity, suburllistdistrict, suburllistprovince} from "../../../../config/baseUrl";
 import {convertByteToMB} from "../../../../config/FunctionGlobal";
 import {info} from "../../../auth/containers/Login";
 import {msglimitfile} from "../../../../config/KosaKata";
 import {DecrypsCode} from "../../../../config/Encrypt";
 import {headers} from "../../../../config/ConfigParam";
 
-export var typeofrealestate = '',conditions='',yearbuild='',rooms='',addresss='',provincee='',sizee='',proofownership='',filedocumentRealEstate={filedoc:[],totalsize:0},isuploadfileRE='NO'
+export var typeofrealestate = '',conditions='',yearbuild='',rooms='',addresss='',provincee='',citynamecollre='',districtnamecollre='',sizee='',proofownership='',filedocumentRealEstate={filedoc:[],totalsize:0},isuploadfileRE='NO'
 export var valueCollateralRealEstate = {
     applicationid:"",
     typerealestate:"",
@@ -37,6 +37,10 @@ export default class CollateralRealEstate extends React.Component{
         collateralTypeId: 3,
         parameters: {},
         valueProv:'',
+        listkotaTemplate:[],
+        listkota:[],
+        listkecamatanTemplate:[],
+        listkecamatan:[],
         posts:[],
         valuedocument:{
             filedoc:[],
@@ -114,8 +118,71 @@ export default class CollateralRealEstate extends React.Component{
             .then(response => response.json())
             .then(json =>
                 // console.log(json.data)
-                this.setState({posts: json.data})
+                // this.setState({posts: json.data})
+                this.handlesetProvinci(json)
             )
+    }
+
+    handlesetProvinci(json){
+        this.setState({posts: json.data});
+        this.getListCity();
+    }
+
+    getListCity(){
+        var url = suburllistcity;
+        const otherPram={
+            method:"GET",
+            headers: headers
+        }
+        fetch(url,otherPram)
+            .then(response => response.json())
+
+            .then(json =>
+                this.getListKecamatan(json)
+            )
+    }
+
+    getListKecamatan(json){
+        this.setState({listkota: [], listkotaTemplate:json.data})
+        var url = suburllistdistrict;
+        const otherPram={
+            method:"GET",
+            headers: headers
+        }
+        fetch(url,otherPram)
+            .then(response => response.json())
+            .then(json =>
+                this.setState({listkecamatan: [], listkecamatanTemplate:json.data})
+            )
+    }
+
+    OnChangeKecamatan(e){
+        var str = e.target.value;
+        var value = this.state.valueCollateralRealEstate;
+        value.districtid = str;
+        this.setState(value);
+
+        let getData = this.state.listkecamatan.filter(output => output.iddistrict == str);
+        districtnamecollre = "";
+        if(getData.length > 0){
+            districtnamecollre = getData[0].namedistrict;
+        }
+    }
+
+    OnChangeCity(e){
+        var str = e.target.value;
+        var value = this.state.valueCollateralRealEstate;
+        value.regenciesid = str;
+        this.setState(value);
+
+        let listkecamatan = this.state.listkecamatanTemplate.filter(output => output.idregencies == str);
+        this.setState({listkecamatan:listkecamatan});
+
+        let getKota = this.state.listkota.filter(output => output.idregencies == str);
+        citynamecollre = "";
+        if(getKota.length > 0){
+            citynamecollre = getKota[0].nameregencies;
+        }
     }
       onChangeSize(e){
           const value = e.target.value;
@@ -194,11 +261,23 @@ export default class CollateralRealEstate extends React.Component{
       }
     OnChangeProvince(e){
         var str = e.target.value;
-        valueCollateralRealEstate.provinceid = value;
+        valueCollateralRealEstate.provinceid = str;
         this.state.valueProv = str;
         var temp = this.state.valueCollateralRealEstate;
-        temp.provinceid = value;
+        temp.provinceid = str;
         this.setState(temp);
+
+        provincee = '';
+        var filterprovince = this.state.posts.filter( (item) => {
+            return item.locationCode == e.target.value
+        })
+        filterprovince.map(function (item) {
+            provincee = item.locationName;
+        })
+
+        let listkota = this.state.listkotaTemplate.filter(output => output.idprovince == str);
+        this.setState({listkota:listkota});
+
         flag = true
     }
 
@@ -215,6 +294,9 @@ export default class CollateralRealEstate extends React.Component{
         var temp = this.state.valueCollateralRealEstate;
         temp.provinceid = event.target.value;
         this.setState(temp);
+
+        let listkota = this.state.listkotaTemplate.filter(output => output.idprovince == str);
+        this.setState({listkota:listkota});
         flag = true;
 
     }
@@ -371,7 +453,7 @@ export default class CollateralRealEstate extends React.Component{
                                 <select className="form-control input-lg"
                                         data-smart-validate-input="" data-required=""
                                         name="province" defaultValue={""}
-                                        onChange={this.myChangeHandler} value={this.state.valueCollateralRealEstate.provinceid}
+                                        onChange={this.OnChangeProvince.bind(this)} value={this.state.valueCollateralRealEstate.provinceid}
                                 >
                                     <option value="0" selected={true}>Choose</option>
                                     {
@@ -388,13 +470,71 @@ export default class CollateralRealEstate extends React.Component{
                         </div>
                     </div>
                 </div>
-                <TypeCity
+
+                <div className="row">
+                    <div className="col-md-6">
+                        <div className="form-group">
+                        <div className="inputGroup-sizing-default">
+                               <h4 style={{float:"left"}}><b>{LanguageStore.translate('City')}</b></h4>
+                            <select className="form-control input-lg"
+                                    data-smart-validate-input="" data-required=""
+                                    name="idregencies" defaultValue={""} value={this.state.valueCollateralRealEstate.regenciesid}
+                                    onChange={this.OnChangeCity.bind(this)}
+                            >
+                                <option value="" selected={true}>{LanguageStore.translate('Choose')}</option>
+                                {
+
+                                    this.state.listkota.map(function (item) {
+                                        if(item.nameregencies !== '') {
+                                            return (
+                                                <option key={item.idregencies}
+                                                        value={item.idregencies}>{item.nameregencies}</option>
+
+                                            )
+                                        }
+                                    })}
+
+                            </select>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="row">
+                    <div className="col-md-6">
+                        <div className="form-group">
+                        <div className="inputGroup-sizing-default">
+                               <h4 style={{float:"left"}}><b>{LanguageStore.translate('District')}</b></h4>
+                            <select className="form-control input-lg"
+                                    data-smart-validate-input="" data-required=""
+                                    name="idregencies" defaultValue={""} value={this.state.valueCollateralRealEstate.districtid}
+                                    onChange={this.OnChangeKecamatan.bind(this)}
+                            >
+                                <option value="" selected={true}>{LanguageStore.translate('Choose')}</option>
+                                {
+
+                                    this.state.listkecamatan.map(function (item) {
+                                        if(item.namedistrict !== '') {
+                                            return (
+                                                <option key={item.iddistrict}
+                                                        value={item.iddistrict}>{item.namedistrict}</option>
+
+                                            )
+                                        }
+                                    })}
+
+                            </select>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                {/* <TypeCity
                     idcity={idregencies}
                     iddistrict={iddistrict}
                     no={'4'}
                     DivState={this.state.valueProv}
                     onChangeAddress= {this.OnChangeProvince.bind(this)}
-                />
+                /> */}
 
                 <div className="row">
                     <div className="col-sm-6">

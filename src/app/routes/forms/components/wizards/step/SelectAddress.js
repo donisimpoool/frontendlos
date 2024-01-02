@@ -12,6 +12,8 @@ export default class SelectAddress extends React.Component{
                         onChangeAddressAdditional = {this.props.onChangeAddressAdditional.bind(this)}
                         listprovince = {this.props.listprovince}
                         listownershipstatus={this.props.listownershipstatus}
+                        listkota={this.props.listkota}
+                        listkecamatan={this.props.listkecamatan}
                     />
                 </div>                
             );

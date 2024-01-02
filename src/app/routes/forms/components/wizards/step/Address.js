@@ -5,10 +5,10 @@ import SelectUntil from '../SelectUntil';
 import TypeCity, {namecity} from '../Type/TypeCity';
 import {personelvalue} from "./Personal";
 import LanguageStore from "../../../../../components/i18n/LanguageStore";
-import {suburllistprovince} from "../../../../../config/baseUrl";
+import {suburllistcity, suburllistdistrict, suburllistkelurahanv1, suburllistprovince} from "../../../../../config/baseUrl";
 import {headers} from "../../../../../config/ConfigParam";
 
-export var mainaddress='',provincename='',postalcode='',ownershipstatus='',isCollateral='',livedinaddress='',location='',rt='',rw='';
+export var mainaddress='',provincename='',cityname='',districtname='',postalcode='',ownershipstatus='',isCollateral='',livedinaddress='',location='',rt='',rw='';
 export var Addressvalue = {
     mainaddress: "",
     provinceid:"0",
@@ -43,6 +43,12 @@ export default class Address extends React.Component{
             valueAdditional: false,
             valueUntil: false,
             valueProv:'',
+            listkotaTemplate:[],
+            listkota:[],
+            listkecamatanTemplate:[],
+            listkecamatan:[],
+            listkelurahan:[],
+            
             // addressList: this.props.address_state
             address: {
                 mainAddress: true
@@ -86,7 +92,41 @@ export default class Address extends React.Component{
             .then(response => response.json())
             .then(json =>
                 // console.log(json.data)
-                this.setState({posts: json.data})
+                // this.setState({posts: json.data})
+                this.handlesetProvinci(json)
+                
+            )
+    }
+
+    handlesetProvinci(json){
+        this.setState({posts: json.data});
+        this.getListCity();
+    }
+    getListCity(){
+        var url = suburllistcity;
+        const otherPram={
+            method:"GET",
+            headers: headers
+        }
+        fetch(url,otherPram)
+            .then(response => response.json())
+
+            .then(json =>
+                this.getListKecamatan(json)
+            )
+    }
+
+    getListKecamatan(jsons){
+        this.setState({listkota: [], listkotaTemplate:jsons.data})
+        var url = suburllistdistrict;
+        const otherPram={
+            method:"GET",
+            headers: headers
+        }
+        fetch(url,otherPram)
+            .then(response => response.json())
+            .then(json =>
+                this.setState({listkecamatan: [],listkecamatanTemplate:json.data})
             )
     }
 
@@ -127,7 +167,6 @@ export default class Address extends React.Component{
         value.usedforcollateral = str;
         this.setState(value);
         Addressvalue = this.state.valueaddress;
-        console.log("value", str)
         flag = true;
     }
     onChangePostalCode(e){
@@ -179,6 +218,63 @@ export default class Address extends React.Component{
         flag = true;
     }
 
+    OnChangeKecamatan(e){
+        var str = e.target.value;
+        var value = this.state.valueaddress;
+        value.iddistrict = str;
+        this.setState(value);
+
+        let getData = this.state.listkecamatan.filter(output => output.iddistrict == str);
+        districtname = "";
+        if(getData.length > 0){
+            districtname = getData[0].namedistrict;
+        }
+        
+        this.getlistkelurahanV1(str);
+    }
+
+    OnChangeKelurahan(e){
+        var str = e.target.value;
+        var value = this.state.valueaddress;
+        value.villagesid = str;
+        this.setState(value);
+    }
+
+    getlistkelurahanV1(iddistrict){
+        var url = suburllistkelurahanv1;
+        const formData = new FormData();
+        formData.append('iddistrict', iddistrict);
+        var params =
+            {
+                "iddistrict": iddistrict,
+            }
+        const otherPram={
+            method:"POST",
+            headers: headers,
+            body: JSON.stringify(params)
+        }
+        fetch(url,otherPram)
+            .then(response => response.json())
+            .then(json => {
+                this.setState({listkelurahan: json.data})
+            })
+    }
+
+    OnChangeCity(e){
+        var str = e.target.value;
+        var value = this.state.valueaddress;
+        value.idregencies = str;
+        this.setState(value);
+
+        let getKota = this.state.listkota.filter(output => output.idregencies == str);
+        cityname = "";
+        if(getKota.length > 0){
+            cityname = getKota[0].nameregencies;
+        }
+        
+        let listkecamatan = this.state.listkecamatanTemplate.filter(output => output.idregencies == str);
+        this.setState({listkecamatan:listkecamatan});
+    }
     OnChangeProvince(e){
         var str = e.target.value;
         var value = this.state.valueaddress;
@@ -194,6 +290,9 @@ export default class Address extends React.Component{
             provincename = item.locationName;
         })
         flag = true
+
+        let listkota = this.state.listkotaTemplate.filter(output => output.idprovince == str);
+        this.setState({listkota:listkota});
         this.onchangepostalcodebykelurahan('');
     }
     OnChangeLivedAddressSinceYear(e){
@@ -304,6 +403,7 @@ export default class Address extends React.Component{
         }
 
         const yearList = allYears.map((x) => {return(<option value={x} key={x}>{x}</option>)});
+        
         return(
             <div>
              <div className="row">
@@ -350,7 +450,96 @@ export default class Address extends React.Component{
                         </div>
                       </div>
                     </div>
-                    <TypeCity
+
+                    <div className="row">
+                    <div className="col-md-6">
+                        <div className="form-group">
+                        <div className="inputGroup-sizing-default">
+                               <h4 style={{float:"left"}}><b>{LanguageStore.translate('City')}</b></h4>
+                            <select className="form-control input-lg"
+                                    data-smart-validate-input="" data-required=""
+                                    name="idregencies" defaultValue={""} value={this.state.valueaddress.idregencies}
+                                    onChange={this.OnChangeCity.bind(this)}
+                            >
+                                <option value="" selected={true}>{LanguageStore.translate('Choose')}</option>
+                                {
+
+                                    this.state.listkota.map(function (item) {
+                                        if(item.nameregencies !== '') {
+                                            return (
+                                                <option key={item.idregencies}
+                                                        value={item.idregencies} >{item.nameregencies}</option>
+
+                                            )
+                                        }
+                                    })}
+
+                            </select>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="row">
+                    <div className="col-md-6">
+                        <div className="form-group">
+                        <div className="inputGroup-sizing-default">
+                               <h4 style={{float:"left"}}><b>{LanguageStore.translate('District')}</b></h4>
+                            <select className="form-control input-lg"
+                                    data-smart-validate-input="" data-required=""
+                                    name="idregencies" defaultValue={""} value={this.state.valueaddress.iddistrict}
+                                    onChange={this.OnChangeKecamatan.bind(this)}
+                            >
+                                <option value="" selected={true}>{LanguageStore.translate('Choose')}</option>
+                                {
+
+                                    this.state.listkecamatan.map(function (item) {
+                                        if(item.namedistrict !== '') {
+                                            return (
+                                                <option key={item.iddistrict}
+                                                        value={item.iddistrict}>{item.namedistrict}</option>
+
+                                            )
+                                        }
+                                    })}
+
+                            </select>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="row">
+                    <div className="col-md-6">
+                        <div className="form-group">
+                        <div className="inputGroup-sizing-default">
+                               <h4 style={{float:"left"}}><b>{LanguageStore.translate('Village')}</b></h4>
+                            <select className="form-control input-lg"
+                                    data-smart-validate-input="" data-required=""
+                                    name="idregencies" defaultValue={""} value={this.state.valueaddress.villagesid}
+                                    onChange={this.OnChangeKelurahan.bind(this)}
+                            >
+                                <option value="" selected={true}>{LanguageStore.translate('Choose')}</option>
+                                {
+
+                                    this.state.listkelurahan.map(function (item) {
+                                        if(item.namesubdistrict !== '') {
+                                            return (
+                                                <option key={item.idsubdistrict}
+                                                        value={item.idsubdistrict}>{item.namesubdistrict}</option>
+
+                                            )
+                                        }
+                                    })}
+
+                            </select>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                    {/* {
+                        this.state.valueProv !== ''?
+                        <TypeCity
                         no={'1'}
                         DivState={this.state.valueProv}
                         idcity={idcity}
@@ -358,7 +547,9 @@ export default class Address extends React.Component{
                         onChangeAddress= {this.OnChangeProvince.bind(this)}
                         listkelurahan={this.props.listkelurahan}
                         onchangepostalcodebykelurahan={this.onchangepostalcodebykelurahan.bind('')}
-                    />
+                    />:''
+                    } */}
+                    
 
                     <div className="row" >
                         <div className="col-sm-6">
@@ -510,6 +701,8 @@ export default class Address extends React.Component{
                     listownershipstatus={variabelownershipstatus}
                     DivState={this.state.valueAdditional}
                     listprovince={this.state.posts}
+                    listkota={this.state.listkotaTemplate}
+                    listkecamatan={this.state.listkecamatanTemplate}
                     onChangeAddressAdditional={this.onChangeAddressAdditional.bind(this)}
                 />
                 <br/>

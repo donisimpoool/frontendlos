@@ -74,7 +74,6 @@ export default class Loan extends React.Component {
     onReturnLoan() {
         this.props.loan_update(this.state.loan)
         this.props.onGetData()
-        console.log(this.props.loan_console)
     }
 
     onParseAmount(e) {
@@ -113,10 +112,11 @@ export default class Loan extends React.Component {
 
     myChangeHandler = (e) => {
         const loanprodID = e.target.value;
+        let nameloan = this.state.posts.filter(output => output.loanProductId == loanprodID);
 
-        var nameloan = this.state.posts.filter( (item) => {
-            return item.loanproductid == loanprodID
-        })
+        // var nameloan = this.state.posts.filter( (item) => {
+        //     return item.loanProductId == loanprodID
+        // })
         loanName = '';
         var mintenor = 0
         var maxtenor = 0
@@ -125,7 +125,9 @@ export default class Loan extends React.Component {
         var filterid = ''
         var defaulttenor=0
         var defaultamount=0
-        nameloan.map(function (item) {
+        // nameloan.map(function (item) {
+        if(nameloan.length > 0){
+            let item = nameloan[0];
             loanName = item.loanName;
             mintenor = item.mintenor;
             maxtenor = item.maxtenor;
@@ -134,8 +136,9 @@ export default class Loan extends React.Component {
             filterid = item.filterid_h;
             defaulttenor = item.defaulttenor;
             defaultamount = item.defaultamount;
+        }
+        // })
 
-        })
         var value = this.state.value;
         value.loanproductid = loanprodID;
         value.tenor = defaulttenor;
@@ -239,8 +242,8 @@ export default class Loan extends React.Component {
                                         this.state.posts.map(function (item) {
                                             if(item.loanName !== '') {
                                                 return (
-                                                    <option key={item.loanproductid}
-                                                            value={item.loanproductid}>{item.loanName}</option>
+                                                    <option key={item.loanProductId}
+                                                            value={item.loanProductId}>{item.loanName}</option>
                                                 )
                                             }
 
@@ -263,10 +266,11 @@ export default class Loan extends React.Component {
                             <div className="inputGroup-sizing-default">
                                 <h4 style={{float: "left"}}><b>{LanguageStore.translate('Loan Amount')}</b><label>&nbsp;( IDR )</label></h4>
 
-                                <NumberFormat className="form-control input-lg" data-minlength="4" data-required=""
+                                <NumberFormat className="form-control input-lg"  required={false}
                                               thousandSeparator={true} placeholder="Enter your loan amount"
-                                              onChange={this.onParseAmount.bind(this)} min={this.state.range.minamount} max={this.state.range.maxamount }
-                                              name="amount" value={this.state.value.amount} data-message=""
+                                              onChange={this.onParseAmount.bind(this)} 
+                                            //   min={this.state.range.minamount} max={this.state.range.maxamount }
+                                              name="amount"  value={this.state.value.amount} data-message=""
 
                                 />
 

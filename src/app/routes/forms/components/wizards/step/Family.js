@@ -65,7 +65,7 @@ export default class Family extends React.Component{
         mothername = str
         var value = this.state.valuefamily;
         value.mothername = str
-        this.state(value)
+        this.setState(value);
         familyvalue = this.state.valuefamily;
         flag = true;
     }
@@ -101,7 +101,7 @@ export default class Family extends React.Component{
                                 <h4  style={{float:"left"}}><b>{LanguageStore.translate('Mother Name')} </b></h4>
                                 <input className="form-control input-lg"
                                        onChange={this.onmothername.bind(this)}
-                                       name="MotherName"
+                                       name="mothername"
                                        placeholder={LanguageStore.translate('Mother Name')} type="text" value={this.state.valuefamily.mothername}
                                        data-smart-validate-input="" data-required="" data-minlength="4"
                                        data-message="Please specify Mother Name"/>
@@ -150,7 +150,7 @@ export default class Family extends React.Component{
                                     <h4  style={{float:"left"}}><b>{LanguageStore.translate('Mobile Phone Emergency Contact')}</b></h4>
                                         <NumberFormat className="form-control input-lg" data-minlength="4"
                                         data-required="" placeholder={LanguageStore.translate('Mobile Phone Emergency Contact')}
-                                        format="##########"  name="emergencyContactMobile"  maxLength="10" value={this.state.valuefamily.mobileemergency}
+                                          name="emergencyContactMobile"  maxLength="10" value={this.state.valuefamily.mobileemergency}
                                         onChange={this.onchangemobilephoneemergencycontact.bind(this)} required />
                                         </div>
                                       </div>

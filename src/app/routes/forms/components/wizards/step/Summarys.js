@@ -14,7 +14,7 @@ import {Addressvalue} from "./Address";
 import {names,mobilephone,landline,placeofbirth,dateofbirthtime,Gender,maritalstatus,typeid,idnumber,education,email } from "./Personal";
 import AddressSum from "../SummaryData/AddressSum";
 import {idcity, idcity2, idcity3, idcity4, namecity, namecity2, namecity3, namecity4} from "../Type/TypeCity";
-import {mainaddress,provincename,postalcode,ownershipstatus,isCollateral,livedinaddress,location} from "./Address";
+import {mainaddress,provincename,postalcode,ownershipstatus,isCollateral,livedinaddress,location, cityname as add_cityname, districtname as add_districtname} from "./Address";
 import {filedocument} from "./Document";
 import {filedocumentVehicle} from "../CollateralVehicle";
 import {filedocumentRealEstate} from "../CollateralRealEstate";
@@ -29,11 +29,11 @@ import {
     namekecataman4,
     idkelurahan
 } from "../Type/typeDistrict";
-import {mainaddress2, provincename2, postalcode2, ownershipstatus2, isCollateral2, Addressvalue2} from "./Address2";
+import {mainaddress2, provincename2, postalcode2, ownershipstatus2, isCollateral2, Addressvalue2,cityname2,districtname2} from "./Address2";
 import {familyvalue} from "./Family";
 import {contactemergency,addressemergencycontact,mobileemergency} from "./Family";
 import {businessvalue} from "./Business";
-import {companyname,companyaddress,provincenamebusiness,divisionname,positionname,durationtime,numberofemployees,businessline} from "./Business";
+import {companyname,companyaddress,provincenamebusiness,citynamebusiness,districtnamebusiness,divisionname,positionname,durationtime,numberofemployees,businessline} from "./Business";
 import {financialvalue} from "./Financial";
 import {typeincome,mainincome,sideincome,expense,additionalexpense,typevehiclefinancial,vehicleowner} from "./Financial";
 import {bankvalue} from "./Bank";
@@ -51,7 +51,9 @@ import {
     sizee,
     proofownership,
     isuploadfileRE,
-    valueCollateralRealEstate
+    valueCollateralRealEstate,
+    citynamecollre,
+    districtnamecollre
 } from "../CollateralRealEstate";
 import {typevehicle, years, millage, isuploadfileVehicle, valueColleteralVehicle} from "../CollateralVehicle";
 import {brandid, brandname, transmisiionname, transmisionid} from "../TypeVehicle";
@@ -360,18 +362,18 @@ export default class Summarys extends React.Component{
                         <div>
                             <AddressSum
                                 location={location}
-                                namecity={namecity}
+                                namecity={add_cityname}
                                 mainaddress={mainaddress}
                                 provincename={provincename}
-                                namekecamatan={namekecamatan}
+                                namekecamatan={add_districtname}
                                 postalcode={postalcode}
                                 ownershipstatus={ownershipstatus}
                                 isCollateral={isCollateral}
                                 livedinaddress={livedinaddress}
-                                namecity2={namecity2}
+                                namecity2={cityname2}
                                 mainaddress2={mainaddress2}
                                 provincename2={provincename2}
-                                namekecataman2={namekecataman2}
+                                namekecataman2={districtname2}
                                 postalcode2={postalcode2}
                                 ownershipstatus2={ownershipstatus2}
                                 isCollateral2={isCollateral2}
@@ -411,8 +413,8 @@ export default class Summarys extends React.Component{
                                 companyname = {companyname}
                                 companyaddress = {companyaddress}
                                 provincename = {provincenamebusiness}
-                                namecity3 = {namecity3}
-                                namekecataman3 = {namekecataman3}
+                                namecity3 = {citynamebusiness}
+                                namekecataman3 = {districtnamebusiness}
                                 divisionname = {divisionname}
                                 positionname={positionname}
                                 durationtime={durationtime}
@@ -482,7 +484,7 @@ export default class Summarys extends React.Component{
                                condition={conditions}
                                yearbuild={yearbuild}proofownership={proofownership}
                                rooms={rooms}addresss={addresss}provincee={provincee}sizee={sizee}
-                               namecity4={namecity4}namekecataman4={namekecataman4}isuploadfileRE={isuploadfileRE}
+                               namecity4={citynamecollre}namekecataman4={districtnamecollre}isuploadfileRE={isuploadfileRE}
 
                                typevehicle={typevehicle}years={years}millage={millage}
                                brandname={brandname}transmisiionname={transmisiionname}
