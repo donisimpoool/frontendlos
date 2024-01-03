@@ -1,5 +1,6 @@
 import React from 'react'
 import NumberFormat from 'react-number-format';
+import { useParams } from 'react-router';
 import {suburllistloan,suburllistloan_simpool} from "../../../../../config/baseUrl";
 
 import { parse } from 'querystring';
@@ -50,6 +51,9 @@ export default class Loan extends React.Component {
     }
 
     componentDidMount() {
+        
+        // const params= useParams();
+        // console.log('this.props ',useParams().id);
         loanvalue = this.state.value;
         var url = suburllistloan
         const otherPram={

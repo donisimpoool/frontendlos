@@ -181,6 +181,7 @@ class NewApplication extends React.Component {
 
   componentDidMount(){
       const session = localStorage.getItem(keyset);
+      console.log('this.props.match.params.id ',this.props.routeParams.id);
       if(session){
       }
       else{
@@ -203,7 +204,7 @@ class NewApplication extends React.Component {
   }
 
   onChangeCreditCard(e){
-    console.log("Bank",e.target.value)
+    // console.log("Bank",e.target.value)
     if(e.target.value==1)
         this.setState({
             valueCC: true
@@ -217,18 +218,18 @@ class NewApplication extends React.Component {
 
   onSaveDraft(){
       var value = this.state.allvalue;
-      Addressvalue.idregencies = idcity;
-      Addressvalue.iddistrict = idkec;
-      Addressvalue.idvillage = idkelurahan
+      // Addressvalue.idregencies = idcity;
+      // Addressvalue.iddistrict = idkec;
+      // Addressvalue.idvillage = idkelurahan
 
-      Addressvalue2.secondidregencies = idcity2;
-      Addressvalue2.secondiddistrict = idkec2;
+      // Addressvalue2.secondidregencies = idcity2;
+      // Addressvalue2.secondiddistrict = idkec2;
 
-      businessvalue.idregencies = idcity3;
-      businessvalue.iddistrict = idkec3;
+      // businessvalue.idregencies = idcity3;
+      // businessvalue.iddistrict = idkec3;
 
-      valueCollateralRealEstate.regenciesid = idcity4;
-      valueCollateralRealEstate.districtid = idkec4;
+      // valueCollateralRealEstate.regenciesid = idcity4;
+      // valueCollateralRealEstate.districtid = idkec4;
 
       valueColleteralVehicle.brand = brandid
       valueColleteralVehicle.typetransmision = transmisionid;

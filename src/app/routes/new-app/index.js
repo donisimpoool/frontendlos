@@ -19,6 +19,15 @@ export default {
         })
       },
       
+    },
+    {
+      path: 'edit-app/:id',
+      getComponent(nextState, cb){
+        System.import('./components/NewApplication').then((m)=> {
+          cb(null, m.default)
+        })
+      },
+      
     }
   ]
 

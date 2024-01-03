@@ -69,13 +69,13 @@ import {
 } from "../CollateralBank";
 import {postLoan, uploadFile} from "../actions/loanActions";
 import LanguageStore from "../../../../../components/i18n/LanguageStore";
-import {keyset, suburlcreateapp,suburlsubmitapp} from "../../../../../config/baseUrl";
+import {createapp, keyset, suburlcreateapp,suburlsubmitapp} from "../../../../../config/baseUrl";
 import {suburlmultiplefile} from "../../../../../config/baseUrl";
 import {info} from "../../../../auth/containers/Login";
 import {convertByteToMB} from "../../../../../config/FunctionGlobal";
 import {msglimitfile} from "../../../../../config/KosaKata";
 import {DecrypsCode} from "../../../../../config/Encrypt";
-import {headers} from "../../../../../config/ConfigParam";
+import {header, headers} from "../../../../../config/ConfigParam";
 
 export default class Summarys extends React.Component{
     constructor(props) {
@@ -144,18 +144,18 @@ export default class Summarys extends React.Component{
     onSubmit= () => {
         if(window.confirm('Are you sure you want to save it ?')){
         var value = this.state.allvalue
-        Addressvalue.idregencies = idcity;
-        Addressvalue.iddistrict = idkec;
-        Addressvalue.idvillage = idkelurahan
+        // Addressvalue.idregencies = idcity;
+        // Addressvalue.iddistrict = idkec;
+        // Addressvalue.idvillage = idkelurahan
 
-        Addressvalue2.idregencies = idcity2;
-        Addressvalue2.iddistrict = idkec2;
+        // Addressvalue2.idregencies = idcity2;
+        // Addressvalue2.iddistrict = idkec2;
 
-        businessvalue.idregencies = idcity3;
-        businessvalue.iddistrict = idkec3;
+        // businessvalue.idregencies = idcity3;
+        // businessvalue.iddistrict = idkec3;
 
-        valueCollateralRealEstate.regenciesid = idcity4;
-        valueCollateralRealEstate.districtid = idkec4;
+        // valueCollateralRealEstate.regenciesid = idcity4;
+        // valueCollateralRealEstate.districtid = idkec4;
 
         valueColleteralVehicle.brand = brandid
         valueColleteralVehicle.typetransmision = transmisionid;
@@ -170,108 +170,112 @@ export default class Summarys extends React.Component{
         value.financialvalue = financialvalue;
         value.bankvalue = bankvalue;
         value.collateralvalue = collateralvalue;
+
+        let applicationaddress = Addressvalue;
+        applicationaddress.secondaddress = Addressvalue2.secondaddress;
+        applicationaddress.secondprovinceid = Addressvalue2.secondprovinceid;
+        applicationaddress.secondpostalcode = Addressvalue2.secondpostalcode;
+        applicationaddress.secondownershipstatus = Addressvalue2.secondownershipstatus;
+        applicationaddress.secondusedforcollateral = Addressvalue2.secondusedforcollateral;
+        applicationaddress.secondidregencies = Addressvalue2.secondidregencies;
+        applicationaddress.secondiddistrict = Addressvalue2.secondiddistrict;
         this.setState(value);
         var status = 0;
         var paramloan = {
-            applicationID: "",
-            status: "OPEN",
-            score: 0,
-            isdraft: "N",
-            createdby:JSON.parse(DecrypsCode(localStorage.getItem(keyset))).id,
-            appLoan: this.state.allvalue.loanvalue,
-            appPersonel: this.state.allvalue.personelvalue,
-            appAddress1: this.state.allvalue.Addressvalue,
-            appAddress2: this.state.allvalue.Addressvalue2,
-            appFamily: this.state.allvalue.familyvalue,
-            appBusiness: this.state.allvalue.businessvalue,
-            appFinancial: this.state.allvalue.financialvalue,
-            appBank: this.state.allvalue.bankvalue,
-            appCollateral: this.state.allvalue.collateralvalue,
-            appCollateralRealEstate: valueCollateralRealEstate,
-            appCollateralVehicle: valueColleteralVehicle,
-            appCollateralDeposit: valuecollateraldeposit,
-            creditcard: creditcardvalue
+            isdraft:false,
+            applicationloan:this.state.allvalue.loanvalue,
+            applicationpersonal:this.state.allvalue.personelvalue,
+            applicationaddress:applicationaddress,
+            applicationfamily:this.state.allvalue.familyvalue,
+            applicationbusiness:this.state.allvalue.businessvalue,
+            applicationfinancial:this.state.allvalue.financialvalue,
+            applicationbank:this.state.allvalue.bankvalue,
+            applicationcollateral:this.state.allvalue.collateralvalue,
+            applicationCollateralRealEstate:valueCollateralRealEstate,
+            applicationCollateralVehicle:valueColleteralVehicle,
+            applicationCollateralDeposit:valuecollateraldeposit,
         }
         var msg = "";
         var arraymsg = [];
             var size = 0;
-            var sizefile = JSON.parse(DecrypsCode(localStorage.getItem(keyset))).sizefile
-            if (filedocument.filedoc.length > 0) {
-                size += paramsfile.totalsize
-            }
-            if (filedocumentRealEstate.filedoc.length > 0) {
-                size += filedocumentRealEstate.totalsize
-            }
-            if (filedocumentVehicle.filedocvehicle.length > 0) {
-                size += filedocumentVehicle.totalsize
-            }
-            if (filedocumentbank.filedoc.length > 0) {
-                size += filedocumentbank.totalsize
-            }
-            var totalSizeMB = convertByteToMB(size);
-            if (sizefile > totalSizeMB) {
+            // var sizefile = JSON.parse(DecrypsCode(localStorage.getItem(keyset))).sizefile
+            // if (filedocument.filedoc.length > 0) {
+            //     size += paramsfile.totalsize
+            // }
+            // if (filedocumentRealEstate.filedoc.length > 0) {
+            //     size += filedocumentRealEstate.totalsize
+            // }
+            // if (filedocumentVehicle.filedocvehicle.length > 0) {
+            //     size += filedocumentVehicle.totalsize
+            // }
+            // if (filedocumentbank.filedoc.length > 0) {
+            //     size += filedocumentbank.totalsize
+            // }
+            // var totalSizeMB = convertByteToMB(size);
+            // if (sizefile > totalSizeMB) {
 
-            }else{
-                msg = msglimitfile(sizefile)+" \r\n ";
-                arraymsg.push(msg);
-            }
+            // }else{
+            //     msg = msglimitfile(sizefile)+" \r\n ";
+            //     arraymsg.push(msg);
+            // }
         if (msg == "") {
-            var url = suburlsubmitapp;
+            var url = createapp;
             fetch(url,
                 {
                     method: 'POST',
-                    headers: headers,
+                    headers: header,
                     body: JSON.stringify(paramloan)
                 })
                 .then(response => response.json())
                 .then(respon => {
-                    if(respon.validation == "") {
-                        if (filedocument.filedoc.length > 0) {
-                            var parms = {
-                                'filedoc': filedocument.filedoc,
-                                'description': filedocument.description
-                            }
-                            uploadFile(parms, respon.data.applicationid, 'appdocument')
-                        }
-                        if (filedocumentVehicle.filedocvehicle.length > 0) {
-                            var parms = {
-                                'filedoc': filedocumentVehicle.filedocvehicle,
-                                'description': ''
-                            }
-                            uploadFile(parms, respon.data.applicationid, 'colvehicle')
-                        }
-                        if (filedocumentRealEstate.filedoc.length > 0) {
-                            var parms = {
-                                'filedoc': filedocumentRealEstate.filedoc,
-                                'description': ''
-                            }
-                            uploadFile(parms, respon.data.applicationid, 'colrealestate')
-                        }
-                        if (filedocumentbank.filedoc.length > 0) {
-                            var parms = {
-                                'filedoc': filedocumentbank.filedoc,
-                                'description': ''
-                            }
-                            uploadFile(parms, respon.data.applicationid, 'colbank')
-                        }
-                        alert('Sukses Menyimpan')
-                    }else{
-                        msg = "";
-                        respon.validation.map(function (item) {
-                            msg += item.errormessages+"\r\n";
-                        })
-                        alert(msg);
-                    }
+                    // if(respon.validation == "") {
+                    //     if (filedocument.filedoc.length > 0) {
+                    //         var parms = {
+                    //             'filedoc': filedocument.filedoc,
+                    //             'description': filedocument.description
+                    //         }
+                    //         uploadFile(parms, respon.data.applicationid, 'appdocument')
+                    //     }
+                    //     if (filedocumentVehicle.filedocvehicle.length > 0) {
+                    //         var parms = {
+                    //             'filedoc': filedocumentVehicle.filedocvehicle,
+                    //             'description': ''
+                    //         }
+                    //         uploadFile(parms, respon.data.applicationid, 'colvehicle')
+                    //     }
+                    //     if (filedocumentRealEstate.filedoc.length > 0) {
+                    //         var parms = {
+                    //             'filedoc': filedocumentRealEstate.filedoc,
+                    //             'description': ''
+                    //         }
+                    //         uploadFile(parms, respon.data.applicationid, 'colrealestate')
+                    //     }
+                    //     if (filedocumentbank.filedoc.length > 0) {
+                    //         var parms = {
+                    //             'filedoc': filedocumentbank.filedoc,
+                    //             'description': ''
+                    //         }
+                    //         uploadFile(parms, respon.data.applicationid, 'colbank')
+                    //     }
+                    //     alert('Sukses Menyimpan')
+                    // }else{
+                    //     msg = "";
+                    //     respon.validation.map(function (item) {
+                    //         msg += item.errormessages+"\r\n";
+                    //     })
+                    //     alert(msg);
+                    // }
                 })
-        } else {
-            msg = "";
-            for (var i = 0; i <= 9; i++) {
-                if (arraymsg.length > i) {
-                    msg += arraymsg[i];
-                }
-            }
-            alert(msg);
-        }
+        } 
+        // else {
+        //     msg = "";
+        //     for (var i = 0; i <= 9; i++) {
+        //         if (arraymsg.length > i) {
+        //             msg += arraymsg[i];
+        //         }
+        //     }
+        //     alert(msg);
+        // }
     }
         // postLoan(paramloan)
     }

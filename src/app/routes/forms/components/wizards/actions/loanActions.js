@@ -125,6 +125,7 @@ export function postLoan(params,paramsfile) {
             )
             .then(response => response.json())
             .then(respon => {
+            })
                 // uploadFile(paramsfile, respon.data.applicationid, 'appdocument')
                 // if (filedocumentVehicle.filedocvehicle.length > 0) {
                 //     var parms = {
@@ -147,7 +148,7 @@ export function postLoan(params,paramsfile) {
                 //     }
                 //     uploadFile(parms, respon.data.applicationid, 'colbank')
                 // }
-            })
+            // })
     // return dispatch => {
         
     // }

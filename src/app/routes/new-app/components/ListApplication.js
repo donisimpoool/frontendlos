@@ -1,5 +1,5 @@
 import React from 'react'
-import {keyset, url} from '../../../config/baseUrl'
+import {baseUrlApp, keyset, url} from '../../../config/baseUrl'
 
 import BigBreadcrumbs from '../../../components/navigation/components/BigBreadcrumbs'
 import Datatable from '../../../components/tables/Datatable'
@@ -13,7 +13,7 @@ import {listposition} from "../../forms/components/wizards/step/Business";
 import {Alert} from "react-bootstrap";
 import LanguageStore from "../../../components/i18n/LanguageStore";
 import {suburllistappv1} from "../../../config/baseUrl";
-import {headers} from "../../../config/ConfigParam";
+import {header, headers} from "../../../config/ConfigParam";
 
 const pageNumb = 2;
 const pageSize = 100;
@@ -63,12 +63,12 @@ export default class ListApplication extends React.Component {
         this.setState({
             data: []
         })
-        var url = suburllistappv1;
+        var url = baseUrlApp;//suburllistappv1;
         // fetch(`${url}/loan/application/v1/applicant-list/?pageSize=${pageSize}`,
         fetch(url,
             {
                 method: 'GET',
-                headers: headers
+                headers: header
             })
             .then(response => response.json())
             .then(appList => {
@@ -182,8 +182,8 @@ export default class ListApplication extends React.Component {
             var listdata = [];
             for (let i = 0; i < this.state.data.length; i++) {
                 var item = this.state.data[i];
-                var itemdate = item.date;
-                itemdate = itemdate.substring(0, 10);
+                // var itemdate = item.date;
+                // itemdate = itemdate.substring(0, 10);
                 var status = item.status;
                 if(status == 'U'){
                     status = "Underwriting"
@@ -193,11 +193,11 @@ export default class ListApplication extends React.Component {
                     status = "Approved"
                 }
                 var temp = {
-                    id: item.applicationID,
-                    custname: item.personelapp.name,
-                    loanid: item.loanapp.loanproduct.loanName,
-                    amountloan: item.loanapp.amount,
-                    date: item.datemonth,
+                    id: item.id,
+                    custname: item.personalName,
+                    loanid: item.loanName,
+                    amountloan: item.loanAmount,
+                    date: item.date,
                     status:status
                 }
                 listdata.push(temp);

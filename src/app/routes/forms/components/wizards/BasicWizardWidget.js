@@ -124,7 +124,6 @@ export default class BasicWizardWidget extends React.Component{
         console.log('wizard submit stuff', data)
     }
 
-
     render() {
         return (
             <JarvisWidget editbutton={false} deletebutton={false} color="darken">
@@ -145,7 +144,7 @@ export default class BasicWizardWidget extends React.Component{
                                      onComplete={this.onWizardComplete}>
                                 <div className="form-bootstrapWizard clearfix">
                                         <ul className="bootstrapWizard">
-                                            <li data-smart-wizard-tab="1">
+                                            <li data-smart-wizard-tab="1" >
                                                 <a> <span className="step">1</span> <span
                                                     className="title">{LanguageStore.translate('Loan Application')} </span>
                                                 </a>

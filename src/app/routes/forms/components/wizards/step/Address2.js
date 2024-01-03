@@ -50,6 +50,7 @@ export default class Address2 extends React.Component{
             cityname2 = getKota[0].nameregencies;
         }
         
+        Addressvalue2 = this.state.valueaddress;
         let listkecamatan = this.props.listkecamatan.filter(output => output.idregencies == str);
         this.setState({listkecamatan:listkecamatan});
     }
@@ -65,6 +66,7 @@ export default class Address2 extends React.Component{
         if(getData.length > 0){
             districtname2 = getData[0].namedistrict;
         }
+        Addressvalue2 = this.state.valueaddress;
         
     }
 
@@ -120,7 +122,6 @@ export default class Address2 extends React.Component{
             provincename2 = item.locationName;
         })
 
-        console.log('this.props.listkota ',this.props.listkota);
         let listkota = this.props.listkota.filter(output => output.idprovince == str);
         
         this.setState({listkota:listkota});
