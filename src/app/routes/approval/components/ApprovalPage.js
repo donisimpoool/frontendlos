@@ -9,10 +9,10 @@ import Underwriting from './Underwriting'
 import Rejected from './Rejected'
 import Approved from './Approved'
 import Msg from "../../../components/i18n/Msg";
-import {keyset} from "../../../config/baseUrl";
+import {getListApproval, keyset} from "../../../config/baseUrl";
 import {suburllistappv2,suburllistunderwriting,suburllistrejected,suburllistapprove,suburllistfilter,suburllistsend} from "../../../config/baseUrl";
 import Send from "./Send";
-import {headers} from "../../../config/ConfigParam";
+import {header, headers} from "../../../config/ConfigParam";
 
 export default class ApprovalPage extends React.Component {
         constructor(props) {
@@ -27,63 +27,86 @@ export default class ApprovalPage extends React.Component {
           }
         }
 
+        setEntity(data) {
+          let listApp = data;
+          let listAppReject = data.filter(output => output.status == "R");
+          let listAppUnderWriting = data.filter(output => output.status == "U");
+          let listAppApprove = data.filter(output => output.status == "A");
+          let listAppSend = data.filter(output => output.status == "S");
+          this.setState({listallitems:listApp,listitems:listAppUnderWriting,listallitemsrejected:listAppReject,listallitemsapproved:listAppApprove,listallitemssend:listAppSend});
+        } 
+
         componentDidMount() {
             const session = localStorage.getItem(keyset);
             if(session) {
-                var url = suburllistappv2;
+              var url = getListApproval;
                 var otherPram = {
                     method: "GET",
-                    headers: headers
+                    headers: header
                 }
                 fetch(url, otherPram)
                     .then(response => response.json())
                     .then(json =>
                         // console.log(json.data)
                         // paramloanrender = json.data
-                        this.setState({listallitems: json.data}),
+                        // this.setState({listallitems: json.data}),
+                        this.setEntity(json.data)
                     )
 
-                url = suburllistunderwriting;
-                fetch(url, otherPram)
-                    .then(response => response.json())
-                    .then(json =>
-                        // console.log(json.data)
-                        // paramloanrender = json.data
-                        this.setState({listitems: json.data})
-                    )
+                // var url = suburllistappv2;
+                // var otherPram = {
+                //     method: "GET",
+                //     headers: headers
+                // }
+                // fetch(url, otherPram)
+                //     .then(response => response.json())
+                //     .then(json =>
+                //         // console.log(json.data)
+                //         // paramloanrender = json.data
+                //         this.setState({listallitems: json.data}),
+                //     )
 
-                url = suburllistrejected;
-                fetch(url, otherPram)
-                    .then(response => response.json())
-                    .then(json =>
-                        // console.log(json.data)
-                        // paramloanrender = json.data
-                        this.setState({listallitemsrejected: json.data})
-                    )
-                url = suburllistapprove;
-                fetch(url, otherPram)
-                    .then(response => response.json())
-                    .then(json =>
-                        // console.log(json.data)
-                        // paramloanrender = json.data
-                        this.setState({listallitemsapproved: json.data})
-                    )
-                url = suburllistfilter;
-                fetch(url, otherPram)
-                    .then(response => response.json())
-                    .then(json =>
-                        // console.log(json.data)
-                        // paramloanrender = json.data
-                        this.setState({listallitemsfilter: json.data})
-                    )
-                url = suburllistsend;
-                fetch(url, otherPram)
-                    .then(response => response.json())
-                    .then(json =>
-                        // console.log(json.data)
-                        // paramloanrender = json.data
-                        this.setState({listallitemssend: json.data})
-                    )
+                // url = suburllistunderwriting;
+                // fetch(url, otherPram)
+                //     .then(response => response.json())
+                //     .then(json =>
+                //         // console.log(json.data)
+                //         // paramloanrender = json.data
+                //         this.setState({listitems: json.data})
+                //     )
+
+                // url = suburllistrejected;
+                // fetch(url, otherPram)
+                //     .then(response => response.json())
+                //     .then(json =>
+                //         // console.log(json.data)
+                //         // paramloanrender = json.data
+                //         this.setState({listallitemsrejected: json.data})
+                //     )
+                // url = suburllistapprove;
+                // fetch(url, otherPram)
+                //     .then(response => response.json())
+                //     .then(json =>
+                //         // console.log(json.data)
+                //         // paramloanrender = json.data
+                //         this.setState({listallitemsapproved: json.data})
+                //     )
+                // url = suburllistfilter;
+                // fetch(url, otherPram)
+                //     .then(response => response.json())
+                //     .then(json =>
+                //         // console.log(json.data)
+                //         // paramloanrender = json.data
+                //         this.setState({listallitemsfilter: json.data})
+                //     )
+                // url = suburllistsend;
+                // fetch(url, otherPram)
+                //     .then(response => response.json())
+                //     .then(json =>
+                //         // console.log(json.data)
+                //         // paramloanrender = json.data
+                //         this.setState({listallitemssend: json.data})
+                //     )
             }else{
                 window.location.href = "/#/login";
             }
@@ -124,6 +147,7 @@ export default class ApprovalPage extends React.Component {
                   <div id="myTabContent1" className="tab-content padding-0">
                     <div className="tab-pane in active" id="all">
                       <p>
+                        {/* appentity kalo udah beres backend, appentity di hilangkan */}
                         <All
                             listallitem={this.state.listallitems}
                         />

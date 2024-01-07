@@ -1101,7 +1101,7 @@ class Underwriting extends Component{
                               <th>Field</th><th>Value</th>
                           </tr>
                           <tr><td>{LanguageStore.translate('Collateral Type')}</td><td>{collateralname}</td></tr>
-                          {
+                          {/* {
                               listcollateral.map(function (item) {
                                   if(item.field !== 'List File') {
                                       return (
@@ -1124,7 +1124,7 @@ class Underwriting extends Component{
                                           </tr>
                                       )
                                   }
-                              })}
+                              })} */}
 
                       </table>
                   </Tab>

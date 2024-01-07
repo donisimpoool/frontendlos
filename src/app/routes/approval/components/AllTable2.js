@@ -241,7 +241,7 @@ class AllTable extends Component{
         var listcollateral = [];
         var value = ['','','','','','','','','','',''];
         var collateralname = '';
-        if(row.appcollateralentity != null) {
+        if(row.appcollateralentity != null && row.appcollateralentity.collateral !== "") {
             collateralname = row.appcollateralentity.collateral;
             if (row.appcollateralentity.collateral == 'RealEstate') {
                 listcollateral = listtypecollateral[0];
@@ -548,7 +548,7 @@ class AllTable extends Component{
                                 <th>Field</th><th>Value</th>
                             </tr>
                             <tr><td>{LanguageStore.translate('Collateral Type')}</td><td>{collateralname}</td></tr>
-                            {
+                            {/* {
                                 listcollateral.map(function (item) {
                                     if(item.field !== 'List File') {
                                         return (
@@ -571,7 +571,7 @@ class AllTable extends Component{
                                             </tr>
                                         )
                                     }
-                                })}
+                                })} */}
 
                         </table>
                     </Tab>

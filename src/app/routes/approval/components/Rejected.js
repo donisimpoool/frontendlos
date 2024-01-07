@@ -489,7 +489,7 @@ class Rejected extends Component{
                                 <th>Field</th><th>Value</th>
                             </tr>
                             <tr><td>{LanguageStore.translate('Collateral Type')}</td><td>{collateralname}</td></tr>
-                            {
+                            {/* {
                                 listcollateral.map(function (item) {
                                     if(item.field !== 'List File') {
                                         return (
@@ -512,7 +512,7 @@ class Rejected extends Component{
                                             </tr>
                                         )
                                     }
-                                })}
+                                })} */}
 
                         </table>
                     </Tab>
