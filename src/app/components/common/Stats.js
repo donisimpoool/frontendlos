@@ -36,7 +36,7 @@ export default class Stats extends React.Component {
     var all = 0;
     var underwriting = 0;
     var approve = 0;
-    var length = this.props.list.length;
+    var length = this.props.list != undefined?this.props.list.length:0;
     if (length > 0) {
     this.props.list.slice(0, 1).map(function (item) {
       all = item.appall;
@@ -50,7 +50,10 @@ export default class Stats extends React.Component {
       <div className="col-xs-12 col-sm-5 col-md-5 col-lg-8">  
         <div className="col-xs-12 col-sm-4 col-md-4 col-lg-3">
           <div className="well well-sm bg-color-purple txt-color-white text-center">
-            <ul id="sparks" className={className} className="text-center">
+            <ul id="sparks" 
+            // className={className} 
+            className="text-center"
+            >
               <li className="sparks-info"> 
                 <h5 className="txt-color-white"> <Msg phrase="Applicants" txtcolour={'white'}/>  <span className="txt-color-white"> {all}</span></h5>
               </li> 
@@ -60,7 +63,10 @@ export default class Stats extends React.Component {
 
         <div className="col-xs-12 col-sm-4 col-md-4 col-lg-3">
           <div className="well well-sm bg-color-purple txt-color-white text-center">
-            <ul id="sparks" className={className} className="text-center"> 
+            <ul id="sparks" 
+            // className={className} 
+            className="text-center"
+            > 
               <li className="sparks-info">
                 <h5 className="txt-color-white"> <Msg phrase="Approved" txtcolour={'white'}/> <span className="txt-color-white">  {approve}</span></h5>
               </li> 
@@ -71,7 +77,9 @@ export default class Stats extends React.Component {
 
         <div className="col-xs-12 col-sm-4 col-md-4 col-lg-3">
           <div className="well well-sm bg-color-purple txt-color-white text-center">
-            <ul id="sparks" className={className} className="text-center"> 
+            <ul id="sparks" 
+            // className={className} 
+            className="text-center"> 
               <li className="sparks-info">
                 <h5 className="txt-color-white"> <Msg phrase="Pending" txtcolour={'white'}/> <span className="txt-color-white">  {underwriting}</span></h5>
               </li>

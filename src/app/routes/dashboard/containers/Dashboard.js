@@ -13,8 +13,8 @@ import ChartJs from "../../graphs/containers/ChartJs"
 import NormalTables from "../../tables/containers/NormalTables"
 import LoanRangeTables from "../../tables/containers/LoanRangeTables";
 import Msg from "../../../components/i18n/Msg"
-import {suburllistgraph, suburllisttopfive, suburllistrangesize, keyset, auth} from "../../../config/baseUrl";
-import {headers} from "../../../config/ConfigParam";
+import {suburllistgraph, suburllisttopfive, suburllistrangesize, keyset, auth, getListDataDashboard, getGraphDashboard} from "../../../config/baseUrl";
+import {header, headers} from "../../../config/ConfigParam";
 
 export var bulan="";
 class Dashboard extends React.Component {
@@ -63,34 +63,38 @@ class Dashboard extends React.Component {
       //     };
       //     this.setState({listreangeamount: params});
 
-      //     var url = suburllistgraph;
-      //     const otherPram = {
-      //         method: "GET",
-      //         headers: headers
-      //     }
+          var url = getGraphDashboard;
+          const otherPram = {
+              method: "GET",
+              headers: header
+          }
 
-      //     fetch(url, otherPram)
-      //         .then(response => response.json())
-      //         .then(json => {
-      //             var value = this.state.datagraph;
-      //             value.datagraphdonuts = json.data.donuts
-      //             value.listgraph = json.data.graph;
-      //             // value.jmlapplied = json.data.donuts.jmlapplied
-      //             // value.jmlapprove = json.data.donuts.jmlapprove
-      //             // value.jmlpending = json.data.donuts.jmlpending
-      //             this.setState(value);
-      //             // alert("json.data.donuts.jmlapplied : "+json.data.donuts.jmlapplied)
-      //             // console.log("json.data.donuts : "+JSON.stringify(json.data.graph))
-      //             // this.setState({listgraph: json.data.graph}) //, {datagraphdonuts: json.data.donuts})
-      //             // alert("json.data.donuts.jmlapplied : "+json.data.donuts.jmlapplied)
+          fetch(url, otherPram)
+              .then(response => response.json())
+              .then(json => {
+                  var value = this.state.datagraph;
+                  value.datagraphdonuts = json.data.donuts
+                  value.listgraph = json.data.graph;
+                  // value.jmlapplied = json.data.donuts.jmlapplied
+                  // value.jmlapprove = json.data.donuts.jmlapprove
+                  // value.jmlpending = json.data.donuts.jmlpending
+                  this.setState(value);
+                  // alert("json.data.donuts.jmlapplied : "+json.data.donuts.jmlapplied)
+                  // console.log("json.data.donuts : "+JSON.stringify(json.data.graph))
+                  // this.setState({listgraph: json.data.graph}) //, {datagraphdonuts: json.data.donuts})
+                  // alert("json.data.donuts.jmlapplied : "+json.data.donuts.jmlapplied)
                   
-      //             // this.setState({datagraphdonuts: json.data.donuts})
-      //         })
+                  // this.setState({datagraphdonuts: json.data.donuts})
+              })
 
       //     // this.props.fetchToken();
       // }else{
       //     window.location.href = "/#/login";
       // }
+  }
+
+  setData = (json) => {
+    this.setState({listitemstopfive:json.listtopfive,listreangeamount:json.listrangesize})
   }
   onChangeTimespan = (e) => {
     var str = e.target.value;
@@ -107,23 +111,24 @@ class Dashboard extends React.Component {
           {
             "bulan": str,
           }
-      var url = suburllisttopfive;
+      var url = getListDataDashboard;//suburllisttopfive;
       var otherPram = {
         method: "POST",
-        headers: headers,
+        headers: header,
         body: JSON.stringify(params)
       }
       fetch(url, otherPram)
           .then(response => response.json())
           .then(json =>
-              this.setState({listitemstopfive: json.data}),
+              this.setData(json.data)
+              // this.setState({listitemstopfive: json.data}),
           )
-      url = suburllistrangesize;
-      fetch(url, otherPram)
-          .then(response => response.json())
-          .then(json =>
-              this.setState({listreangeamount: json.data}),
-          )
+      // url = suburllistrangesize;
+      // fetch(url, otherPram)
+      //     .then(response => response.json())
+      //     .then(json =>
+      //         this.setState({listreangeamount: json.data}),
+      //     )
     }
   }
   render() {

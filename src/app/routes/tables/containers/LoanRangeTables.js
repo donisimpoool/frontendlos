@@ -35,6 +35,7 @@ export default class LoanRangeTables extends React.Component {
                                             </thead>
                                             <tbody>
                                             {
+                                                this.props.list != undefined?
                                                 this.props.list.map(function (item) {
                                                     var num = item.amount;
                                                     num = "Rp "+num.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,")
@@ -47,7 +48,9 @@ export default class LoanRangeTables extends React.Component {
                                                         </tr>
                                                     )
                                                     }
-                                                })}
+                                                })
+                                            :""
+                                            }
                                             </tbody>
                                         </table>
 

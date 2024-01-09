@@ -34,7 +34,7 @@ export default class NormalTables extends React.Component {
                         <tr>
                           <th><Msg phrase="Loan Name"/></th>
                           <th><Msg phrase="Loan Description"/></th>
-                          <th><Msg phrase="Amount Loan"/></th>
+                          <th><Msg phrase="Amount Using This Loan"/></th>
                         </tr>
                         </thead>
                         <tbody>
