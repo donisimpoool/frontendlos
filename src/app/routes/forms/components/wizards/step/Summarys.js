@@ -14,7 +14,7 @@ import {Addressvalue} from "./Address";
 import {names,mobilephone,landline,placeofbirth,dateofbirthtime,Gender,maritalstatus,typeid,idnumber,education,email } from "./Personal";
 import AddressSum from "../SummaryData/AddressSum";
 import {idcity, idcity2, idcity3, idcity4, namecity, namecity2, namecity3, namecity4} from "../Type/TypeCity";
-import {mainaddress,provincename,postalcode,ownershipstatus,isCollateral,livedinaddress,location, cityname as add_cityname, districtname as add_districtname} from "./Address";
+import {mainaddress,provincename,postalcode,ownershipstatus,isCollateral,livedinaddress,location as address_loc, cityname as add_cityname, districtname as add_districtname} from "./Address";
 import {filedocument} from "./Document";
 import {filedocumentVehicle} from "../CollateralVehicle";
 import {filedocumentRealEstate} from "../CollateralRealEstate";
@@ -228,6 +228,9 @@ export default class Summarys extends React.Component{
                 })
                 .then(response => response.json())
                 .then(respon => {
+                    if(respon.success){
+                        location.reload();
+                    }
                     // if(respon.validation == "") {
                     //     if (filedocument.filedoc.length > 0) {
                     //         var parms = {
@@ -365,7 +368,7 @@ export default class Summarys extends React.Component{
                         </header>
                         <div>
                             <AddressSum
-                                location={location}
+                                location={address_loc}
                                 namecity={add_cityname}
                                 mainaddress={mainaddress}
                                 provincename={provincename}

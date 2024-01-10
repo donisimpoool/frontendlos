@@ -12,6 +12,10 @@ export const getListApproval = baseUrlApp+'/getListApprove';
 export const baseUrlDashboard = url+'/v1/dashboard';
 export const getListDataDashboard = baseUrlDashboard+'/getList';
 export const getGraphDashboard = baseUrlDashboard+'/getGraph';
+
+export const baseUrlRoules = url+'/v1/roules';
+export const updateScoreRoules = baseUrlRoules+'/updatescore';
+
 //
 
 //

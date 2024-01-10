@@ -348,11 +348,11 @@ class NewApplication extends React.Component {
             className="col-xs-12 col-sm-7 col-md-7 col-lg-4"/> 
           <div className="col-xs-4 col-sm-4 col-md-4 col-log-4">
 
-              <button type="button" className="btn btn-info btn-lg"
+              {/* <button type="button" className="btn btn-info btn-lg"
                 onClick={this.onSaveDraft.bind(this)} 
                 // href="#/application"
               >
-                  {LanguageStore.translate('Save as Draft')}</button>
+                  {LanguageStore.translate('Save as Draft')}</button> */}
             </div>
 
 

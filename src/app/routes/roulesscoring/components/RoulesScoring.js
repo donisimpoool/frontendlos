@@ -6,8 +6,8 @@ import 'react-bootstrap-table/dist/react-bootstrap-table-all.min.css'
 import 'react-bootstrap-table/dist/react-bootstrap-table.min.css'
 import {listattributeroules,litvalue} from "../ListRoules";
 import {valueroules} from "./FormRoulesScoring";
-import {suburllistrules,suburlalllistrules} from "../../../config/baseUrl";
-import {headers} from "../../../config/ConfigParam";
+import {suburllistrules,suburlalllistrules, baseUrlRoules} from "../../../config/baseUrl";
+import {header, headers} from "../../../config/ConfigParam";
 
 function priceFormatter(cell, row) {
     var price = cell;
@@ -56,12 +56,12 @@ export default class RoulesScoring extends React.Component {
             id:0}
         // var url = suburllistrules+`?page=1&sizeperpage=10`;
         //suburlalllistrules
-        var url = suburlalllistrules;
+        var url = baseUrlRoules;
         // fetch(`${url}/loan/application/v1/applicant-list/?pageSize=${pageSize}`,
         fetch(url,
             {
                 method: 'GET',
-                headers: headers,
+                headers: header,
             })
             .then(response => response.json())
             .then(appList => {

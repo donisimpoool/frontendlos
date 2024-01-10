@@ -3,8 +3,8 @@ import NumberFormat from "react-number-format";
 import BigBreadcrumbs from "../../../components/navigation/components/BigBreadcrumbs";
 import {listattributeroules,listtyperoules,litvalue} from "../ListRoules";
 import {valueroulesfromtable} from "./RoulesScoring";
-import {suburlroulesscoringcreate,suburlroulesscoringupdate,suburlroulesscoringdelete} from "../../../config/baseUrl";
-import {headers} from "../../../config/ConfigParam";
+import {suburlroulesscoringcreate,suburlroulesscoringupdate,suburlroulesscoringdelete, updateScoreRoules} from "../../../config/baseUrl";
+import {header, headers} from "../../../config/ConfigParam";
 
 export var valueroules ={
     typeroules:'',
@@ -177,12 +177,12 @@ export default class FormRoulesScoring extends React.Component{
         var valueroules = this.state.valueroules
         valueroules.userid = 'Doni';
         this.setState(valueroules);
-        var url = suburlroulesscoringupdate;
-        var params = this.state.valueroules;
+        var url = updateScoreRoules;//suburlroulesscoringupdate;
+        var params = {score:this.state.valueroules.score,id:this.state.valueroules.id};//this.state.valueroules;
         fetch(url,
             {
                 method: 'POST',
-                headers: headers,
+                headers: header,
                 body: JSON.stringify(params)
             }).then(response => response.json())
             .then(respon => {
