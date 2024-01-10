@@ -3,14 +3,15 @@ import './MenuTabs.css';
 import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
 import 'react-bootstrap-table/dist/react-bootstrap-table-all.min.css'
 import 'react-bootstrap-table/dist/react-bootstrap-table.min.css'
-import {suburllistrules, suburlupdatestatus, suburllistunderwritingpage, keyset} from "../../../config/baseUrl";
+import {suburllistrules, suburlupdatestatus, suburllistunderwritingpage, keyset, updateStatusApp} from "../../../config/baseUrl";
 import {
     sizefont,
     Speedometerwidth,
     Speedometerheight,
     ColumnSpeedometerwidth,
     ColumnSpeedometerheight,
-    headers
+    headers,
+    header
 } from "../../../config/ConfigParam";
 
 const datdata = require('../../../../assets/api/tables/datatables.datdata.json');
@@ -40,19 +41,19 @@ function handleclickApprove(){
     if(window.confirm('do you want to approve it ?')) {
         var params = {
             appid: applicationid,
-            status: "A",
-            userid:JSON.parse(DecrypsCode(localStorage.getItem(keyset))).id
+            status: "A"
+            // userid:JSON.parse(DecrypsCode(localStorage.getItem(keyset))).id
         }
-        var url = suburlupdatestatus;
+        var url = updateStatusApp;//suburlupdatestatus;
         fetch(url,
             {
                 method: 'POST',
-                headers: headers,
+                headers: header,
                 body: JSON.stringify(params)
             })
             .then(response => response.json())
             .then(respon => {
-                if(respon.message == ""){
+                if(respon.success){
                     location.reload();
                 }else {
                     alert(respon.message)
@@ -68,19 +69,19 @@ function handleclickRejected(){
     if(window.confirm('do you want to reject it ?')) {
         var params = {
             appid: applicationid,
-            status: "R",
-            userid:JSON.parse(DecrypsCode(localStorage.getItem(keyset))).id
+            status: "R"
+            // userid:JSON.parse(DecrypsCode(localStorage.getItem(keyset))).id
         }
-        var url = suburlupdatestatus;
+        var url = updateStatusApp;//suburlupdatestatus;
         fetch(url,
             {
                 method: 'POST',
-                headers: headers,
+                headers: header,
                 body: JSON.stringify(params)
             })
             .then(response => response.json())
             .then(respon => {
-                if(respon.message == ""){
+                if(respon.success){
                     location.reload();
                 }else {
                     alert(respon.message)

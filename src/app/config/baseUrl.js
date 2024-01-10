@@ -7,10 +7,12 @@ export const url = 'http://localhost:8088/los/api'
 export const loginURL = url+'/v1/login';
 export const baseUrlApp = url+'/v1/application';
 export const createapp = baseUrlApp;
+export const updateStatusApp = baseUrlApp+'/updatestatus';
 export const getListApproval = baseUrlApp+'/getListApprove';
 export const baseUrlDashboard = url+'/v1/dashboard';
 export const getListDataDashboard = baseUrlDashboard+'/getList';
 export const getGraphDashboard = baseUrlDashboard+'/getGraph';
+//
 
 //
 

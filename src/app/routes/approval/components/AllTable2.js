@@ -548,7 +548,7 @@ class AllTable extends Component{
                                 <th>Field</th><th>Value</th>
                             </tr>
                             <tr><td>{LanguageStore.translate('Collateral Type')}</td><td>{collateralname}</td></tr>
-                            {/* {
+                            {
                                 listcollateral.map(function (item) {
                                     if(item.field !== 'List File') {
                                         return (
@@ -557,21 +557,22 @@ class AllTable extends Component{
                                                 <td>{value[item.index]}</td>
                                             </tr>
                                         )
-                                    }else{
-                                        return (
-                                            <tr>
-                                                <td>{item.field}</td>
-                                                <td>{
-                                                    value[item.index].map(function (item) {
-                                                        return (
-                                                            <tr><td > <div onClick={donwloadfile.bind(this,item.path,item.namefile)}>{item.namefile}</div></td></tr>
-                                                        )
-                                                    })
-                                                }</td>
-                                            </tr>
-                                        )
                                     }
-                                })} */}
+                                    // else{
+                                    //     return (
+                                    //         <tr>
+                                    //             <td>{item.field}</td>
+                                    //             <td>{
+                                    //                 value[item.index].map(function (item) {
+                                    //                     return (
+                                    //                         <tr><td > <div onClick={donwloadfile.bind(this,item.path,item.namefile)}>{item.namefile}</div></td></tr>
+                                    //                     )
+                                    //                 })
+                                    //             }</td>
+                                    //         </tr>
+                                    //     )
+                                    // }
+                                })}
 
                         </table>
                     </Tab>
