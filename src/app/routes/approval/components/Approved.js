@@ -29,36 +29,36 @@ var applicationid = '';
 function handleclicksend(){
     if(window.confirm('do you want to send it ?')) {
         // showLoad
-        var params = {
-            appid: applicationid,
-            status: "S",
-            userid:JSON.parse(DecrypsCode(localStorage.getItem(keyset))).id
-        }
-        var url = suburlSendLoan;
-        fetch(url,
-            {
-                method: 'POST',
-                headers: headers,
-                body: JSON.stringify(params)
-            })
-            .then(response => response.json())
-            .then(respon => {
-                if(respon.message == ""){
-                    if(respon.validation == "") {
-                        location.reload();
-                    }else{
-                        var msg = "";
-                        var no = 1;
-                        respon.validation.map(function (item) {
-                            msg += no+". "+item.errormessages+"\r\n";
-                            no++;
-                        })
-                        alert(msg);
-                    }
-                }else {
-                    alert(respon.message)
-                }
-            })
+        // var params = {
+        //     appid: applicationid,
+        //     status: "S",
+        //     // userid:JSON.parse(DecrypsCode(localStorage.getItem(keyset))).id
+        // }
+        // var url = suburlSendLoan;
+        // fetch(url,
+        //     {
+        //         method: 'POST',
+        //         headers: headers,
+        //         body: JSON.stringify(params)
+        //     })
+        //     .then(response => response.json())
+        //     .then(respon => {
+        //         if(respon.message == ""){
+        //             if(respon.validation == "") {
+        //                 location.reload();
+        //             }else{
+        //                 var msg = "";
+        //                 var no = 1;
+        //                 respon.validation.map(function (item) {
+        //                     msg += no+". "+item.errormessages+"\r\n";
+        //                     no++;
+        //                 })
+        //                 alert(msg);
+        //             }
+        //         }else {
+        //             alert(respon.message)
+        //         }
+        //     })
     }
 }
 function showLoad(){
@@ -378,7 +378,7 @@ class Approved extends Component{
                                 <h1><b>{LanguageStore.translate('Decision Comments')}</b></h1>
                                 <b>{LanguageStore.translate('Scorecard Comments')}:</b> {row.appentity.scorecardcomments}    <br/>
                                 <b>{LanguageStore.translate('Rule Engine Comments')}:</b> {row.appentity.ruleenginecomments}    <br/>
-                                <div hidden={JSON.parse(DecrypsCode(localStorage.getItem(keyset))).isapproval == 'N'}>
+                                <div >
                                     <button type="button" className="btn btn-labeled btn-success" onClick={handleclicksend}> <span className="btn-label"><i className="glyphicon glyphicon-ok"></i></span>{LanguageStore.translate('Send')} </button>
                                 </div>
                             </div>

@@ -223,7 +223,7 @@ export default class Summarys extends React.Component{
             fetch(url,
                 {
                     method: 'POST',
-                    headers: header,
+                    headers: header(),
                     body: JSON.stringify(paramloan)
                 })
                 .then(response => response.json())

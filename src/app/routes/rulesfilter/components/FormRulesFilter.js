@@ -308,7 +308,7 @@ export default class FormRulesFilter extends React.Component{
     editformroules(){
 
         var valuefilter = this.state.valuefilter
-        valuefilter.createby = JSON.parse(DecrypsCode(localStorage.getItem(keyset))).sizefile
+        // valuefilter.createby = JSON.parse(DecrypsCode(localStorage.getItem(keyset))).sizefile
         valuefilter.filterdetail = listdetailfilter;
         this.setState(valuefilter);
         var url = suburlupdatefilter
@@ -332,7 +332,7 @@ export default class FormRulesFilter extends React.Component{
     }
     saveformroules(){
         var valuefilter = this.state.valuefilter
-        valuefilter.createby = JSON.parse(DecrypsCode(localStorage.getItem(keyset))).id
+        // valuefilter.createby = JSON.parse(DecrypsCode(localStorage.getItem(keyset))).id
         valuefilter.filterdetail = listdetailfilter;
         this.setState(valuefilter);
         var url = suburlcreatefilter;

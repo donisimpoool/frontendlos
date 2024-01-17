@@ -16,26 +16,29 @@ import RecentProjects from './RecentProjects'
 import {keyset, suburlLogout} from "../../config/baseUrl";
 import {info} from "../../routes/auth/containers/Login";
 import {DecrypsCode} from "../../config/Encrypt";
+import { keyToken } from '../../config/ConfigParam'
 
 export default class Header extends React.Component {
     logout(){
-        if (window.confirm('Are you sure you want to exit ?')) {
-            var user = JSON.parse(DecrypsCode(localStorage.getItem(keyset))).id;
-            var url = suburlLogout + `?userid=` + user;
-            fetch(url,
-                {
-                    method: 'GET',
-                    headers: {
-                        // Authorization: 'Bearer '+localStorage.getItem('token')
-                        'content-type': 'application/json'
-                    },
-                })
-                .then(response => response.json())
-                .then(appList => {
-                    localStorage.removeItem(keyset);
-                    window.location.href = "/#/login"
-                })
-        }
+      localStorage.removeItem(keyToken);
+      window.location.href = "/#/login";
+        // if (window.confirm('Are you sure you want to exit ?')) {
+        //     var user = JSON.parse(DecrypsCode(localStorage.getItem(keyset))).id;
+        //     var url = suburlLogout + `?userid=` + user;
+        //     fetch(url,
+        //         {
+        //             method: 'GET',
+        //             headers: {
+        //                 // Authorization: 'Bearer '+localStorage.getItem('token')
+        //                 'content-type': 'application/json'
+        //             },
+        //         })
+        //         .then(response => response.json())
+        //         .then(appList => {
+        //             localStorage.removeItem(keyset);
+        //             window.location.href = "/#/login"
+        //         })
+        // }
     }
   render() {
     return <header id="header">

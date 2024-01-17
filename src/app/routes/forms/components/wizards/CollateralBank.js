@@ -54,9 +54,9 @@ export default class CollateralBank extends React.Component{
         filedocumentbank = this.state.valuedocument;
         isuploadfileBank='YES';
         var totalsizemb = convertByteToMB(size);
-        if(totalsizemb > JSON.parse(DecrypsCode(localStorage.getItem(keyset))).sizefile){
-            alert(msglimitfile(info.sizefile));
-        }
+        // if(totalsizemb > JSON.parse(DecrypsCode(localStorage.getItem(keyset))).sizefile){
+        //     alert(msglimitfile(info.sizefile));
+        // }
     }
       onChangeAmount(e){
           var str = e.target.value;

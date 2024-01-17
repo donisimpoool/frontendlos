@@ -182,7 +182,7 @@ export default class FormRoulesScoring extends React.Component{
         fetch(url,
             {
                 method: 'POST',
-                headers: header,
+                headers: header(),
                 body: JSON.stringify(params)
             }).then(response => response.json())
             .then(respon => {

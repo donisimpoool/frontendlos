@@ -1,6 +1,8 @@
 export var keyset = 'LOSSYSTEM';
 export var auth = 'Basic MKqp!ncc2=Ix9Uy=';
-export const url = 'http://localhost:8088/los/api'
+// export const url = 'http://localhost:8088/los/api';
+// export const url = 'http://localhost:8189/scoring/';
+export const url = 'https://dev.skorqu.simpool.id/creditscoring';
 
 
 // New

@@ -181,12 +181,12 @@ class NewApplication extends React.Component {
 
   componentDidMount(){
       const session = localStorage.getItem(keyset);
-      console.log('this.props.match.params.id ',this.props.routeParams.id);
-      if(session){
-      }
-      else{
-          window.location.href = "/#/login";
-      }
+      // console.log('this.props.match.params.id ',this.props.routeParams.id);
+      // if(session){
+      // }
+      // else{
+      //     window.location.href = "/#/login";
+      // }
       // var url = `http://localhost:8080/province/v1/getlistkelurahan`;
       // const otherPram={
       //     method:"GET",

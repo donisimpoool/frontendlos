@@ -119,7 +119,7 @@ export function postLoan(params,paramsfile) {
         fetch(url,
             {
                 method: 'POST',
-                headers: header,
+                headers: header(),
                 body: JSON.stringify(params)
             }
             )

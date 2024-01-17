@@ -65,15 +65,17 @@ export default class Login extends React.Component {
         this.setState(value);
     }
     componentDidMount() {
-
+      
     }
-     loginxxx(){
+    
+    login(){
       let user = this.state.formlogin.user;
       let password = this.state.formlogin.password;
       let obj = new Object();
       obj.user = user;
       obj.password = password;
 
+      this.funconverlay("show");
       fetch(loginURL,
         {
             method: 'POST',
@@ -91,74 +93,76 @@ export default class Login extends React.Component {
         
         return responseData;})
       .then(data => {
-        handleAuth ({token:data.data.token});
-        hashHistory.push("/dashboard");
-        // this.setState({"questions" : data});
-      })
+        
+        if(data.success){
+          handleAuth ({token:data.data.token});
+          this.handleTimeLogin();
 
+        // setTimeout(
+        //   () => this.handleTimeLogin() ,  
+        //   2000
+        // );
+        
+        }else {
+          this.funconverlay("hide");
+          alert(data.message)
+        }
+      })
       .catch(err => {
         console.log("fetch error" + err);
     });
-        // // .then(response => 
-        //   // response.json()
-        //   // console.log('response ',response.json())
-        //   // )
-        // .then(appList => {
-        //   console.log('appList ',appList);
-        //   // alert(appList);
-        //   hashHistory.push("/dashboard");
-        //   // window.location.href = "/#/dashboard/analytics";
-        // }).catch((error) => {
-        //   console.log(error)
-        // });
 
     }
 
-
-    login(){
-        this.funconverlay("show")
-        info.name = ''
-        info.id = ''
-        info.isapproval = ''
-        info.listmenu = []
-      var user = this.state.formlogin.user;
-      var password = this.state.formlogin.password;
-      var url = suburlLogin;
-        var param = {
-            userid:user,
-            password:password
-        }
-        fetch(url,
-          {
-              method: 'POST',
-              headers: {
-                  'Authorization': auth,
-                  'content-type': 'application/json'
-              },
-              // mode:'no-cors',,
-              body: JSON.stringify(param)
-
-          })
-          .then(response => response.json())
-          .then(appList => {
-              this.funconverlay("hide")
-
-              if(user == appList.message){//isapproval
-                  info.listmenu = appList.data.items
-                  info.name = appList.data.name
-                  info.sizefile = appList.data.limitsizefile
-                  info.id = appList.message
-                  info.isapproval = appList.data.isapproval
-                  info.companyid = appList.data.companyid
-                  info.idtable = appList.data.idtable
-                  localStorage.setItem(keyset,EncrypsCode(JSON.stringify(info)))
-                  window.location.href = "/#"+appList.data.firstroute;//"/#/dashboard";
-
-              }else{
-                  alert(appList.message)
-              }
-          })
+    handleTimeLogin(){
+      this.funconverlay("hide");
+      window.location.href = "/#/dashboard/analytics";
     }
+
+    // login(){
+    //     this.funconverlay("show")
+    //     info.name = ''
+    //     info.id = ''
+    //     info.isapproval = ''
+    //     info.listmenu = []
+    //   var user = this.state.formlogin.user;
+    //   var password = this.state.formlogin.password;
+    //   var url = suburlLogin;
+    //     var param = {
+    //         userid:user,
+    //         password:password
+    //     }
+    //     fetch(url,
+    //       {
+    //           method: 'POST',
+    //           headers: {
+    //               'Authorization': auth,
+    //               'content-type': 'application/json'
+    //           },
+    //           // mode:'no-cors',,
+    //           body: JSON.stringify(param)
+
+    //       })
+    //       .then(response => response.json())
+    //       .then(appList => {
+    //           this.funconverlay("hide")
+
+    //           if(user == appList.message){//isapproval
+    //               info.listmenu = appList.data.items
+    //               info.name = appList.data.name
+    //               info.sizefile = appList.data.limitsizefile
+    //               info.id = appList.message
+    //               info.isapproval = appList.data.isapproval
+    //               info.companyid = appList.data.companyid
+    //               info.idtable = appList.data.idtable
+    //               localStorage.setItem(keyset,EncrypsCode(JSON.stringify(info)))
+    //               window.location.href = "/#"+appList.data.firstroute;//"/#/dashboard";
+
+    //           }else{
+    //               alert(appList.message)
+    //           }
+    //       })
+    // }
     funotp1(e){
         var str = e.target.value;
         var value = this.state.valueotp;
@@ -275,7 +279,7 @@ export default class Login extends React.Component {
             </section>
 
             <footer>
-              <button type="submit" onClick={this.loginxxx.bind(this)} className="btn btn-primary">
+              <button type="submit" onClick={this.login.bind(this)} className="btn btn-primary">
                           Sign in
                 </button>
                 </footer>

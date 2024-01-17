@@ -36,7 +36,7 @@ export default class Stats extends React.Component {
     var all = 0;
     var underwriting = 0;
     var approve = 0;
-    var length = this.props.list != undefined?this.props.list.length:0;
+    var length = this.props.list != undefined && this.props.list !== null?this.props.list.length:0;
     if (length > 0) {
     this.props.list.slice(0, 1).map(function (item) {
       all = item.appall;

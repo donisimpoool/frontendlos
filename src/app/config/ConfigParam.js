@@ -15,11 +15,17 @@ export var headers = {
         'content-type': 'application/json'
 }
 
-export var header = {
-        'Authorization': localStorage.getItem(keyToken),
-        'Accept': 'application/json',
-        'Access-Control-Allow-Origin': '*',
-        'Content-Type': 'application/json',
+// export var header = {
+//         'Authorization': localStorage.getItem(keyToken),
+//         'Accept': 'application/json',
+//         'Access-Control-Allow-Origin': '*',
+//         'Content-Type': 'application/json',
+// }
+export const header = () =>{
+  return  {'Authorization': localStorage.getItem(keyToken),
+          'Accept': 'application/json',
+          'Access-Control-Allow-Origin': '*',
+          'Content-Type': 'application/json',}
 }
 
 export const handleAuth = (param) =>{
@@ -31,7 +37,7 @@ function getstorage() {
     const session = localStorage.getItem(keyset);
     var value = ''
     if(session){
-            value = JSON.parse(DecrypsCode(localStorage.getItem(keyset))).companyid+"-"+JSON.parse(DecrypsCode(localStorage.getItem(keyset))).idtable
+        //     value = JSON.parse(DecrypsCode(localStorage.getItem(keyset))).companyid+"-"+JSON.parse(DecrypsCode(localStorage.getItem(keyset))).idtable
     }
     return value
 }

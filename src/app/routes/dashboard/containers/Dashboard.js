@@ -66,9 +66,10 @@ class Dashboard extends React.Component {
           var url = getGraphDashboard;
           const otherPram = {
               method: "GET",
-              headers: header
+              headers: header()
           }
-
+          console.log('header ',header);
+          console.log('otherPram ',otherPram);
           fetch(url, otherPram)
               .then(response => response.json())
               .then(json => {
@@ -114,9 +115,13 @@ class Dashboard extends React.Component {
       var url = getListDataDashboard;//suburllisttopfive;
       var otherPram = {
         method: "POST",
-        headers: header,
+        headers: header(),
         body: JSON.stringify(params)
       }
+
+      console.log('header month ',header);
+          console.log('otherPram month ',otherPram);
+
       fetch(url, otherPram)
           .then(response => response.json())
           .then(json =>

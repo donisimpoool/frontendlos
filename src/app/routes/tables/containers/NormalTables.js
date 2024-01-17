@@ -7,7 +7,7 @@ import Msg from '../../../components/i18n/Msg';
 
 export default class NormalTables extends React.Component {
   render() {
-    console.log("this.props.list : "+this.props.list.length)
+    // console.log("this.props.list : "+this.props.list.length)
     return (
       <div id="content">
         {/* <div className="row">
@@ -39,6 +39,7 @@ export default class NormalTables extends React.Component {
                         </thead>
                         <tbody>
                         {
+                          this.props.list != undefined && this.props.list != null?
                           this.props.list.map(function (item) {
                             return (
                                 <tr key={item.loanid}>
@@ -47,7 +48,9 @@ export default class NormalTables extends React.Component {
                                   <td>{item.jumlahloan}</td>
                                 </tr>
                             )
-                          })}
+                          })
+                          :""
+                        }
                         </tbody>
                       </table>
 

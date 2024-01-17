@@ -75,9 +75,9 @@ export default class CollateralRealEstate extends React.Component{
         isuploadfileRE='YES';
 
         var totalsizemb = convertByteToMB(sizes);
-        if(totalsizemb > JSON.parse(DecrypsCode(localStorage.getItem(keyset))).sizefile){
-            alert(msglimitfile(info.sizefile));
-        }
+        // if(totalsizemb > JSON.parse(DecrypsCode(localStorage.getItem(keyset))).sizefile){
+        //     alert(msglimitfile(info.sizefile));
+        // }
     }
     onParse(e){ 
         var str = e.target.value

@@ -48,7 +48,7 @@ function handleclickApprove(){
         fetch(url,
             {
                 method: 'POST',
-                headers: header,
+                headers: header(),
                 body: JSON.stringify(params)
             })
             .then(response => response.json())
@@ -76,7 +76,7 @@ function handleclickRejected(){
         fetch(url,
             {
                 method: 'POST',
-                headers: header,
+                headers: header(),
                 body: JSON.stringify(params)
             })
             .then(response => response.json())
@@ -578,7 +578,7 @@ class Underwriting extends Component{
                          <h1><b>{LanguageStore.translate('Decision Comments')}</b></h1>
                          <b>{LanguageStore.translate('Scorecard Comments')}:</b> {row.appentity.scorecardcomments}    <br/>
                          <b>{LanguageStore.translate('Rule Engine Comments')}:</b> {row.appentity.ruleenginecomments}    <br/>
-                         <div hidden={JSON.parse(DecrypsCode(localStorage.getItem(keyset))).isapproval == 'N'}>
+                         <div >
                             <button type="button" className="btn btn-labeled btn-success" onClick={handleclickApprove}> <span className="btn-label"><i className="glyphicon glyphicon-ok"></i></span>{LanguageStore.translate('Approved')} </button>
                              &nbsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
                              <button type="button" className="btn btn-labeled btn-danger" onClick={handleclickRejected}>   <span className="btn-label"><i className="glyphicon glyphicon-remove"></i></span>{LanguageStore.translate('Reject')}</button>

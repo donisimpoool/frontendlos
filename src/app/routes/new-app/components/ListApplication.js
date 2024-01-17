@@ -58,8 +58,8 @@ export default class ListApplication extends React.Component {
     }
     componentDidMount(){
         console.log("")
-        const session = localStorage.getItem(keyset);
-        if(session){
+        // const session = localStorage.getItem(keyset);
+        if(true){
         this.setState({
             data: []
         })
@@ -68,7 +68,7 @@ export default class ListApplication extends React.Component {
         fetch(url,
             {
                 method: 'GET',
-                headers: header
+                headers: header()
             })
             .then(response => response.json())
             .then(appList => {
@@ -78,7 +78,7 @@ export default class ListApplication extends React.Component {
             })
         }
         else{
-            window.location.href = "/#/login";
+            // window.location.href = "/#/login";
         }
     }
 

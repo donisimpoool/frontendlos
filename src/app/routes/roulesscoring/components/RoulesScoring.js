@@ -61,7 +61,7 @@ export default class RoulesScoring extends React.Component {
         fetch(url,
             {
                 method: 'GET',
-                headers: header,
+                headers: header(),
             })
             .then(response => response.json())
             .then(appList => {

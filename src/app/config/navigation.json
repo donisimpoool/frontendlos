@@ -404,6 +404,18 @@
           "route": "/misc/ck-editor"
         }
       ]
+    },
+    {
+      "title" : "Admin",
+      "route" : "",
+      "icon" : "fa fa-lg fa-fw fa-check-circle",
+      "menuitem":[
+        {
+          "title" : "User",
+          "route" : "/user",
+          "icon" : "fa fa-lg fa-fw fa-check-circle"
+        }
+      ]
     }
 
   ]

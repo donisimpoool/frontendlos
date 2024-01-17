@@ -37,12 +37,12 @@ export default class ApprovalPage extends React.Component {
         } 
 
         componentDidMount() {
-            const session = localStorage.getItem(keyset);
-            if(session) {
+            // const session = localStorage.getItem(keyset);
+            if(true) {
               var url = getListApproval;
                 var otherPram = {
                     method: "GET",
-                    headers: header
+                    headers: header()
                 }
                 fetch(url, otherPram)
                     .then(response => response.json())
@@ -108,7 +108,7 @@ export default class ApprovalPage extends React.Component {
                 //         this.setState({listallitemssend: json.data})
                 //     )
             }else{
-                window.location.href = "/#/login";
+                // window.location.href = "/#/login";
             }
         }
 
